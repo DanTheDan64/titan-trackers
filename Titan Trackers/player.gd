@@ -20,14 +20,16 @@ var max_speed = states["walking"][0]
 var accell = states["walking"][1]
 const JUMP_VELOCITY = 6
 
+@onready var cam = $"../cam"
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		rotation_degrees.y += -event.relative.x * sens
-		$Camera3D.rotation_degrees.x += -event.relative.y * sens
-		$Camera3D.rotation_degrees.x = clamp($Camera3D.rotation_degrees.x, -90, 90)
+		cam.rotation_degrees.y += -event.relative.x * sens
+		cam.rotation_degrees.x += -event.relative.y * sens
+		cam.rotation_degrees.x = clamp(cam.rotation_degrees.x, -90, 90)
 	elif InputEvent:
 		if Input.is_action_pressed("escape"):
 			get_tree().quit()
@@ -44,10 +46,9 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, direction.x * max_speed, accell * delta)
 		velocity.z = move_toward(velocity.z, direction.z * max_speed, accell * delta)
 	else:
-		
-		#$"..".rotation_degrees = Vector3.ZERO
+		$"..".global_rotation_degrees = Vector3.ZERO
 		position = Vector3.ZERO
-		global_rotation_degrees = get_rotation_degrees()
+	
 	
 	match state:
 		"walking": walking(delta)

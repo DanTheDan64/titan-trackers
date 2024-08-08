@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwdapu7o4fdlh"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_mrykw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wytqq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4r681"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1si1p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wj07u"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 28, 36)
+collision_layer = 0
+linear_velocity = Vector3(0, 0, -30)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_wytqq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4r681")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="cam" type="Camera3D" parent="Marker3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 1.25, 0)
+near = 0.001
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="Marker3D"]
+transform = Transform3D(0.999999, 0, 0, 0, 1.5, 0, 0, 0, 0.999999, 0, 0, 0)
+collision_layer = 0
+floor_stop_on_slope = false
+floor_max_angle = 0.523599
+floor_snap_length = 0.4
+script = ExtResource("1_mrykw")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Marker3D/CharacterBody3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0.333333, 0)
+shape = SubResource("CapsuleShape3D_1si1p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D/CharacterBody3D"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0.333333, 0)
+mesh = SubResource("CapsuleMesh_wj07u")
