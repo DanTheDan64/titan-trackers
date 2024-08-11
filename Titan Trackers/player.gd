@@ -49,6 +49,8 @@ func _physics_process(delta):
 		$"..".global_rotation_degrees = Vector3.ZERO
 		position = Vector3.ZERO
 	
+	if Input.is_action_pressed("shoot"):
+		$"../..".linear_velocity += -$"../cam".transform.basis.z
 	
 	match state:
 		"walking": walking(delta)
