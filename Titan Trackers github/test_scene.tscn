@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=16 format=3 uid="uid://bnqe2scl2i4rg"]
 
+[ext_resource type="Script" path="res://player_2.gd" id="2_3nyfb"]
 [ext_resource type="Texture2D" uid="uid://b4e61fcesrbkk" path="res://icon.svg" id="2_t4kl2"]
-[ext_resource type="PackedScene" uid="uid://cwdapu7o4fdlh" path="res://player.tscn" id="2_uhwxe"]
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="3_0gknb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8j0qs"]
 
@@ -28,6 +29,12 @@ albedo_texture = ExtResource("2_t4kl2")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hih2b"]
 albedo_texture = ExtResource("2_t4kl2")
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fbty6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vtoaj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4yls7"]
+
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
@@ -51,13 +58,12 @@ mesh = SubResource("BoxMesh_fqadi")
 
 [node name="PinJoint3D" type="PinJoint3D" parent="StaticBody3D6"]
 node_a = NodePath("..")
-node_b = NodePath("../../RigidBody3D")
 exclude_nodes_from_collision = false
 
 [node name="terrain" type="Node" parent="."]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 200, 0, 0, -64.7971)
+transform = Transform3D(120, 0, 0, 0, 2, 0, 0, 0, 400, 0, 0, -65)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D"]
 shape = SubResource("BoxShape3D_newsb")
@@ -89,6 +95,7 @@ mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="terrain"]
 transform = Transform3D(43.1364, -0.546122, 8.59942, 9.57819, 0.731798, 13.2512, -40.5895, -0.407703, 12.266, 66.4302, 9.44232, 3.35721)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D3"]
 shape = SubResource("BoxShape3D_newsb")
@@ -109,4 +116,32 @@ transform = Transform3D(1, -4.65661e-10, 0, -1.90735e-06, 1, 0, -1.19209e-07, 0,
 material_override = SubResource("StandardMaterial3D_hih2b")
 mesh = SubResource("BoxMesh_fqadi")
 
-[node name="RigidBody3D" parent="." instance=ExtResource("2_uhwxe")]
+[node name="player_2" type="Marker3D" parent="."]
+script = ExtResource("2_3nyfb")
+
+[node name="stuff_holder" type="Marker3D" parent="player_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player_2/stuff_holder"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("CapsuleMesh_fbty6")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="player_2/stuff_holder"]
+
+[node name="non_grappling_state" type="CharacterBody3D" parent="player_2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 4, 0)
+script = ExtResource("3_0gknb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/non_grappling_state"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_vtoaj")
+
+[node name="grappling_state" type="RigidBody3D" parent="player_2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 4, 0)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/grappling_state"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4yls7")

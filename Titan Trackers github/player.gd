@@ -36,6 +36,8 @@ func _input(event):
 
 
 func _physics_process(delta):
+	
+	
 	if state != "grappling":
 		if not is_on_floor():
 			velocity.y -= gravity * delta
@@ -48,7 +50,6 @@ func _physics_process(delta):
 	else:
 		$"..".global_rotation_degrees = Vector3.ZERO
 		position = Vector3.ZERO
-	
 	if Input.is_action_pressed("shoot"):
 		$"../..".linear_velocity += -$"../cam".transform.basis.z
 	
@@ -98,10 +99,6 @@ func in_air(delta):
 	
 	if Input.is_action_just_released("jump") or velocity.y <= 20:
 		gravity = 18
-	
-	
-
-
 
 
 
