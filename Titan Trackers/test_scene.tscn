@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=17 format=3 uid="uid://bnqe2scl2i4rg"]
 
-[ext_resource type="Script" path="res://player_2.gd" id="2_3nyfb"]
+[ext_resource type="Script" path="res://player/player_master_controller.gd" id="2_3nyfb"]
 [ext_resource type="Texture2D" uid="uid://b4e61fcesrbkk" path="res://icon.svg" id="2_t4kl2"]
-[ext_resource type="Script" path="res://CharacterBody3D.gd" id="3_0gknb"]
+[ext_resource type="Script" path="res://player/moving_controller.gd" id="3_0gknb"]
+[ext_resource type="Script" path="res://player/grappling_controller.gd" id="4_ikxwq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8j0qs"]
 
@@ -47,7 +48,7 @@ spot_range = 408.0
 environment = SubResource("Environment_h8gqh")
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 11.1435, 41.9674, 8.95584)
+transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, -15.8565, 4.9674, -56.0442)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6"]
@@ -95,7 +96,6 @@ mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="terrain"]
 transform = Transform3D(43.1364, -0.546122, 8.59942, 9.57819, 0.731798, 13.2512, -40.5895, -0.407703, 12.266, 66.4302, 9.44232, 3.35721)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D3"]
 shape = SubResource("BoxShape3D_newsb")
@@ -120,28 +120,26 @@ mesh = SubResource("BoxMesh_fqadi")
 script = ExtResource("2_3nyfb")
 
 [node name="stuff_holder" type="Marker3D" parent="player_2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="player_2/stuff_holder"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 1.5, 0)
 mesh = SubResource("CapsuleMesh_fbty6")
 skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="player_2/stuff_holder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="non_grappling_state" type="CharacterBody3D" parent="player_2"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 4, 0)
+[node name="moving_physicsbody" type="CharacterBody3D" parent="player_2"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("3_0gknb")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/non_grappling_state"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/moving_physicsbody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_vtoaj")
 
-[node name="grappling_state" type="RigidBody3D" parent="player_2"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 4, 0)
-collision_layer = 0
-collision_mask = 0
+[node name="grappling_physicsbody" type="RigidBody3D" parent="player_2"]
+script = ExtResource("4_ikxwq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/grappling_state"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/grappling_physicsbody"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("CapsuleShape3D_4yls7")

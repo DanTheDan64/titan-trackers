@@ -23,6 +23,14 @@ func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, direction.x * max_speed, accell * delta)
 	velocity.z = move_toward(velocity.z, direction.z * max_speed, accell * delta)
 	
+	if Input.is_action_pressed("shoot"):
+		velocity += direction
+	
+	if Input.is_action_just_pressed("fire_hook"):
+		$"..".change_state()
+		$"../grappling_physicsbody".linear_velocity = velocity
+		velocity = Vector3.ZERO
+	
 	
 	move_and_slide()
 
