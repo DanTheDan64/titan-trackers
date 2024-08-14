@@ -24,13 +24,31 @@ func _physics_process(delta):
 	velocity.z = move_toward(velocity.z, direction.z * max_speed, accell * delta)
 	
 	if Input.is_action_pressed("shoot"):
-		velocity += direction
+		if direction:
+			velocity += direction
+		else:
+			velocity += -$"../stuff_holder/Camera3D".transform.basis.z
 	
 	if Input.is_action_just_pressed("fire_hook"):
-		$"..".change_state()
-		$"../grappling_physicsbody".linear_velocity = velocity
-		velocity = Vector3.ZERO
+			var space_state = get_world_3d().direct_space_state
+			# use global coordinates, not local to node
+			var query = PhysicsRayQueryParameters3D.create(
+			$"../stuff_holder/Camera3D".position,
+			-$"../stuff_holder/Camera3D".transform.basis.z * 150)
+			var result = space_state.intersect_ray(query)
+			print(result)
+			%StaticBody3D6.position = result.position + $"..".position
+			$"../grappling_physicsbody".position = position
+			
+			$"..".change_state()
+			$"../grappling_physicsbody".linear_velocity = velocity
+			velocity = Vector3.ZERO
+			return
 	
+	
+	
+	#if not result.is_empty():
+	#	print(result.position)
 	
 	move_and_slide()
 

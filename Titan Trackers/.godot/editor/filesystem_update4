@@ -1,4 +1,4 @@
 res://test_scene.tscn
-res://player/player_master_controller.gd
+res://player/grappling_controller.gd
 res://player.tscn
 res://player/moving_controller.gd

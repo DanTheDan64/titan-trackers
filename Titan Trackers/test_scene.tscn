@@ -48,7 +48,10 @@ spot_range = 408.0
 environment = SubResource("Environment_h8gqh")
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, -15.8565, 4.9674, -56.0442)
+collision_layer = 0
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6"]
@@ -58,7 +61,9 @@ shape = SubResource("BoxShape3D_newsb")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="PinJoint3D" type="PinJoint3D" parent="StaticBody3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 3.72529e-09, 0, 1, 0, 0, 0)
 node_a = NodePath("..")
+node_b = NodePath("../../player_2/grappling_physicsbody")
 exclude_nodes_from_collision = false
 
 [node name="terrain" type="Node" parent="."]
@@ -74,6 +79,7 @@ mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="terrain"]
 transform = Transform3D(8, 0, 0, 0, 60, 0, 0, 0, 8, -18, 30, -8.129)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D5"]
 shape = SubResource("BoxShape3D_newsb")
@@ -84,7 +90,8 @@ material_override = SubResource("StandardMaterial3D_021oi")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(60, 0, 0, 0, 0.707107, 7.07107, 0, -0.707107, 7.07107, 0, 4.46085, 28.159)
+transform = Transform3D(120, 0, 0, 0, 1.41421, 14.1421, 0, -1.41421, 14.1421, -21, 3.46085, 28.159)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -3.72529e-09, 1, 0, 0, 0)
@@ -95,7 +102,8 @@ material_override = SubResource("StandardMaterial3D_q0cxj")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(43.1364, -0.546122, 8.59942, 9.57819, 0.731798, 13.2512, -40.5895, -0.407703, 12.266, 66.4302, 9.44232, 3.35721)
+transform = Transform3D(43.1364, -0.546122, 8.59942, 9.57819, 0.731798, 13.2512, -40.5895, -0.407703, 12.266, 66.4302, 9.44232, 7.35721)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D3"]
 shape = SubResource("BoxShape3D_newsb")
@@ -106,13 +114,14 @@ material_override = SubResource("StandardMaterial3D_epwf2")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-38.0111, -0.28406, 14.3939, 13.5777, 0.821472, 10.4685, -44.3938, 0.494463, -9.12268, 69.4904, 20.1367, -57.1878)
+transform = Transform3D(-12.2227, -0.562287, 19.4107, 15.4786, 0.936478, 11.9341, -65.4949, 0.326254, -0.802016, 85.4904, 18.1367, -65.1878)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D4"]
 shape = SubResource("BoxShape3D_newsb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D4"]
-transform = Transform3D(1, -4.65661e-10, 0, -1.90735e-06, 1, 0, -1.19209e-07, 0, 1, 0, 0, 0)
+transform = Transform3D(1, -4.65661e-10, 7.45058e-09, -3.8147e-06, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_hih2b")
 mesh = SubResource("BoxMesh_fqadi")
 
@@ -128,6 +137,7 @@ skeleton = NodePath("../..")
 
 [node name="Camera3D" type="Camera3D" parent="player_2/stuff_holder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+far = 10000.0
 
 [node name="moving_physicsbody" type="CharacterBody3D" parent="player_2"]
 transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
