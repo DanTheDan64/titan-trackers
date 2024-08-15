@@ -15,6 +15,7 @@ background_mode = 2
 sky = SubResource("Sky_jbla2")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_newsb"]
+size = Vector3(0.001, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fqadi"]
 
@@ -47,10 +48,15 @@ spot_range = 408.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h8gqh")
 
-[node name="StaticBody3D6" type="StaticBody3D" parent="."]
+[node name="PinJoint3D" type="PinJoint3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, -15.8565, 4.9674, -56.0442)
-collision_layer = 0
+node_a = NodePath("../StaticBody3D6")
+node_b = NodePath("../player_2/grappling_physicsbody")
+exclude_nodes_from_collision = false
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="."]
+transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, 28.1435, 24.9674, -4.0442)
 collision_mask = 0
 metadata/_edit_group_ = true
 
@@ -59,12 +65,6 @@ shape = SubResource("BoxShape3D_newsb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6"]
 mesh = SubResource("BoxMesh_fqadi")
-
-[node name="PinJoint3D" type="PinJoint3D" parent="StaticBody3D6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 3.72529e-09, 0, 1, 0, 0, 0)
-node_a = NodePath("..")
-node_b = NodePath("../../player_2/grappling_physicsbody")
-exclude_nodes_from_collision = false
 
 [node name="terrain" type="Node" parent="."]
 
@@ -82,10 +82,10 @@ transform = Transform3D(8, 0, 0, 0, 60, 0, 0, 0, 8, -18, 30, -8.129)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4995, 0, 0)
 shape = SubResource("BoxShape3D_newsb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0166667, 0)
 material_override = SubResource("StandardMaterial3D_021oi")
 mesh = SubResource("BoxMesh_fqadi")
 
@@ -126,6 +126,7 @@ material_override = SubResource("StandardMaterial3D_hih2b")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="player_2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 30, 0)
 script = ExtResource("2_3nyfb")
 
 [node name="stuff_holder" type="Marker3D" parent="player_2"]
