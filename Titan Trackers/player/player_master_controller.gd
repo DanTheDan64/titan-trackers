@@ -1,6 +1,5 @@
 extends Marker3D
 
-
 var sens = 0.2
 @onready var stuff_holder = $stuff_holder
 
@@ -9,7 +8,7 @@ var sens = 0.2
 @onready var moving_physicsbody = $moving_physicsbody
 @onready var grappling_physicsbody = $grappling_physicsbody
 
-@onready var cc = moving_physicsbody
+@onready var cc = "moving"
 
 var max_speed = 8
 var accell = 30
@@ -35,30 +34,34 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	match cc:
-		moving_physicsbody: moving_controller()
-		grappling_physicsbody: grappling_controller()
+		"moving": moving_controller()
+		"grappling": grappling_controller()
+	
+	print(%PinJoint3D.get_node_b())
 
 
-func change_state():
-	if cc == moving_physicsbody:
-		cc = grappling_physicsbody
-		grappling_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
-		moving_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
+func change_state(state_to):
+	if state_to == "grappling":
+		cc = "grappling"
+		$grappling_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
+		%PinJoint3D.set_node_b("player_2/grappling_physicsbody")
 		
-	elif cc == grappling_physicsbody:
-		cc = moving_physicsbody
-		grappling_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
-		moving_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
+	elif state_to == "moving":
+		cc = "moving"
+		$grappling_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
+		%PinJoint3D.set_node_b("extra")
 		
 
 
 func moving_controller():
 	stuff_holder.position = moving_physicsbody.position
 	grappling_physicsbody.position = moving_physicsbody.position
+	grappling_physicsbody.linear_velocity = Vector3.ZERO
 
 func grappling_controller():
 	stuff_holder.position = grappling_physicsbody.position
 	moving_physicsbody.position = grappling_physicsbody.position
+	moving_physicsbody.velocity = Vector3.ZERO
 
 
 

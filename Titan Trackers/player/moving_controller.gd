@@ -31,19 +31,21 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("fire_hook"):
 		var space_state = get_world_3d().direct_space_state
-		# use global coordinates, not local to node
-		var query = PhysicsRayQueryParameters3D.create(
-		$"../stuff_holder/Camera3D".position,
-		-$"../stuff_holder/Camera3D".transform.basis.z * 150)
-		var result = space_state.intersect_ray(query)
-		print(result)
-		%PinJoint3D.position = result.position + $"..".position
 		
-		$"..".change_state()
-		$"../grappling_physicsbody".linear_velocity = velocity
-		velocity = Vector3.ZERO
-		return
-	
+		#get data
+		var query = PhysicsRayQueryParameters3D.create(
+		$"../stuff_holder/Camera3D".global_position,
+		-$"../stuff_holder/Camera3D".transform.basis.z * 100000000)
+		var result = space_state.intersect_ray(query)
+		
+		#use data
+		if not result.is_empty():
+			$"../../swing_around".position = result.position
+			%PinJoint3D.position = result.position
+			$"../grappling_physicsbody".linear_velocity = velocity
+			velocity = Vector3.ZERO
+			$"..".change_state("grappling")
+			return
 	
 	
 	#if not result.is_empty():
