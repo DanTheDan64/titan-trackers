@@ -49,15 +49,14 @@ environment = SubResource("Environment_h8gqh")
 
 [node name="PinJoint3D" type="PinJoint3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, 0, 83, -21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 94, 49)
 node_a = NodePath("../swing_around")
 node_b = NodePath("../extra")
 exclude_nodes_from_collision = false
+params/impulse_clamp = 2.0
 
 [node name="swing_around" type="StaticBody3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 83, -21)
-collision_layer = 0
-collision_mask = 0
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 94, 49)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="swing_around"]
@@ -89,7 +88,6 @@ metadata/_edit_group_ = true
 shape = SubResource("BoxShape3D_newsb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="terrain"]
@@ -129,7 +127,7 @@ material_override = SubResource("StandardMaterial3D_hih2b")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(8, 0, 0, 0, 60, 0, 0, 0, 8, -18, 30, -8.129)
+transform = Transform3D(8, 0, 0, 0, 60, 0, 0, 0, 8, -18, 53, -8.129)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D5"]
@@ -151,25 +149,23 @@ shape = SubResource("BoxShape3D_newsb")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="player_2" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52, 1)
 script = ExtResource("2_3nyfb")
 metadata/_edit_group_ = true
 
 [node name="stuff_holder" type="Marker3D" parent="player_2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 90, 55)
+
+[node name="Camera3D" type="Camera3D" parent="player_2/stuff_holder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+far = 10000.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="player_2/stuff_holder"]
 transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 1.5, 0)
 mesh = SubResource("CapsuleMesh_fbty6")
 skeleton = NodePath("../..")
 
-[node name="Camera3D" type="Camera3D" parent="player_2/stuff_holder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-far = 10000.0
-
 [node name="moving_physicsbody" type="CharacterBody3D" parent="player_2"]
-process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 23, 0)
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -55, 90, 55)
 script = ExtResource("3_0gknb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/moving_physicsbody"]
@@ -177,8 +173,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_vtoaj")
 
 [node name="grappling_physicsbody" type="RigidBody3D" parent="player_2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23, 0)
-linear_velocity = Vector3(0, 0, -33.625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 90, 55)
+angular_velocity = Vector3(0, 0.84535, 0)
 script = ExtResource("4_ikxwq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player_2/grappling_physicsbody"]

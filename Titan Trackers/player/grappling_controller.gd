@@ -18,7 +18,7 @@ func _physics_process(delta):
 	#	linear_velocity = Vector3.ZERO
 	#	global_rotation_degrees = Vector3.ZERO
 	#	$"..".change_state()
-	
+	angular_velocity = Vector3.ZERO
 	if Input.is_action_pressed("shoot"):
 		if direction:
 			linear_velocity += direction

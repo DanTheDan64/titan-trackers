@@ -17,9 +17,14 @@ var JUMP_velocity = 6
 
 var gravity = 12
 
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	grappling_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
+	
+	if cc == "moving":
+		grappling_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
+	elif cc == "grappling":
+		moving_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -37,18 +42,29 @@ func _process(delta):
 		"moving": moving_controller()
 		"grappling": grappling_controller()
 	
-	print(%PinJoint3D.get_node_b())
+	#print(%PinJoint3D.get_node_b())
 
 
 func change_state(state_to):
 	if state_to == "grappling":
 		cc = "grappling"
 		$grappling_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
+		$moving_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
 		%PinJoint3D.set_node_b("player_2/grappling_physicsbody")
+		
+		if \
+		$grappling_physicsbody.process_mode == Node.PROCESS_MODE_INHERIT \
+		and $moving_physicsbody.process_mode == Node.PROCESS_MODE_DISABLED \
+		and cc == "grappling":
+			print()
+			print()
+			print()
+			print("sdoujfg")
 		
 	elif state_to == "moving":
 		cc = "moving"
 		$grappling_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
+		$moving_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
 		%PinJoint3D.set_node_b("extra")
 		
 
@@ -56,12 +72,12 @@ func change_state(state_to):
 func moving_controller():
 	stuff_holder.position = moving_physicsbody.position
 	grappling_physicsbody.position = moving_physicsbody.position
-	grappling_physicsbody.linear_velocity = Vector3.ZERO
+
 
 func grappling_controller():
 	stuff_holder.position = grappling_physicsbody.position
 	moving_physicsbody.position = grappling_physicsbody.position
-	moving_physicsbody.velocity = Vector3.ZERO
+
 
 
 
