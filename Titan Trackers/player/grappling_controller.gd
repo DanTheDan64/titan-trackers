@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 @onready var cam = $"../stuff_holder/Camera3D"
-
+var gravity = 12
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,6 +10,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	linear_velocity.y -= gravity * delta
+	
+	
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
@@ -18,7 +21,8 @@ func _physics_process(delta):
 	#	linear_velocity = Vector3.ZERO
 	#	global_rotation_degrees = Vector3.ZERO
 	#	$"..".change_state()
-	angular_velocity = Vector3.ZERO
+	
+	#angular_velocity = Vector3.ZERO
 	if Input.is_action_pressed("shoot"):
 		if direction:
 			linear_velocity += direction

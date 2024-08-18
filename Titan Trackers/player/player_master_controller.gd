@@ -58,8 +58,8 @@ func change_state(state_to):
 		and cc == "grappling":
 			print()
 			print()
-			print()
-			print("sdoujfg")
+			print(%PinJoint3D.get_node_a())
+			print(%PinJoint3D.get_node_b())
 		
 	elif state_to == "moving":
 		cc = "moving"
