@@ -35,6 +35,7 @@ func _physics_process(delta):
 	
 	#shoot grapple, go to grapple state
 	if Input.is_action_just_pressed("fire_hook"):
+		print("1")
 		var space_state = get_world_3d().direct_space_state
 		
 		#shoot raycast forwards and find point hit

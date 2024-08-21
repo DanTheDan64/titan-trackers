@@ -15,7 +15,8 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	if Input.is_action_pressed("fire_hook"):
+	if Input.is_action_just_released("fire_hook"):
+		print("2")
 		$"../moving_physicsbody".velocity = linear_velocity * 1.1
 		linear_velocity = Vector3.ZERO
 		$"..".change_state("moving")
