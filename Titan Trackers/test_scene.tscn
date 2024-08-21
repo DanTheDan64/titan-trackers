@@ -138,7 +138,7 @@ material_override = SubResource("StandardMaterial3D_021oi")
 mesh = SubResource("BoxMesh_fqadi")
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, 28.1435, 25.9674, -4.0442)
+transform = Transform3D(9.80102, 0, 28.84, 0, 10.534, 0, -3.86072, 0, 73.2146, -16.8565, 193.967, -4.0442)
 collision_mask = 0
 metadata/_edit_group_ = true
 

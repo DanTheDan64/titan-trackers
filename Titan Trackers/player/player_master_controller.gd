@@ -51,7 +51,7 @@ func change_state(state_to):
 		cc = "grappling"
 		grappling_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
 		moving_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
-		%PinJoint3D.set_node_b("player_2/grappling_physicsbody")
+		%PinJoint3D.set_node_b($"../player_2/grappling_physicsbody".get_path())
 		
 		#see if variables are right
 		if \
@@ -68,7 +68,7 @@ func change_state(state_to):
 		cc = "moving"
 		grappling_physicsbody.process_mode = Node.PROCESS_MODE_DISABLED
 		moving_physicsbody.process_mode = Node.PROCESS_MODE_INHERIT
-		%PinJoint3D.set_node_b("extra")
+		%PinJoint3D.set_node_b($"../extra".get_path())
 
 
 #have moving_physicsbody's siblings follow it

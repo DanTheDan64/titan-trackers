@@ -12,9 +12,15 @@ func _ready():
 func _physics_process(delta):
 	linear_velocity.y -= gravity * delta
 	
-	
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	if Input.is_action_pressed("fire_hook"):
+		$"../moving_physicsbody".velocity = linear_velocity * 1.1
+		linear_velocity = Vector3.ZERO
+		$"..".change_state("moving")
+		return
+	
 	
 	#boost the player forwards
 	if Input.is_action_pressed("shoot"):
