@@ -1,4 +1,6 @@
-res://test_scene.tscn
-res://player.tscn
-res://player/player_master_controller.gd
+res://player_old.tscn
 res://player/grappling_controller.gd
+res://player/moving_controller.gd
+res://test_scene.tscn
+res://player_old.gd
+res://player/player_master_controller.gd
