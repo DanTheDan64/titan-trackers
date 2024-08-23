@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 @onready var cam = $"../stuff_holder/Camera3D"
-var gravity = 12
+var gravity = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,6 @@ func _physics_process(delta):
 	var direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if Input.is_action_just_released("fire_hook"):
-		print("2")
 		$"../moving_physicsbody".velocity = linear_velocity * 1.1
 		linear_velocity = Vector3.ZERO
 		$"..".change_state("moving")
