@@ -1,5 +1,4 @@
 res://test_scene.tscn
-res://player/grappling_controller.gd
-res://player_old.tscn
-res://player_3.gd
 res://player_old/player_old.tscn
+res://player_3.gd
+res://erth.tscn

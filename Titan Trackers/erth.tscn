@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgxkrow3r1mta"]
+
+[ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://icon.svg" id="1_j7trm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6rgl"]
+albedo_texture = ExtResource("1_j7trm")
+
+[sub_resource type="BoxMesh" id="BoxMesh_c8d4q"]
+size = Vector3(4, 4, 4)
+
+[node name="erth" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_c6rgl")
+mesh = SubResource("BoxMesh_c8d4q")

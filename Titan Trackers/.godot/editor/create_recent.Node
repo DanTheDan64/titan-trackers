@@ -1,7 +1,7 @@
-Label
 CollisionShape3D
 MeshInstance3D
 StaticBody3D
+Label
 Marker3D
 Camera3D
 CharacterBody3D
