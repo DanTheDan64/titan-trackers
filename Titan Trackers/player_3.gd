@@ -72,7 +72,6 @@ func moving(delta, direction, direction_flat):
 	$Marker3D.rotation_degrees = Vector3(0, cam.rotation_degrees.y, 0)
 	
 	#movement
-	
 	velocity.x = move_toward(velocity.x, direction_flat.x * max_speed, accell * delta)
 	velocity.z = move_toward(velocity.z, direction_flat.z * max_speed, accell * delta)
 	
@@ -84,20 +83,21 @@ func moving(delta, direction, direction_flat):
 		
 		var query = PhysicsRayQueryParameters3D.create(
 		cam.global_position,
-		-cam.transform.basis.z * 4000)
+		cam.global_position + -cam.transform.basis.z * 4000)
 		var result = space_state.intersect_ray(query)
 		
 		if not result.is_empty():
 			shoot_to = result.position
 			state = "grappling"
-			var aa = preload("res://erth.tscn").instantiate()
-			aa.position = result.position
-			get_parent().add_child(aa)
 			return
 
 
 func grappling(delta):
 	velocity += (shoot_to - position).normalized() * delta * 150
+	
+	velocity.x = move_toward(velocity.x, 0, accell * delta)
+	velocity.z = move_toward(velocity.z, 0, accell * delta)
+	
 	if Input.is_action_just_released("fire_hook"):
 		state = "moving"
 
