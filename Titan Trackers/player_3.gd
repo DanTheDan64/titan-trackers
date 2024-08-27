@@ -1,17 +1,27 @@
 extends CharacterBody3D
 
+#want to do:
+#decide what states are wanted
+#add states
+#add helper func for non grapple states going to grapple
+#
+#
+#
 
-var max_speed = 8
-var accell = 30
-var jump_velocity = 6
 
-var gravity = 12
+var gravity = 50
 
 var state = "moving"
 var shoot_to = Vector3.ZERO
 
+#camera
 @onready var cam = $Camera3D
 var sens = 0.2
+
+#movement
+var max_speed = 8
+var accell = 30
+var jump_velocity = 6
 
 @onready var input_dir = Input.get_vector("left", "right", "up", "down")
 @onready var direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -20,7 +30,6 @@ var sens = 0.2
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
 
 
 func _input(event):
@@ -45,7 +54,7 @@ func _physics_process(delta):
 	
 	var query = PhysicsRayQueryParameters3D.create(
 	cam.global_position,
-	cam.global_position + -cam.transform.basis.z * 4000)
+	cam.global_position + -cam.transform.basis.z * 500)
 	var result = space_state.intersect_ray(query)
 	
 	if result: $"../2d/Sprite2D".modulate = Color.RED
@@ -54,13 +63,10 @@ func _physics_process(delta):
 	#gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		accell = 30
+		accell = 40
 	else:
 		accell = 90
 	
-	input_dir = Input.get_vector("left", "right", "up", "down")
-	direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	direction_flat = ($Marker3D.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	#jump/boost
 	if Input.is_action_just_pressed("jump"):
@@ -69,7 +75,7 @@ func _physics_process(delta):
 	
 	match state:
 		"grappling": grappling(delta)
-		_: moving(delta, direction, direction_flat, result)
+		_: moving(delta, result)
 		
 	
 	$"../2d/Label".text = state
@@ -77,11 +83,15 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func moving(delta, direction, direction_flat, result):
+func moving(delta, result):
 	#thing for moving
 	$Marker3D.rotation_degrees = Vector3(0, cam.rotation_degrees.y, 0)
 	
 	#movement
+	input_dir = Input.get_vector("left", "right", "up", "down")
+	direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction_flat = ($Marker3D.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
 	velocity.x = move_toward(velocity.x, direction_flat.x * max_speed, accell * delta)
 	velocity.z = move_toward(velocity.z, direction_flat.z * max_speed, accell * delta)
 	
@@ -103,8 +113,6 @@ func grappling(delta):
 	
 	if Input.is_action_just_released("fire_hook"):
 		state = "moving"
-
-
 
 
 

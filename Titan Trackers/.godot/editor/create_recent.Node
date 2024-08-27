@@ -1,5 +1,6 @@
-MeshInstance3D
+RayCast3D
 CollisionShape3D
+MeshInstance3D
 StaticBody3D
 Label
 Marker3D
@@ -8,5 +9,4 @@ CharacterBody3D
 Node
 Camera2D
 Sprite2D
-RayCast3D
 RigidBody3D

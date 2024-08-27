@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=19 format=3 uid="uid://bnqe2scl2i4rg"]
 
 [ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://icon.svg" id="2_jp5t4"]
 [ext_resource type="Script" path="res://player_3.gd" id="2_wj0m0"]
@@ -26,19 +26,25 @@ size = Vector3(40, 5, 40)
 size = Vector3(40, 5, 40)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4dq1x"]
-size = Vector3(50, 5, 200)
+size = Vector3(50, 5, 500)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmdgl"]
 albedo_texture = ExtResource("2_jp5t4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_vqvrn"]
-size = Vector3(50, 5, 200)
+size = Vector3(50, 5, 500)
 
 [sub_resource type="BoxMesh" id="BoxMesh_x84fl"]
 size = Vector3(16, 40, 16)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uur3i"]
 size = Vector3(16, 40, 16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6jl8c"]
+size = Vector3(50, 50, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rl4ip"]
+size = Vector3(50, 50, 50)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
@@ -237,7 +243,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D17" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, 0, 0.224144, -0.836516, 0.5, -53.2352, 327, -180.349)
+transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, 0, 0.224144, -0.836516, 0.5, 370.765, 486, 94.651)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D17"]
@@ -595,6 +601,48 @@ mesh = SubResource("BoxMesh_x84fl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D52"]
 shape = SubResource("BoxShape3D_uur3i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 539, 217, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D"]
+mesh = SubResource("BoxMesh_6jl8c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D"]
+shape = SubResource("BoxShape3D_rl4ip")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1057, 401, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D2"]
+mesh = SubResource("BoxMesh_6jl8c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D2"]
+shape = SubResource("BoxShape3D_rl4ip")
+
+[node name="StaticBody3D53" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1692, 458, 314)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D53"]
+mesh = SubResource("BoxMesh_6jl8c")
+skeleton = NodePath("../../StaticBody3D53")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D53"]
+shape = SubResource("BoxShape3D_rl4ip")
+
+[node name="StaticBody3D54" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2210, 786, 850)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D54"]
+mesh = SubResource("BoxMesh_6jl8c")
+skeleton = NodePath("../../StaticBody3D53")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D54"]
+shape = SubResource("BoxShape3D_rl4ip")
 
 [node name="2d" type="Node" parent="."]
 
