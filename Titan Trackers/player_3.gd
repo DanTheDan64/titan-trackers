@@ -41,6 +41,16 @@ func _input(event):
 
 
 func _physics_process(delta):
+	var space_state = get_world_3d().direct_space_state
+	
+	var query = PhysicsRayQueryParameters3D.create(
+	cam.global_position,
+	cam.global_position + -cam.transform.basis.z * 4000)
+	var result = space_state.intersect_ray(query)
+	
+	if result: $"../2d/Sprite2D".modulate = Color.RED
+	else: $"../2d/Sprite2D".modulate = Color.WHITE
+	
 	#gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -59,7 +69,7 @@ func _physics_process(delta):
 	
 	match state:
 		"grappling": grappling(delta)
-		_: moving(delta, direction, direction_flat)
+		_: moving(delta, direction, direction_flat, result)
 		
 	
 	$"../2d/Label".text = state
@@ -67,7 +77,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func moving(delta, direction, direction_flat):
+func moving(delta, direction, direction_flat, result):
 	#thing for moving
 	$Marker3D.rotation_degrees = Vector3(0, cam.rotation_degrees.y, 0)
 	
@@ -78,13 +88,6 @@ func moving(delta, direction, direction_flat):
 	
 	#shoot grapple, go to grapple state
 	if Input.is_action_just_pressed("fire_hook"):
-		var space_state = get_world_3d().direct_space_state
-		
-		
-		var query = PhysicsRayQueryParameters3D.create(
-		cam.global_position,
-		cam.global_position + -cam.transform.basis.z * 4000)
-		var result = space_state.intersect_ray(query)
 		
 		if not result.is_empty():
 			shoot_to = result.position
