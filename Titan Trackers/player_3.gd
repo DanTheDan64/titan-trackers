@@ -8,24 +8,43 @@ extends CharacterBody3D
 #
 #
 
+enum STATES {
+	MOVING,
+	SNAKING,
+	JUMPING,
+	GRAPPLING,
+	AIRBORN
+}
 
-var gravity = 50
+var state: STATES = STATES.MOVING
 
-var state = "moving"
-var shoot_to = Vector3.ZERO
+var gravity: int = 30
+
 
 #camera
-@onready var cam = $Camera3D
-var sens = 0.2
+@onready var cam: Object = $Camera3D
+var sens: int = 0.2
+
+#objects
+@onready var crosshair: Object = $"../2d/Sprite2D"
+@onready var movement_orienter: Object = $movement_orienter
 
 #movement
-var max_speed = 8
-var accell = 30
-var jump_velocity = 6
+var max_speed: int = 8
+var accell: int = 30
+var jump_velocity: int = 6
 
-@onready var input_dir = Input.get_vector("left", "right", "up", "down")
-@onready var direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-@onready var direction_flat = ($Marker3D.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+@onready var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
+@onready var direction: Vector3 = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+@onready var direction_flat: Vector3 = (movement_orienter.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+#grappling
+var shoot_to = Vector3.ZERO
+
+var held_pos: Vector3 = Vector3.ZERO
+var coyote_time: float = 0.2
+var grapple_range: int = 800
+var pull_strength: int = 150
 
 
 func _ready():
@@ -50,15 +69,21 @@ func _input(event):
 
 
 func _physics_process(delta):
+	#shoot ray out to see if it can grapple and where to grapple around
 	var space_state = get_world_3d().direct_space_state
 	
 	var query = PhysicsRayQueryParameters3D.create(
 	cam.global_position,
-	cam.global_position + -cam.transform.basis.z * 500)
+	cam.global_position + -cam.transform.basis.z * grapple_range)
 	var result = space_state.intersect_ray(query)
 	
-	if result: $"../2d/Sprite2D".modulate = Color.RED
-	else: $"../2d/Sprite2D".modulate = Color.WHITE
+	
+	#grappling coyote time
+	if result: 
+		crosshair.modulate = Color.RED
+		held_pos = result.position
+		$grapple_coyote_time.start(coyote_time)
+	
 	
 	#gravity
 	if not is_on_floor():
@@ -74,23 +99,23 @@ func _physics_process(delta):
 			velocity.y = jump_velocity
 	
 	match state:
-		"grappling": grappling(delta)
+		STATES.GRAPPLING: grappling(delta)
 		_: moving(delta, result)
-		
 	
-	$"../2d/Label".text = state
+	
+	
 	
 	move_and_slide()
 
 
 func moving(delta, result):
 	#thing for moving
-	$Marker3D.rotation_degrees = Vector3(0, cam.rotation_degrees.y, 0)
+	movement_orienter.rotation_degrees = Vector3(0, cam.rotation_degrees.y, 0)
 	
 	#movement
 	input_dir = Input.get_vector("left", "right", "up", "down")
 	direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	direction_flat = ($Marker3D.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction_flat = (movement_orienter.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	velocity.x = move_toward(velocity.x, direction_flat.x * max_speed, accell * delta)
 	velocity.z = move_toward(velocity.z, direction_flat.z * max_speed, accell * delta)
@@ -99,20 +124,31 @@ func moving(delta, result):
 	#shoot grapple, go to grapple state
 	if Input.is_action_just_pressed("fire_hook"):
 		
-		if not result.is_empty():
-			shoot_to = result.position
-			state = "grappling"
+		if held_pos:
+			shoot_to = held_pos
+			state = STATES.GRAPPLING
 			return
 
 
 func grappling(delta):
-	velocity += (shoot_to - position).normalized() * delta * 150
+	velocity += (shoot_to - position).normalized() * delta * pull_strength
 	
 	velocity.x = move_toward(velocity.x, 0, accell * delta)
 	velocity.z = move_toward(velocity.z, 0, accell * delta)
 	
 	if Input.is_action_just_released("fire_hook"):
-		state = "moving"
+		state = STATES.MOVING
+
+
+func _on_grapple_coyote_time_timeout():
+	crosshair.modulate = Color.WHITE
+	held_pos = Vector3.ZERO
+
+
+
+
+
+
 
 
 

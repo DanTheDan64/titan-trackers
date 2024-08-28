@@ -75,8 +75,17 @@ mesh = SubResource("CapsuleMesh_lq231")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10623, 0)
 
-[node name="Marker3D" type="Marker3D" parent="CharacterBody3D"]
+[node name="movement_orienter" type="Marker3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="grapple_coyote_time" type="Timer" parent="CharacterBody3D"]
+one_shot = true
+
+[node name="state_controller" type="Node" parent="CharacterBody3D"]
+
+[node name="moving" type="Node" parent="CharacterBody3D/state_controller"]
+
+[node name="grappling" type="Node" parent="CharacterBody3D/state_controller"]
 
 [node name="terrain" type="Node" parent="."]
 
@@ -123,7 +132,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D12" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -33, 163, 45)
+transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -33, 215, -9)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D12"]
@@ -273,7 +282,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D20" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 7.45058e-09, -0.224144, 0.836516, 0.5, 23.6068, 163, 145.549)
+transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 7.45058e-09, -0.224144, 0.836516, 0.5, 23.6068, 163, 94.549)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D20"]
@@ -659,3 +668,5 @@ offset_right = -496.0
 offset_bottom = -312.0
 theme_override_font_sizes/font_size = 96
 text = "vghbjcy"
+
+[connection signal="timeout" from="CharacterBody3D/grapple_coyote_time" to="CharacterBody3D" method="_on_grapple_coyote_time_timeout"]
