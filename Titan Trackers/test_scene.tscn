@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=21 format=3 uid="uid://bnqe2scl2i4rg"]
 
 [ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://icon.svg" id="2_jp5t4"]
 [ext_resource type="Script" path="res://player_3.gd" id="2_wj0m0"]
@@ -46,6 +46,12 @@ size = Vector3(50, 50, 50)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rl4ip"]
 size = Vector3(50, 50, 50)
 
+[sub_resource type="BoxMesh" id="BoxMesh_c0aq1"]
+size = Vector3(10, 5, 1500)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46qcd"]
+size = Vector3(10, 5, 1500)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
 
@@ -61,22 +67,22 @@ spot_range = 4096.0
 environment = SubResource("Environment_h8gqh")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 128, 209)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 132, 209)
 script = ExtResource("2_wj0m0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("CapsuleShape3D_kd6ts")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("CapsuleMesh_lq231")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10623, 0)
+transform = Transform3D(0.587785, 0, 0.809017, 0, 1, 0, -0.809017, 0, 0.587785, 0, 0.106232, 0)
 
 [node name="movement_orienter" type="Marker3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="grapple_coyote_time" type="Timer" parent="CharacterBody3D"]
 one_shot = true
@@ -365,9 +371,6 @@ shape = SubResource("BoxShape3D_uur3i")
 transform = Transform3D(0.612372, -0.353553, -0.707107, 0.5, 0.866025, 0, 0.612372, -0.353553, 0.707107, -191.79, 526, 58.0783)
 metadata/_edit_group_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D28"]
-mesh = SubResource("BoxMesh_x84fl")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D28"]
 shape = SubResource("BoxShape3D_uur3i")
 
@@ -511,6 +514,11 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D42"]
 shape = SubResource("BoxShape3D_uur3i")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="terrain/StaticBody3D42"]
+transform = Transform3D(0.595035, 0.771811, 0.224144, -0.288848, 0.465625, -0.836517, -0.75, 0.433012, 0.5, -140.184, -156.838, -68.8541)
+mesh = SubResource("BoxMesh_x84fl")
+skeleton = NodePath("../../StaticBody3D28")
+
 [node name="StaticBody3D43" type="StaticBody3D" parent="terrain"]
 transform = Transform3D(0.836516, -0.482963, 0.258819, 0.5, 0.866025, 1.49011e-08, -0.224144, 0.12941, 0.965925, -352.304, 526, 34.0984)
 metadata/_edit_group_ = true
@@ -653,6 +661,26 @@ skeleton = NodePath("../../StaticBody3D53")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D54"]
 shape = SubResource("BoxShape3D_rl4ip")
 
+[node name="StaticBody3D55" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 188, 1029)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D55"]
+mesh = SubResource("BoxMesh_c0aq1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D55"]
+shape = SubResource("BoxShape3D_46qcd")
+
+[node name="StaticBody3D56" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 188, 1029)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D56"]
+mesh = SubResource("BoxMesh_c0aq1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D56"]
+shape = SubResource("BoxShape3D_46qcd")
+
 [node name="2d" type="Node" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="2d"]
@@ -660,13 +688,5 @@ shape = SubResource("BoxShape3D_rl4ip")
 [node name="Sprite2D" type="Sprite2D" parent="2d"]
 scale = Vector2(0.0625, 0.0625)
 texture = SubResource("CompressedTexture2D_wxa7q")
-
-[node name="Label" type="Label" parent="2d"]
-offset_left = -944.0
-offset_top = -520.0
-offset_right = -496.0
-offset_bottom = -312.0
-theme_override_font_sizes/font_size = 96
-text = "vghbjcy"
 
 [connection signal="timeout" from="CharacterBody3D/grapple_coyote_time" to="CharacterBody3D" method="_on_grapple_coyote_time_timeout"]

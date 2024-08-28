@@ -1,9 +1,9 @@
-Node
-Timer
-RayCast3D
 CollisionShape3D
 MeshInstance3D
 StaticBody3D
+Node
+Timer
+RayCast3D
 Label
 Marker3D
 Camera3D

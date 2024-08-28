@@ -10,7 +10,7 @@ extends CharacterBody3D
 
 enum STATES {
 	MOVING,
-	SNAKING,
+	SNEAKING,
 	JUMPING,
 	GRAPPLING,
 	AIRBORN
@@ -23,7 +23,7 @@ var gravity: int = 30
 
 #camera
 @onready var cam: Object = $Camera3D
-var sens: int = 0.2
+var sens: float = 0.2
 
 #objects
 @onready var crosshair: Object = $"../2d/Sprite2D"
@@ -78,8 +78,8 @@ func _physics_process(delta):
 	var result = space_state.intersect_ray(query)
 	
 	
-	#grappling coyote time
-	if result: 
+	#setting grapple around and coyote time
+	if result and state == 0:
 		crosshair.modulate = Color.RED
 		held_pos = result.position
 		$grapple_coyote_time.start(coyote_time)
@@ -103,8 +103,6 @@ func _physics_process(delta):
 		_: moving(delta, result)
 	
 	
-	
-	
 	move_and_slide()
 
 
@@ -123,8 +121,10 @@ func moving(delta, result):
 	
 	#shoot grapple, go to grapple state
 	if Input.is_action_just_pressed("fire_hook"):
-		
+		crosshair.modulate = Color.GREEN
 		if held_pos:
+			$grapple_coyote_time.stop()
+			
 			shoot_to = held_pos
 			state = STATES.GRAPPLING
 			return
@@ -137,6 +137,7 @@ func grappling(delta):
 	velocity.z = move_toward(velocity.z, 0, accell * delta)
 	
 	if Input.is_action_just_released("fire_hook"):
+		crosshair.modulate = Color.WHITE
 		state = STATES.MOVING
 
 
