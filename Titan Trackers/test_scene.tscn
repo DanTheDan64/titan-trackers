@@ -1,6 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://bnqe2scl2i4rg"]
 
 [ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://icon.svg" id="2_jp5t4"]
+[ext_resource type="Script" path="res://Retical/retical.gd" id="2_p1cwd"]
 [ext_resource type="Script" path="res://player_3.gd" id="2_wj0m0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8j0qs"]
@@ -52,9 +53,6 @@ size = Vector3(10, 5, 1500)
 [sub_resource type="BoxShape3D" id="BoxShape3D_46qcd"]
 size = Vector3(10, 5, 1500)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
-
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
@@ -92,6 +90,47 @@ one_shot = true
 [node name="moving" type="Node" parent="CharacterBody3D/state_controller"]
 
 [node name="grappling" type="Node" parent="CharacterBody3D/state_controller"]
+
+[node name="UserRetical" type="Control" parent="CharacterBody3D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="retical" type="CenterContainer" parent="CharacterBody3D/UserRetical"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_p1cwd")
+DOT_RADIUS = 3.0
+
+[node name="Top" type="Line2D" parent="CharacterBody3D/UserRetical/retical"]
+points = PackedVector2Array(0, -5, 0, -15)
+width = 2.0
+
+[node name="Right" type="Line2D" parent="CharacterBody3D/UserRetical/retical"]
+points = PackedVector2Array(5, 0, 15, 0)
+width = 2.0
+
+[node name="Bottom" type="Line2D" parent="CharacterBody3D/UserRetical/retical"]
+points = PackedVector2Array(0, 5, 0, 15)
+width = 2.0
+
+[node name="Left" type="Line2D" parent="CharacterBody3D/UserRetical/retical"]
+points = PackedVector2Array(-5, 0, -15, 0)
+width = 2.0
 
 [node name="terrain" type="Node" parent="."]
 
@@ -680,13 +719,5 @@ mesh = SubResource("BoxMesh_c0aq1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D56"]
 shape = SubResource("BoxShape3D_46qcd")
-
-[node name="2d" type="Node" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="2d"]
-
-[node name="Sprite2D" type="Sprite2D" parent="2d"]
-scale = Vector2(0.0625, 0.0625)
-texture = SubResource("CompressedTexture2D_wxa7q")
 
 [connection signal="timeout" from="CharacterBody3D/grapple_coyote_time" to="CharacterBody3D" method="_on_grapple_coyote_time_timeout"]

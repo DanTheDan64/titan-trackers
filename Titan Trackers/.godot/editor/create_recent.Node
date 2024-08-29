@@ -1,3 +1,6 @@
+Line2D
+CenterContainer
+Control
 CollisionShape3D
 MeshInstance3D
 StaticBody3D
@@ -10,4 +13,3 @@ Camera3D
 CharacterBody3D
 Camera2D
 Sprite2D
-RigidBody3D

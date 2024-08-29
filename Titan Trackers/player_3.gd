@@ -26,8 +26,8 @@ var gravity: int = 30
 var sens: float = 0.2
 
 #objects
-@onready var crosshair: Object = $"../2d/Sprite2D"
 @onready var movement_orienter: Object = $movement_orienter
+@onready var retical = $UserRetical/retical
 
 #movement
 var max_speed: int = 8
@@ -49,7 +49,8 @@ var pull_strength: int = 150
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+	retical.DOT_COLOR = Color.BLUE
+	
 
 func _input(event):
 	#camera movement
@@ -80,7 +81,7 @@ func _physics_process(delta):
 	
 	#setting grapple around and coyote time
 	if result and state == 0:
-		crosshair.modulate = Color.RED
+		retical.DOT_COLOR = Color.RED
 		held_pos = result.position
 		$grapple_coyote_time.start(coyote_time)
 	
@@ -121,7 +122,8 @@ func moving(delta, result):
 	
 	#shoot grapple, go to grapple state
 	if Input.is_action_just_pressed("fire_hook"):
-		crosshair.modulate = Color.GREEN
+		retical.DOT_COLOR = Color.GREEN
+		retical.queue_redraw()
 		if held_pos:
 			$grapple_coyote_time.stop()
 			
@@ -137,12 +139,13 @@ func grappling(delta):
 	velocity.z = move_toward(velocity.z, 0, accell * delta)
 	
 	if Input.is_action_just_released("fire_hook"):
-		crosshair.modulate = Color.WHITE
+		retical.DOT_COLOR = Color.WHITE
 		state = STATES.MOVING
 
 
 func _on_grapple_coyote_time_timeout():
-	crosshair.modulate = Color.WHITE
+	retical.DOT_COLOR = Color.WHITE
+	retical.queue_redraw()
 	held_pos = Vector3.ZERO
 
 
