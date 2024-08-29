@@ -26,13 +26,13 @@ size = Vector3(40, 5, 40)
 size = Vector3(40, 5, 40)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4dq1x"]
-size = Vector3(50, 5, 500)
+size = Vector3(50, 5, 1200)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmdgl"]
 albedo_texture = ExtResource("2_jp5t4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_vqvrn"]
-size = Vector3(50, 5, 500)
+size = Vector3(50, 5, 1200)
 
 [sub_resource type="BoxMesh" id="BoxMesh_x84fl"]
 size = Vector3(16, 40, 16)
@@ -86,12 +86,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="grapple_coyote_time" type="Timer" parent="CharacterBody3D"]
 one_shot = true
-
-[node name="state_controller" type="Node" parent="CharacterBody3D"]
-
-[node name="moving" type="Node" parent="CharacterBody3D/state_controller"]
-
-[node name="grappling" type="Node" parent="CharacterBody3D/state_controller"]
 
 [node name="terrain" type="Node" parent="."]
 
@@ -688,5 +682,13 @@ shape = SubResource("BoxShape3D_46qcd")
 [node name="Sprite2D" type="Sprite2D" parent="2d"]
 scale = Vector2(0.0625, 0.0625)
 texture = SubResource("CompressedTexture2D_wxa7q")
+
+[node name="Label" type="Label" parent="2d"]
+offset_left = -928.0
+offset_top = -512.0
+offset_right = -320.0
+offset_bottom = -256.0
+theme_override_font_sizes/font_size = 96
+text = "tg yjstgtyjrtj"
 
 [connection signal="timeout" from="CharacterBody3D/grapple_coyote_time" to="CharacterBody3D" method="_on_grapple_coyote_time_timeout"]
