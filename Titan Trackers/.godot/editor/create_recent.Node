@@ -2,6 +2,7 @@ Label
 CollisionShape3D
 MeshInstance3D
 StaticBody3D
+HSlider
 Node
 Timer
 RayCast3D

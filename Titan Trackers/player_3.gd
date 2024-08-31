@@ -24,8 +24,16 @@ var sens: float = 0.2
 @onready var movement_orienter: Object = $movement_orienter
 
 #movement
-var max_speed: int = 8
-var accell: int = 30
+var state_stats = {
+	STATES.MOVING: [2, 12],
+	STATES.JUMPING: [1, 12],
+	STATES.SNEAKING: [8, 0.8],
+	STATES.GRAPPLING: [0, 0.5],
+	STATES.AIRBORN: [0.1, 0.1]
+}
+
+var friction: float = state_stats[state][0]
+var accell: float = state_stats[state][0]
 var jump_velocity: int = 6
 
 @onready var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
@@ -42,15 +50,6 @@ var pull_strength: int = 150
 
 var result: Dictionary
 
-
-var state_stats = {
-	STATES.MOVING: [8, 50],
-	STATES.JUMPING: [10, 20],
-	STATES.SNEAKING: [5, 400],
-	STATES.GRAPPLING: [0, 40],
-	STATES.AIRBORN: [12, 30]
-}
-
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -64,7 +63,7 @@ func _input(event):
 	elif InputEvent:
 		if Input.is_action_pressed("escape"):
 			get_tree().quit()
-		
+
 
 
 func _physics_process(delta):
@@ -81,7 +80,7 @@ func _physics_process(delta):
 		STATES.GRAPPLING: grappling(delta)
 		STATES.AIRBORN: airborn(delta)
 	
-	show_state()
+	$"../2d/Label2".text = str(snapped(velocity.distance_to(Vector3.ZERO), 0.1))
 	
 	move_and_slide()
 
@@ -100,7 +99,7 @@ func jumping(delta):
 	check_boost(delta)
 	
 	if is_on_floor():
-		state = STATES.MOVING
+		update_state(STATES.MOVING)
 
 
 func sneaking(delta):
@@ -110,9 +109,9 @@ func sneaking(delta):
 	
 	if Input.is_action_just_released("sneak"):
 		if is_on_floor():
-			state = STATES.MOVING
+			update_state(STATES.MOVING)
 		else:
-			state = STATES.JUMPING
+			update_state(STATES.JUMPING)
 
 
 func grappling(delta):
@@ -123,8 +122,7 @@ func grappling(delta):
 	
 	if Input.is_action_just_released("fire_hook"):
 		crosshair.modulate = Color.WHITE
-		state = STATES.AIRBORN
-		update_state()
+		update_state(STATES.AIRBORN)
 
 
 func airborn(delta):
@@ -132,7 +130,7 @@ func airborn(delta):
 	check_boost(delta)
 	
 	if is_on_floor():
-		state = STATES.MOVING
+		update_state(STATES.MOVING)
 
 
 
@@ -144,21 +142,23 @@ func movement(delta):
 	direction = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	direction_flat = (movement_orienter.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	velocity.x = move_toward(velocity.x, direction_flat.x * max_speed, accell * delta)
-	velocity.z = move_toward(velocity.z, direction_flat.z * max_speed, accell * delta)
+	velocity += ((direction_flat * accell) - (velocity * friction)) * delta
+	
+	#velocity.x = move_toward(velocity.x, direction_flat.x * max_speed, accell * delta)
+	#velocity.z = move_toward(velocity.z, direction_flat.z * max_speed, accell * delta)
 
 
 func check_jump():
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump"):
 		velocity.y = jump_velocity
-		state = STATES.JUMPING
-		update_state()
+		update_state(STATES.JUMPING)
+	elif not is_on_floor():
+		update_state(STATES.JUMPING)
 
 
 func check_sneak():
 	if Input.is_action_just_pressed("sneak"):
-		state = STATES.SNEAKING
-		update_state()
+		update_state(STATES.SNEAKING)
 
 
 func check_and_start_grapple():
@@ -182,8 +182,7 @@ func check_and_start_grapple():
 		if held_pos:
 			#go to grapple state
 			shoot_to = held_pos
-			state = STATES.GRAPPLING
-			update_state()
+			update_state(STATES.GRAPPLING)
 			return
 
 
@@ -191,24 +190,25 @@ func check_boost(delta):
 	if Input.is_action_just_pressed("jump"):
 			if not is_on_floor():
 				if direction:
-					velocity += direction * 250
+					velocity += direction * 25
 				else:
-					velocity += -cam.transform.basis.z * 250
+					velocity += -cam.transform.basis.z * 25
 
 
 
-func update_state():
-	max_speed = state_stats[state][0]
+func update_state(state_to):
+	state = state_to
+	friction = state_stats[state][0]
 	accell = state_stats[state][1]
-
-
-func show_state():
+	
 	match state:
 		STATES.MOVING: $"../2d/Label".text = "moving"
 		STATES.JUMPING: $"../2d/Label".text = "jumping"
 		STATES.SNEAKING: $"../2d/Label".text = "sneaking"
 		STATES.GRAPPLING: $"../2d/Label".text = "grappling"
 		STATES.AIRBORN: $"../2d/Label".text = "airborn"
+
+
 
 #signals
 func _on_grapple_coyote_time_timeout():
