@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=27 format=3 uid="uid://bnqe2scl2i4rg"]
 
-[ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://icon.svg" id="2_jp5t4"]
-[ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://texture_09.png" id="2_oh5r8"]
+[ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://textures/icon.svg" id="2_jp5t4"]
+[ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://textures/texture_09.png" id="2_oh5r8"]
 [ext_resource type="Script" path="res://player_3.gd" id="2_wj0m0"]
+[ext_resource type="PackedScene" uid="uid://baphmcimphom0" path="res://bullet.tscn" id="4_a7uvv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8j0qs"]
 
@@ -53,15 +54,18 @@ size = Vector3(10, 5, 1500)
 [sub_resource type="BoxShape3D" id="BoxShape3D_46qcd"]
 size = Vector3(10, 5, 1500)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
-
 [sub_resource type="BoxMesh" id="BoxMesh_kcjtk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0a7ug"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
+
+[sub_resource type="BoxMesh" id="BoxMesh_kdtqr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x7dhu"]
+
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.822543, -0.298169, 0.484271, 0.0074801, 0.857134, 0.515039, -0.568654, -0.420019, 0.70726, 247.732, 193.805, 1059.92)
@@ -72,25 +76,27 @@ spot_range = 4096.0
 environment = SubResource("Environment_h8gqh")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 132, 209)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 130, 209)
 script = ExtResource("2_wj0m0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_kd6ts")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_lq231")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(0.587785, 0, 0.809017, 0, 1, 0, -0.809017, 0, 0.587785, 0, 0.106232, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="movement_orienter" type="Marker3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="grapple_coyote_time" type="Timer" parent="CharacterBody3D"]
 one_shot = true
+
+[node name="Timer" type="Timer" parent="CharacterBody3D"]
 
 [node name="terrain" type="Node" parent="."]
 
@@ -147,7 +153,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D7" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 64, 371, -1061)
+transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 139, 401, -718)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D7"]
@@ -157,7 +163,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D8" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -33, 327, -727)
+transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -33, 327, -474)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D8"]
@@ -167,7 +173,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.433013, 0.25, 0.866026, 0.5, 0.866025, 0, -0.75, 0.433013, -0.5, 100.593, 151, -634.603)
+transform = Transform3D(-0.433013, 0.25, 0.866025, 0.5, 0.866025, 2.51323e-07, -0.75, 0.433013, -0.5, 100.593, 151, -381.603)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D5"]
@@ -176,18 +182,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D5"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D6" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.12941, 0.482963, 0.866025, 0.965926, 0.258819, 0, -0.224144, 0.836516, -0.5, 5.33252, 192, -467.598)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D6"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D6"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D13" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.12941, 0.482963, 0.866025, 0.965926, 0.258819, 0, -0.224144, 0.836516, -0.5, 287.657, 163, -630.598)
+transform = Transform3D(-0.12941, 0.482963, 0.866025, 0.965926, 0.258819, 2.80155e-07, -0.224144, 0.836516, -0.5, 287.657, 163, -377.598)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D13"]
@@ -197,7 +193,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D9" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.433013, 0.25, 0.866026, 0.5, 0.866025, 0, -0.75, 0.433013, -0.5, -718.667, 371, -161.603)
+transform = Transform3D(-0.433013, 0.25, 0.866025, 0.5, 0.866025, 2.51323e-07, -0.75, 0.433013, -0.5, -363.667, 371, -161.603)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D9"]
@@ -206,18 +202,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D9"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D10" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.12941, 0.482963, 0.866025, 0.965926, 0.258819, 0, -0.224144, 0.836516, -0.5, -380.915, 327, -244.598)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D10"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D10"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D11" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.433012, -0.25, -0.866026, 0.5, 0.866025, 0, 0.75, -0.433013, 0.5, -534.743, 151, 209.656)
+transform = Transform3D(0.433012, -0.25, -0.866026, 0.5, 0.866025, -1.78814e-07, 0.75, -0.433013, 0.499999, -534.743, 151, 209.656)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D11"]
@@ -227,7 +213,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D14" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, 0, 0.224144, -0.836516, 0.5, -439.483, 192, 42.6511)
+transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, -5.54147e-07, 0.224144, -0.836516, 0.5, -439.483, 192, 42.6511)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D14"]
@@ -237,7 +223,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D15" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, 0, 0.224144, -0.836516, 0.5, -721.807, 163, 205.651)
+transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, -5.54147e-07, 0.224144, -0.836516, 0.5, -721.807, 163, 205.651)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D15"]
@@ -247,7 +233,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D16" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.433012, -0.25, -0.866026, 0.5, 0.866025, 0, 0.75, -0.433013, 0.5, 284.517, 371, -263.344)
+transform = Transform3D(0.433012, -0.25, -0.866026, 0.5, 0.866025, -1.78814e-07, 0.75, -0.433013, 0.499999, 284.517, 371, -263.344)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D16"]
@@ -257,7 +243,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D17" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, 0, 0.224144, -0.836516, 0.5, 370.765, 486, 94.651)
+transform = Transform3D(0.129409, -0.482963, -0.866025, 0.965926, 0.258819, -5.54147e-07, 0.224144, -0.836516, 0.5, 370.765, 486, 94.651)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D17"]
@@ -267,7 +253,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D18" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.433012, -0.25, 0.866025, 0.5, 0.866025, -1.29048e-08, -0.75, 0.433013, 0.5, -66.4572, 151, -18.4555)
+transform = Transform3D(0.433012, -0.25, 0.866026, 0.5, 0.866025, 1.8295e-07, -0.75, 0.433013, 0.499999, -66.4572, 151, -18.4555)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D18"]
@@ -277,7 +263,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D19" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 7.45058e-09, -0.224144, 0.836516, 0.5, -258.717, 192, -17.451)
+transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 5.54401e-07, -0.224144, 0.836516, 0.5, -258.717, 192, -17.451)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D19"]
@@ -287,7 +273,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D20" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 7.45058e-09, -0.224144, 0.836516, 0.5, 23.6068, 163, 94.549)
+transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 5.54401e-07, -0.224144, 0.836516, 0.5, 23.6068, 163, 94.549)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D20"]
@@ -296,28 +282,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D20"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D21" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.433012, -0.25, 0.866025, 0.5, 0.866025, -1.29048e-08, -0.75, 0.433013, 0.5, -885.717, 371, -491.456)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D21"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D21"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D23" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, -412, 371, -1061)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D23"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D23"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D24" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -509, 327, -727)
+transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, -154, 327, -474)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D24"]
@@ -327,7 +293,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D25" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.433013, 0.25, 0.866026, 0.5, 0.866025, 0, -0.75, 0.433013, -0.5, -375.407, 151, -634.603)
+transform = Transform3D(-0.433013, 0.25, 0.866025, 0.5, 0.866025, 2.51323e-07, -0.75, 0.433013, -0.5, -375.407, 151, -381.603)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D25"]
@@ -337,7 +303,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D26" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.12941, 0.482963, 0.866025, 0.965926, 0.258819, 0, -0.224144, 0.836516, -0.5, -188.343, 163, -630.598)
+transform = Transform3D(-0.12941, 0.482963, 0.866025, 0.965926, 0.258819, 2.80155e-07, -0.224144, 0.836516, -0.5, -188.343, 163, -377.598)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D26"]
@@ -346,18 +312,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D26"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D27" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.433012, -0.25, 0.866025, 0.5, 0.866025, -1.29048e-08, -0.75, 0.433013, 0.5, -1361.72, 371, -491.456)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D27"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D27"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D22" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 7.45058e-09, -0.224144, 0.836516, 0.5, -644.965, 327, -240.451)
+transform = Transform3D(0.129409, -0.482963, 0.866025, 0.965926, 0.258819, 5.54401e-07, -0.224144, 0.836516, 0.5, -289.965, 327, -240.451)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D22"]
@@ -366,95 +322,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D22"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D28" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.612372, -0.353553, -0.707107, 0.5, 0.866025, 0, 0.612372, -0.353553, 0.707107, -191.79, 526, 58.0783)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D28"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D29" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.183013, -0.683013, -0.707107, 0.965926, 0.258819, 0, 0.183013, -0.683013, 0.707107, -142.999, 567, -127.891)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D29"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D29"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D30" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.183013, -0.683013, -0.707107, 0.965926, 0.258819, 0, 0.183013, -0.683013, 0.707107, -373.516, 538, 102.626)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D30"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D30"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D31" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.612372, -0.353553, -0.707107, 0.5, 0.866025, 0, 0.612372, -0.353553, 0.707107, 477.133, 746, -610.845)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D31"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D31"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D32" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.183013, -0.683013, -0.707107, 0.965926, 0.258819, 0, 0.183013, -0.683013, 0.707107, 172.37, 702, -443.26)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D32"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D32"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D33" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.224144, -0.12941, 0.965926, 0.5, 0.866025, -1.49012e-08, -0.836516, 0.482963, 0.258819, 201.5, 526, -283.461)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D33"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D33"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D34" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.0669871, -0.25, 0.965925, 0.965926, 0.258819, 1.29048e-08, -0.25, 0.933012, 0.258819, 16.0506, 567, -232.73)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D34"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D34"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D35" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.0669871, -0.25, 0.965925, 0.965926, 0.258819, 1.29048e-08, -0.25, 0.933012, 0.258819, 330.943, 538, -148.355)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D35"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D35"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D36" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.224144, -0.12941, 0.965926, 0.5, 0.866025, -1.49012e-08, -0.836516, 0.482963, 0.258819, -712.266, 746, -528.304)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D36"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D36"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D37" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.0669871, -0.25, 0.965925, 0.965926, 0.258819, 1.29048e-08, -0.25, 0.933012, 0.258819, -414.752, 702, -348.164)
+transform = Transform3D(0.0669871, -0.25, 0.965926, 0.965926, 0.258819, 2.43716e-07, -0.25, 0.933013, 0.258819, -414.752, 457, -348.164)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D37"]
@@ -463,38 +332,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D37"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D38" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.224144, 0.12941, -0.965926, 0.5, 0.866025, 0, 0.836516, -0.482963, -0.258819, -844.731, 526, -135.73)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D38"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D38"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D39" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.0669878, 0.25, -0.965925, 0.965926, 0.258819, 5.4542e-09, 0.25, -0.933012, -0.258819, -659.282, 567, -186.462)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D39"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D39"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D40" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.0669878, 0.25, -0.965925, 0.965926, 0.258819, 5.4542e-09, 0.25, -0.933012, -0.258819, -974.174, 538, -270.837)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D40"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D40"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D41" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.224144, 0.12941, -0.965926, 0.5, 0.866025, 0, 0.836516, -0.482963, -0.258819, 69.0345, 746, 109.112)
+transform = Transform3D(-0.224144, 0.12941, -0.965926, 0.5, 0.866025, 2.78843e-07, 0.836516, -0.482963, -0.258819, 69.0345, 576, 109.112)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D41"]
@@ -504,7 +343,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D42" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(-0.0669878, 0.25, -0.965925, 0.965926, 0.258819, 5.4542e-09, 0.25, -0.933012, -0.258819, -228.479, 702, -71.0283)
+transform = Transform3D(-0.0669878, 0.25, -0.965926, 0.965926, 0.258819, -4.15295e-07, 0.25, -0.933013, -0.258819, -228.479, 457, -71.0283)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D42"]
@@ -513,33 +352,8 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D42"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="terrain/StaticBody3D42"]
-transform = Transform3D(0.595035, 0.771811, 0.224144, -0.288848, 0.465625, -0.836517, -0.75, 0.433012, 0.5, -140.184, -156.838, -68.8541)
-mesh = SubResource("BoxMesh_x84fl")
-skeleton = NodePath("../../StaticBody3D28")
-
-[node name="StaticBody3D43" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.836516, -0.482963, 0.258819, 0.5, 0.866025, 1.49011e-08, -0.224144, 0.12941, 0.965925, -352.304, 526, 34.0984)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D43"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D43"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D44" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.25, -0.933012, 0.258819, 0.965926, 0.258819, 9.44696e-09, -0.0669878, 0.25, 0.965925, -488.963, 567, -101.14)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D44"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D44"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D45" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.25, -0.933012, 0.258819, 0.965926, 0.258819, 9.44696e-09, -0.0669878, 0.25, 0.965925, -404.588, 538, 213.752)
+transform = Transform3D(0.25, -0.933013, 0.258819, 0.965926, 0.258819, 4.15803e-07, -0.0669878, 0.25, 0.965926, -404.588, 463, 213.752)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D45"]
@@ -549,7 +363,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D46" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.836516, -0.482963, 0.258819, 0.5, 0.866025, 1.49011e-08, -0.224144, 0.12941, 0.965925, -597.146, 746, -879.668)
+transform = Transform3D(0.836516, -0.482963, 0.258819, 0.5, 0.866025, -2.85367e-07, -0.224144, 0.12941, 0.965926, -597.146, 576, -626.668)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D46"]
@@ -559,7 +373,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D47" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.612372, -0.353553, -0.707107, 0.5, 0.866025, 0, 0.612372, -0.353553, 0.707107, 140.551, 746, -947.427)
+transform = Transform3D(0.612372, -0.353554, -0.707107, 0.5, 0.866025, 0, 0.612372, -0.353554, 0.707107, 140.551, 576, -694.427)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D47"]
@@ -569,7 +383,7 @@ mesh = SubResource("BoxMesh_x84fl")
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D48" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.183013, -0.683013, -0.707107, 0.965926, 0.258819, 0, 0.183013, -0.683013, 0.707107, -164.212, 702, -779.843)
+transform = Transform3D(0.183013, -0.683013, -0.707107, 0.965926, 0.258819, 0, 0.183013, -0.683013, 0.707107, -164.212, 457, -526.843)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D48"]
@@ -578,44 +392,14 @@ mesh = SubResource("BoxMesh_x84fl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D48"]
 shape = SubResource("BoxShape3D_uur3i")
 
-[node name="StaticBody3D49" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.224144, -0.12941, 0.965926, 0.5, 0.866025, -1.49012e-08, -0.836516, 0.482963, 0.258819, -135.083, 526, -620.044)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D49"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D49"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D50" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.0669871, -0.25, 0.965925, 0.965926, 0.258819, 1.29048e-08, -0.25, 0.933012, 0.258819, -5.64026, 538, -484.938)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D50"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D50"]
-shape = SubResource("BoxShape3D_uur3i")
-
 [node name="StaticBody3D51" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.836516, -0.482963, 0.258819, 0.5, 0.866025, 1.49011e-08, -0.224144, 0.12941, 0.965925, -933.731, 746, -1216.25)
+transform = Transform3D(0.836516, -0.482963, 0.258819, 0.5, 0.866025, -2.85367e-07, -0.224144, 0.12941, 0.965926, -218.731, 462, -771.25)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D51"]
 mesh = SubResource("BoxMesh_x84fl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D51"]
-shape = SubResource("BoxShape3D_uur3i")
-
-[node name="StaticBody3D52" type="StaticBody3D" parent="terrain"]
-transform = Transform3D(0.25, -0.933012, 0.258819, 0.965926, 0.258819, 9.44696e-09, -0.0669878, 0.25, 0.965925, -604.396, 702, -531.943)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D52"]
-mesh = SubResource("BoxMesh_x84fl")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D52"]
 shape = SubResource("BoxShape3D_uur3i")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="terrain"]
@@ -680,6 +464,50 @@ mesh = SubResource("BoxMesh_c0aq1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D56"]
 shape = SubResource("BoxShape3D_46qcd")
 
+[node name="StaticBody3D6" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 131, 203)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D6"]
+mesh = SubResource("BoxMesh_kcjtk")
+skeleton = NodePath("../../StaticBody3D6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D6"]
+shape = SubResource("BoxShape3D_0a7ug")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 131, 217)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D10"]
+mesh = SubResource("BoxMesh_kcjtk")
+skeleton = NodePath("../../StaticBody3D6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D10"]
+shape = SubResource("BoxShape3D_0a7ug")
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 131, 159)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D21"]
+mesh = SubResource("BoxMesh_kcjtk")
+skeleton = NodePath("../../StaticBody3D6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D21"]
+shape = SubResource("BoxShape3D_0a7ug")
+
+[node name="StaticBody3D23" type="StaticBody3D" parent="terrain"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 141, 132, 204)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D23"]
+mesh = SubResource("BoxMesh_kcjtk")
+skeleton = NodePath("../../StaticBody3D6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D23"]
+shape = SubResource("BoxShape3D_0a7ug")
+
 [node name="2d" type="Node" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="2d"]
@@ -705,43 +533,49 @@ theme_override_font_sizes/font_size = 96
 text = "rtry"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 130, 203)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 239, 169, 210)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_kcjtk")
+mesh = SubResource("BoxMesh_kdtqr")
+skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_0a7ug")
+shape = SubResource("BoxShape3D_x7dhu")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 130, 217)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 283, 169, 210)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
-mesh = SubResource("BoxMesh_kcjtk")
+mesh = SubResource("BoxMesh_kdtqr")
+skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-shape = SubResource("BoxShape3D_0a7ug")
+shape = SubResource("BoxShape3D_x7dhu")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 130, 159)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 343, 169, 210)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
-mesh = SubResource("BoxMesh_kcjtk")
+mesh = SubResource("BoxMesh_kdtqr")
+skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
-shape = SubResource("BoxShape3D_0a7ug")
+shape = SubResource("BoxShape3D_x7dhu")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 130, 159)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 357, 169, 265)
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
-mesh = SubResource("BoxMesh_kcjtk")
+mesh = SubResource("BoxMesh_kdtqr")
+skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
-shape = SubResource("BoxShape3D_0a7ug")
+shape = SubResource("BoxShape3D_x7dhu")
+
+[node name="bullet" parent="." instance=ExtResource("4_a7uvv")]
 
 [connection signal="timeout" from="CharacterBody3D/grapple_coyote_time" to="CharacterBody3D" method="_on_grapple_coyote_time_timeout"]

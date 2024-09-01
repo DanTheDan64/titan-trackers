@@ -25,10 +25,10 @@ var sens: float = 0.2
 
 #movement
 var state_stats = {
-	STATES.MOVING: [2, 12],
-	STATES.JUMPING: [1, 12],
-	STATES.SNEAKING: [8, 0.8],
-	STATES.GRAPPLING: [0, 0.5],
+	STATES.MOVING: [3, 24],
+	STATES.JUMPING: [1, 8],
+	STATES.SNEAKING: [8, 8],
+	STATES.GRAPPLING: [1, 0.1],
 	STATES.AIRBORN: [0.1, 0.1]
 }
 
@@ -46,9 +46,12 @@ var shoot_to = Vector3.ZERO
 var held_pos: Vector3 = Vector3.ZERO
 var coyote_time: float = 0.2
 var grapple_range: int = 800
-var pull_strength: int = 150
+var pull_strength: int = 100 
+
 
 var result: Dictionary
+
+var highest = 0
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -80,7 +83,25 @@ func _physics_process(delta):
 		STATES.GRAPPLING: grappling(delta)
 		STATES.AIRBORN: airborn(delta)
 	
+	
+	#if Input.is_action_pressed("shoot"):
+		#var node = preload("res://bullet.tscn").instantiate()
+		#node.rotation_degrees = cam.rotation_degrees
+		#node.position = cam.global_position
+		#node.position += cam.transform.basis.y * -1
+		#node.rotation_degrees.y += randf_range(-2, 2)
+		#node.rotation_degrees.x += randf_range(-2, 2)
+		#
+		#get_parent().add_child(node)
+		#velocity += cam.transform.basis.z * 0.5
+	
+	
+	
 	$"../2d/Label2".text = str(snapped(velocity.distance_to(Vector3.ZERO), 0.1))
+	
+	#if snapped(velocity.distance_to(Vector3.ZERO), 0.01) > highest:
+	#	highest = snapped(velocity.distance_to(Vector3.ZERO), 0.01)
+	#	print(highest)
 	
 	move_and_slide()
 
@@ -90,7 +111,6 @@ func moving(delta):
 	check_jump()
 	check_sneak()
 	check_and_start_grapple()
-	check_boost(delta)
 
 
 func jumping(delta):
@@ -99,13 +119,15 @@ func jumping(delta):
 	check_boost(delta)
 	
 	if is_on_floor():
-		update_state(STATES.MOVING)
+		if Input.is_action_pressed("sneak"):
+			update_state(STATES.SNEAKING)
+		else:
+			update_state(STATES.MOVING)
 
 
 func sneaking(delta):
 	check_jump()
 	check_and_start_grapple()
-	check_boost(delta)
 	
 	if Input.is_action_just_released("sneak"):
 		if is_on_floor():
@@ -122,7 +144,11 @@ func grappling(delta):
 	
 	if Input.is_action_just_released("fire_hook"):
 		crosshair.modulate = Color.WHITE
-		update_state(STATES.AIRBORN)
+		if is_on_floor():
+			update_state(STATES.MOVING)
+		else:
+			update_state(STATES.AIRBORN)
+
 
 
 func airborn(delta):
@@ -143,13 +169,11 @@ func movement(delta):
 	direction_flat = (movement_orienter.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	velocity += ((direction_flat * accell) - (velocity * friction)) * delta
-	
-	#velocity.x = move_toward(velocity.x, direction_flat.x * max_speed, accell * delta)
-	#velocity.z = move_toward(velocity.z, direction_flat.z * max_speed, accell * delta)
+
 
 
 func check_jump():
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_pressed("jump"):
 		velocity.y = jump_velocity
 		update_state(STATES.JUMPING)
 	elif not is_on_floor():
@@ -157,7 +181,7 @@ func check_jump():
 
 
 func check_sneak():
-	if Input.is_action_just_pressed("sneak"):
+	if Input.is_action_pressed("sneak") and is_on_floor():
 		update_state(STATES.SNEAKING)
 
 
@@ -188,12 +212,14 @@ func check_and_start_grapple():
 
 func check_boost(delta):
 	if Input.is_action_just_pressed("jump"):
-			if not is_on_floor():
-				if direction:
-					velocity += direction * 25
-				else:
-					velocity += -cam.transform.basis.z * 25
-
+		if direction:
+			velocity += direction * 25
+		else:
+			velocity += -cam.transform.basis.z * 25
+			
+		if state == STATES.JUMPING:
+			update_state(STATES.AIRBORN)
+		return
 
 
 func update_state(state_to):
@@ -207,7 +233,6 @@ func update_state(state_to):
 		STATES.SNEAKING: $"../2d/Label".text = "sneaking"
 		STATES.GRAPPLING: $"../2d/Label".text = "grappling"
 		STATES.AIRBORN: $"../2d/Label".text = "airborn"
-
 
 
 #signals
