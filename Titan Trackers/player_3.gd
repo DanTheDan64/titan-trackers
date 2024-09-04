@@ -147,13 +147,3 @@ func _on_grapple_coyote_time_timeout():
 	retical.DOT_COLOR = Color.WHITE
 	retical.queue_redraw()
 	held_pos = Vector3.ZERO
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbra50yk6rmxb"]
+
+[sub_resource type="SystemFont" id="SystemFont_wxu3c"]
+
+[node name="Are_you_sure" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 86
+text = "Home"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 89
+text = "Leave"
+
+[node name="Specter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 112.0
+offset_right = 1240.0
+offset_bottom = 368.0
+theme_override_fonts/font = SubResource("SystemFont_wxu3c")
+theme_override_font_sizes/font_size = 128
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Specter2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label2" type="Label" parent="Specter2"]
+visible = false
+offset_left = 680.0
+offset_top = 112.0
+offset_right = 1240.0
+offset_bottom = 368.0
+theme_override_fonts/font = SubResource("SystemFont_wxu3c")
+theme_override_font_sizes/font_size = 128
+text = "Are you sure?"
+horizontal_alignment = 1
+vertical_alignment = 1

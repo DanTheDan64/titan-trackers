@@ -1,3 +1,9 @@
+res://Menu/Main/Main_Menu.tscn
+res://Menu/Options/settings_tab_container.tscn
+res://Menu/Options/options_menu.tscn
+res://Menu/Options/hotkey_rebind_button.tscn
 res://test_scene.tscn
-res://Retical/retical.gd
-res://player_3.gd
+res://Menu/Options/hotkey_rebind_button.gd
+res://Menu/Options/game_menu.tscn
+res://Menu/Options/game_menu.gd
+res://Menu/Options/are_you_sure.tscn
