@@ -1,4 +1,5 @@
 res://test_scene.tscn
 res://player_3.gd
-res://bullet.gd
-res://bullet.tscn
+res://enemy.gd
+res://test_scene.gd
+res://enemy.tscn
