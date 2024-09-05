@@ -1,5 +1,2 @@
 res://test_scene.tscn
-res://enemy.tscn
-res://enemy.gd
-res://player_3.gd
 res://demo/demo.tscn

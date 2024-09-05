@@ -1,3 +1,5 @@
+TextureProgressBar
+ProgressBar
 CPUParticles3D
 GPUParticles3D
 MeshInstance3D
@@ -5,8 +7,6 @@ CollisionShape3D
 Path3D
 CSGPolygon3D
 CSGMesh3D
-TextureProgressBar
-ProgressBar
 Timer
 AnimationPlayer
 StaticBody3D

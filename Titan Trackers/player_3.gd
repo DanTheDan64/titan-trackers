@@ -62,7 +62,7 @@ var highest = 0
 var speed = 0
 
 var normal_fov = 75
-var wanted_fov = normal_fov
+var wanted_fov = 0
 
 func _ready():
 	grapple_line.hide()
@@ -112,13 +112,13 @@ func _physics_process(delta):
 	
 	wanted_fov = move_toward(
 		wanted_fov, 
-		clamp(speed, normal_fov, normal_fov + 25), 
+		clamp(speed - 80, 0, 10), 
 		10 * delta
 		)
 	
-	cam.set_fov(wanted_fov)
+	cam.set_fov(normal_fov + (wanted_fov * 3.5))
 	
-	$"../2d/Label2".text = str(snapped(speed, 0.1))
+	$"../2d/Label2".text = str(cam.get_fov())
 	
 	
 	move_and_slide()
