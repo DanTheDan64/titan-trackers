@@ -273,6 +273,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 48
 
+[node name="Opacity Range" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "Opacity
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Opacity" type="HSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+tick_count = 1
+
 [node name="Crosshair Colour" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
@@ -281,10 +294,6 @@ text = "Crosshair Colour
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Opacity" type="HSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-tick_count = 1
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -295,8 +304,24 @@ theme_override_font_sizes/font_size = 32
 text = "Dot
 "
 
-[node name="On or Off Dot" type="CheckButton" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="On or Off" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "On or Off
+"
+
+[node name="On or Off Dot" type="CheckButton" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+alignment = 2
+icon_alignment = 2
+
+[node name="Dot Size" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Line Width
+"
 
 [node name="Dot size" type="HSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -308,11 +333,29 @@ text = "Line
 
 "
 
+[node name="On or Off2" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "On or Off
+"
+
 [node name="On or Off Line" type="CheckButton" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Line Length" type="HSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="Line Length Size" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Line Length
+"
+
+[node name="Line length2" type="HSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Line Width Size" type="Label" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Line Width
+"
 
 [node name="Line width" type="VSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -393,10 +436,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1520.0
-offset_top = 112.0
-offset_right = 664.0
-offset_bottom = -168.0
+offset_left = 792.0
+offset_top = 144.0
+offset_right = -64.0
+offset_bottom = -136.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
