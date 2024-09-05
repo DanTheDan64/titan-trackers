@@ -51,12 +51,21 @@ var pull_strength: int = 200
 
 var can_grapple: bool = true
 
+@onready var grapple_line = $LineRenderer3D
+
 
 var grapple_data: Dictionary
 
+
+#random
 var highest = 0
+var speed = 0
+
+var normal_fov = 75
+var wanted_fov = normal_fov
 
 func _ready():
+	grapple_line.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
@@ -98,8 +107,19 @@ func _physics_process(delta):
 		if grapple_data.collider.is_in_group("enemy"):
 			grapple_data.collider.hit()
 	
+	speed = velocity.distance_to(Vector3.ZERO)
 	
-	$"../2d/Label2".text = str(snapped(velocity.distance_to(Vector3.ZERO), 0.1))
+	
+	wanted_fov = move_toward(
+		wanted_fov, 
+		clamp(speed, normal_fov, normal_fov + 25), 
+		10 * delta
+		)
+	
+	cam.set_fov(wanted_fov)
+	
+	$"../2d/Label2".text = str(snapped(speed, 0.1))
+	
 	
 	move_and_slide()
 
@@ -126,22 +146,29 @@ func jumping():
 
 
 func sliding():
-	check_jump()
 	check_and_start_grapple()
 	
 	if not is_on_floor():
 		update_state(STATES.AIRBORN)
 	elif Input.is_action_just_released("slide"):
 		update_state(STATES.MOVING)
+	elif Input.is_action_pressed("jump"):
+		velocity.y += jump_velocity
+		update_state(STATES.AIRBORN)
 
 
 func grappling(delta):
 	check_boost()
 	
-	velocity += (shoot_to - position).normalized() * delta * pull_strength
+	if position.distance_to(shoot_to) > 2:
+		velocity += (shoot_to - position).normalized() * delta * pull_strength
+	
+	grapple_line.points[0] = movement_orienter.global_position
+	grapple_line.points[1] = shoot_to
 	
 	
 	if Input.is_action_just_released("fire_hook"):
+		grapple_line.hide()
 		if is_on_floor():
 			update_state(STATES.MOVING)
 		else:
@@ -171,7 +198,7 @@ func movement(delta):
 
 func check_jump():
 	if Input.is_action_pressed("jump"):
-		velocity.y = jump_velocity
+		velocity.y += jump_velocity
 		update_state(STATES.JUMPING)
 	elif not is_on_floor():
 		update_state(STATES.JUMPING)
@@ -185,13 +212,17 @@ func check_slide():
 func check_and_start_grapple():
 	#setting grapple around and coyote time
 	if grapple_data:
-		held_pos = grapple_data.position
-		$grapple_coyote_time.start(coyote_time)
+		if not grapple_data.collider.is_in_group("enemy"):
+			held_pos = grapple_data.position
+			$grapple_coyote_time.start(coyote_time)
 	
 	
 	#shoot grapple
 	if Input.is_action_just_pressed("fire_hook"):
 		if held_pos and can_grapple:
+			grapple_line.points[0] = movement_orienter.global_position
+			grapple_line.points[1] = shoot_to
+			grapple_line.show()
 			shoot_to = held_pos
 			
 			#go to grapple state

@@ -1,7 +1,7 @@
+CPUParticles3D
 GPUParticles3D
 MeshInstance3D
 CollisionShape3D
-CPUParticles3D
 Path3D
 CSGPolygon3D
 CSGMesh3D
@@ -12,4 +12,3 @@ AnimationPlayer
 StaticBody3D
 Area3D
 RayCast3D
-Label

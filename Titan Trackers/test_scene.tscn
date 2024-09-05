@@ -1,9 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=42 format=3 uid="uid://bnqe2scl2i4rg"]
 
-[ext_resource type="Script" path="res://test_scene.gd" id="1_scplm"]
+[ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://demo/line.png" id="2_81olj"]
 [ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://textures/icon.svg" id="2_jp5t4"]
 [ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://textures/texture_09.png" id="2_oh5r8"]
 [ext_resource type="Script" path="res://player_3.gd" id="2_wj0m0"]
+[ext_resource type="Script" path="res://addons/LineRenderer/line_renderer.gd" id="3_0k0i7"]
 [ext_resource type="PackedScene" uid="uid://dui2tjvg431rk" path="res://enemy.tscn" id="4_e5qh1"]
 [ext_resource type="Texture2D" uid="uid://q1h0snv7rn6f" path="res://textures/texture_02.png" id="5_4pcw4"]
 [ext_resource type="Texture2D" uid="uid://cna5tup3atw0j" path="res://textures/texture_06.png" id="7_bce0e"]
@@ -20,6 +21,14 @@ sky = SubResource("Sky_jbla2")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kd6ts"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lq231"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtgjc"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
+albedo_texture = ExtResource("2_81olj")
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_hc84s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kequ4"]
 albedo_texture = ExtResource("2_oh5r8")
@@ -94,7 +103,6 @@ albedo_texture = ExtResource("7_bce0e")
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_scplm")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.822543, -0.298169, 0.484271, 0.0074801, 0.857134, 0.515039, -0.568654, -0.420019, 0.70726, 247.732, 193.805, 1059.92)
@@ -120,12 +128,19 @@ mesh = SubResource("CapsuleMesh_lq231")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 
 [node name="movement_orienter" type="Marker3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
 
 [node name="grapple_coyote_time" type="Timer" parent="CharacterBody3D"]
 one_shot = true
 
 [node name="grapple_cooldown" type="Timer" parent="CharacterBody3D"]
+
+[node name="LineRenderer3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_qtgjc")
+mesh = SubResource("ImmediateMesh_hc84s")
+script = ExtResource("3_0k0i7")
+points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
 [node name="terrain" type="Node" parent="."]
 

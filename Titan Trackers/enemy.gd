@@ -18,6 +18,7 @@ func hit():
 	damaged = true
 	$CPUParticles3D.set_emitting(false)
 	$MeshInstance3D.hide()
+	$CollisionShape3D.disabled = true
 	await get_tree().create_timer( \
 	$CPUParticles3D.lifetime * 2).timeout
 	queue_free()
