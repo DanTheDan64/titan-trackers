@@ -27,7 +27,7 @@ var sens: float = 0.2
 var state_stats = {
 	STATES.MOVING: [3, 24],
 	STATES.JUMPING: [0.5, 5],
-	STATES.SLIDING: [0.15, 0.1],
+	STATES.SLIDING: [0.15, 0.3],
 	STATES.GRAPPLING: [2, 0.1],
 	STATES.AIRBORN: [0.1, 0.1]
 }
@@ -96,6 +96,7 @@ func _physics_process(delta):
 	
 	movement(delta)
 	
+	#state machine
 	match state:
 		STATES.MOVING: moving()
 		STATES.JUMPING: jumping()
@@ -103,13 +104,24 @@ func _physics_process(delta):
 		STATES.GRAPPLING: grappling(delta)
 		STATES.AIRBORN: airborn()
 	
+	#shooting enemies
 	if Input.is_action_just_pressed("shoot") and grapple_data:
 		if grapple_data.collider.is_in_group("enemy"):
 			grapple_data.collider.hit()
 	
+	#to show if the player can grapple
+	if state != STATES.GRAPPLING:
+		if grapple_data:
+			if not grapple_data.collider.is_in_group("enemy"):
+				crosshair.modulate = Color.RED
+		else:
+			crosshair.modulate = Color.WHITE
+	
+	
+	#track speed of player
 	speed = velocity.distance_to(Vector3.ZERO)
 	
-	
+	#change fov dependant on speed
 	wanted_fov = move_toward(
 		wanted_fov, 
 		clamp(speed - 80, 0, 10), 
@@ -118,7 +130,11 @@ func _physics_process(delta):
 	
 	cam.set_fov(normal_fov + (wanted_fov * 3.5))
 	
-	$"../2d/Label2".text = str(cam.get_fov())
+	#ui elements
+	$"../2d/TextureProgressBar".value = move_toward(
+		$"../2d/TextureProgressBar".value, speed, 100 * delta)
+	
+	$"../2d/TextureProgressBar/Label2".text = str(snapped(speed, 0.1))
 	
 	
 	move_and_slide()
@@ -148,9 +164,11 @@ func jumping():
 func sliding():
 	check_and_start_grapple()
 	
+	cam.position.y = -1
 	if not is_on_floor():
 		update_state(STATES.AIRBORN)
 	elif Input.is_action_just_released("slide"):
+		cam.position.y = -0.5
 		update_state(STATES.MOVING)
 	elif Input.is_action_pressed("jump"):
 		velocity.y += jump_velocity
@@ -166,9 +184,9 @@ func grappling(delta):
 	grapple_line.points[0] = movement_orienter.global_position
 	grapple_line.points[1] = shoot_to
 	
-	
 	if Input.is_action_just_released("fire_hook"):
 		grapple_line.hide()
+		crosshair.modulate = Color.WHITE
 		if is_on_floor():
 			update_state(STATES.MOVING)
 		else:
@@ -223,12 +241,14 @@ func check_and_start_grapple():
 			grapple_line.points[0] = movement_orienter.global_position
 			grapple_line.points[1] = shoot_to
 			grapple_line.show()
+			
+			crosshair.modulate = Color.GREEN
+			
 			shoot_to = held_pos
 			
 			#go to grapple state
 			can_grapple = false
 			$grapple_cooldown.start(1)
-			crosshair.modulate = Color.RED
 			update_state(STATES.GRAPPLING)
 			return
 
@@ -265,7 +285,6 @@ func _on_grapple_coyote_time_timeout():
 
 func _on_grapple_cooldown_timeout():
 	can_grapple = true
-	crosshair.modulate = Color.WHITE
 
 
 

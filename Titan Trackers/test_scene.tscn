@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=43 format=3 uid="uid://bnqe2scl2i4rg"]
 
 [ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://line_render_demo/line.png" id="2_81olj"]
 [ext_resource type="Texture2D" uid="uid://dwqkhj0uy7kd7" path="res://textures/icon.svg" id="2_jp5t4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dui2tjvg431rk" path="res://enemy.tscn" id="4_e5qh1"]
 [ext_resource type="Texture2D" uid="uid://q1h0snv7rn6f" path="res://textures/texture_02.png" id="5_4pcw4"]
 [ext_resource type="Texture2D" uid="uid://cna5tup3atw0j" path="res://textures/texture_06.png" id="7_bce0e"]
+[ext_resource type="Texture2D" uid="uid://oce5xjtw33cp" path="res://283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png" id="8_aq3gy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8j0qs"]
 
@@ -18,9 +19,9 @@ sky_material = SubResource("ProceduralSkyMaterial_8j0qs")
 background_mode = 2
 sky = SubResource("Sky_jbla2")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kd6ts"]
-
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lq231"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kd6ts"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtgjc"]
 transparency = 1
@@ -28,7 +29,7 @@ shading_mode = 0
 albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
 albedo_texture = ExtResource("2_81olj")
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_ixbbm"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_1nqfe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kequ4"]
 albedo_texture = ExtResource("2_oh5r8")
@@ -116,10 +117,6 @@ environment = SubResource("Environment_h8gqh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 131.5, 209)
 script = ExtResource("2_wj0m0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-shape = SubResource("CapsuleShape3D_kd6ts")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh = SubResource("CapsuleMesh_lq231")
@@ -130,6 +127,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 [node name="movement_orienter" type="Marker3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("CapsuleShape3D_kd6ts")
+
 [node name="grapple_coyote_time" type="Timer" parent="CharacterBody3D"]
 one_shot = true
 
@@ -138,7 +139,7 @@ one_shot = true
 [node name="LineRenderer3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_qtgjc")
-mesh = SubResource("ImmediateMesh_ixbbm")
+mesh = SubResource("ImmediateMesh_1nqfe")
 script = ExtResource("3_0k0i7")
 points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
@@ -404,20 +405,38 @@ scale = Vector2(0.0625, 0.0625)
 texture = SubResource("CompressedTexture2D_wxa7q")
 
 [node name="Label" type="Label" parent="2d"]
-offset_left = -928.0
-offset_top = -512.0
-offset_right = -320.0
-offset_bottom = -256.0
+offset_left = -904.0
+offset_top = -488.0
+offset_right = -344.0
+offset_bottom = -272.0
 theme_override_font_sizes/font_size = 96
 text = "tg yjstgtyjrtj"
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="2d"]
-offset_left = -912.0
-offset_top = -304.0
-offset_right = -328.0
-offset_bottom = -64.0
+[node name="TextureProgressBar" type="TextureProgressBar" parent="2d"]
+clip_contents = true
+offset_left = -944.0
+offset_top = 144.0
+offset_right = -485.0
+offset_bottom = 513.0
+max_value = 150.0
+step = 0.01
+value = 100.1
+fill_mode = 5
+texture_under = ExtResource("8_aq3gy")
+texture_progress = ExtResource("8_aq3gy")
+tint_progress = Color(1, 0, 0, 1)
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="2d/TextureProgressBar"]
+offset_left = 37.0
+offset_top = 56.0
+offset_right = 421.0
+offset_bottom = 280.0
 theme_override_font_sizes/font_size = 96
 text = "rtry"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="enemy" parent="." instance=ExtResource("4_e5qh1")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 26, 141, 385)
