@@ -3,6 +3,8 @@ extends Control
 
 @onready var label = $HBoxContainer/Label as Label
 @onready var button = $HBoxContainer/Button as Button
+
+
 @export var action_name : String = "left"
 
 
@@ -10,6 +12,7 @@ extends Control
 func _ready():
 	set_process_unhandled_key_input(false) #if it were to be true any inputs that aren't being handled will get picked up
 	#were as if it were to be flase it would just ignore them
+	#wwwwwwwwwwwwwwwwset_physics_process(true)
 	set_action_name()
 	set_key_text()
 	
@@ -47,13 +50,9 @@ func set_action_name():
 			
 
 func set_key_text():
-	var action_events =  InputMap.action_get_events(action_name)
+	var action_events = InputMap.action_get_events(action_name)
 	print(action_events)
 	print("hi")
-	var action_event = action_events[0]
-	#var action_keycode = OS.get_keycode_string(action_event.physical.keycode)
-	
-	#button.text = "%s" % action_keycode# "%S" is basiclly an F-string 
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://byq6v4758uvab"]
+[gd_scene load_steps=9 format=3 uid="uid://byq6v4758uvab"]
 
 [ext_resource type="Script" path="res://Menu/Options/crosshair.gd" id="1_7wpwo"]
 [ext_resource type="PackedScene" uid="uid://cirih71yp56dn" path="res://Menu/Options/hotkey_rebind_button.tscn" id="1_f2duc"]
 [ext_resource type="Script" path="res://Retical/retical.gd" id="1_n75ip"]
+[ext_resource type="Script" path="res://Menu/Options/settings_tab_container.gd" id="1_qhrxl"]
+[ext_resource type="PackedScene" uid="uid://csj2wee15vf2b" path="res://Menu/Options/window_mode_button.tscn" id="2_4xj6k"]
+[ext_resource type="PackedScene" uid="uid://nwctiw8atefk" path="res://Menu/Options/resolution_mode_button.tscn" id="3_a84wp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5do5k"]
 
@@ -19,6 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+script = ExtResource("1_qhrxl")
 metadata/_edit_use_anchors_ = true
 
 [node name="TabContainer" type="TabContainer" parent="."]
@@ -33,7 +37,8 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 1
+all_tabs_in_front = true
 metadata/_edit_use_anchors_ = true
 
 [node name="General" type="TabBar" parent="TabContainer"]
@@ -107,7 +112,6 @@ text = "yes
 "
 
 [node name="Video" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
 metadata/_tab_index = 1
@@ -124,59 +128,21 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Video/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Video/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 64
 
-[node name="Label" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Video/MarginContainer/ScrollContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
+theme_override_constants/separation = 186
 
-[node name="Label2" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
+[node name="Window_Mode_Button" parent="TabContainer/Video/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_4xj6k")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
 
-[node name="Label3" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
+[node name="Resolution_Mode_Button" parent="TabContainer/Video/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_a84wp")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label4" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label5" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label6" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label7" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label8" type="Label" parent="TabContainer/Video/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
 
 [node name="Key Bind" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
 metadata/_tab_index = 2
@@ -360,6 +326,51 @@ text = "Line Width
 [node name="Line width" type="VSlider" parent="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="UserRetical" type="Control" parent="TabContainer/Crosshair"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = 31.0
+offset_right = 436.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="retical" type="CenterContainer" parent="TabContainer/Crosshair/UserRetical"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n75ip")
+DOT_RADIUS = 3.0
+
+[node name="Top" type="Line2D" parent="TabContainer/Crosshair/UserRetical/retical"]
+points = PackedVector2Array(0, -5, 0, -15)
+width = 2.0
+
+[node name="Right" type="Line2D" parent="TabContainer/Crosshair/UserRetical/retical"]
+points = PackedVector2Array(5, 0, 15, 0)
+width = 2.0
+
+[node name="Bottom" type="Line2D" parent="TabContainer/Crosshair/UserRetical/retical"]
+points = PackedVector2Array(0, 5, 0, 15)
+width = 2.0
+
+[node name="Left" type="Line2D" parent="TabContainer/Crosshair/UserRetical/retical"]
+points = PackedVector2Array(-5, 0, -15, 0)
+width = 2.0
+
 [node name="Audio" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
@@ -430,48 +441,5 @@ theme_override_font_sizes/font_size = 32
 text = "yes
 "
 
-[node name="UserRetical" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 792.0
-offset_top = 144.0
-offset_right = -64.0
-offset_bottom = -136.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="retical" type="CenterContainer" parent="UserRetical"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_n75ip")
-DOT_RADIUS = 3.0
-
-[node name="Top" type="Line2D" parent="UserRetical/retical"]
-points = PackedVector2Array(0, -5, 0, -15)
-width = 2.0
-
-[node name="Right" type="Line2D" parent="UserRetical/retical"]
-points = PackedVector2Array(5, 0, 15, 0)
-width = 2.0
-
-[node name="Bottom" type="Line2D" parent="UserRetical/retical"]
-points = PackedVector2Array(0, 5, 0, 15)
-width = 2.0
-
-[node name="Left" type="Line2D" parent="UserRetical/retical"]
-points = PackedVector2Array(-5, 0, -15, 0)
-width = 2.0
+[connection signal="tab_button_pressed" from="TabContainer/Crosshair" to="." method="_on_crosshair_tab_button_pressed"]
+[connection signal="drag_ended" from="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer/Opacity" to="TabContainer/Crosshair" method="_on_opacity_drag_ended"]
