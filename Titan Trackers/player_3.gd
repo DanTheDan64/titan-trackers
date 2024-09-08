@@ -4,8 +4,9 @@ extends CharacterBody3D
 
 enum STATES {
 	MOVING,
-	SLIDING,
 	JUMPING,
+	SLIDING,
+	CRASHING,
 	GRAPPLING,
 	AIRBORN
 }
@@ -20,14 +21,19 @@ var gravity: int = 12
 var sens: float = 0.2
 
 #objects
-@onready var crosshair: Object = $"../2d/Sprite2D"
 @onready var movement_orienter: Object = $movement_orienter
+
+@onready var crosshair: Object = $"gui/Sprite2D"
+@onready var state_text_display = $"gui/Label"
+@onready var spedometer = $"gui/TextureProgressBar"
+@onready var speed_text_display = $"gui/TextureProgressBar/Label2"
 
 #movement
 var state_stats = {
 	STATES.MOVING: [3, 24],
 	STATES.JUMPING: [0.5, 5],
 	STATES.SLIDING: [0.15, 0.3],
+	STATES.CRASHING: [10, 0],
 	STATES.GRAPPLING: [2, 0.1],
 	STATES.AIRBORN: [0.1, 0.1]
 }
@@ -101,6 +107,7 @@ func _physics_process(delta):
 		STATES.MOVING: moving()
 		STATES.JUMPING: jumping()
 		STATES.SLIDING: sliding()
+		STATES.CRASHING: crashing()
 		STATES.GRAPPLING: grappling(delta)
 		STATES.AIRBORN: airborn()
 	
@@ -124,17 +131,17 @@ func _physics_process(delta):
 	#change fov dependant on speed
 	wanted_fov = move_toward(
 		wanted_fov, 
-		clamp(speed - 80, 0, 10), 
+		clamp(speed - 60, 0, 10), 
 		10 * delta
 		)
 	
 	cam.set_fov(normal_fov + (wanted_fov * 3.5))
 	
 	#ui elements
-	$"../2d/TextureProgressBar".value = move_toward(
-		$"../2d/TextureProgressBar".value, speed, 100 * delta)
+	spedometer.value = move_toward(
+		spedometer.value, speed, 100 * delta)
 	
-	$"../2d/TextureProgressBar/Label2".text = str(snapped(speed, 0.1))
+	speed_text_display.text = str(snapped(speed, 0.1))
 	
 	
 	move_and_slide()
@@ -143,7 +150,7 @@ func _physics_process(delta):
 #state functions
 func moving():
 	check_jump()
-	check_slide()
+	check_slide_and_crash()
 	check_and_start_grapple()
 	
 	if not is_on_floor():
@@ -157,6 +164,8 @@ func jumping():
 	if is_on_floor():
 		if Input.is_action_pressed("slide"):
 			update_state(STATES.SLIDING)
+		elif Input.is_action_pressed("crash"):
+			update_state(STATES.CRASHING)
 		else:
 			update_state(STATES.MOVING)
 
@@ -167,12 +176,32 @@ func sliding():
 	cam.position.y = -1
 	if not is_on_floor():
 		update_state(STATES.AIRBORN)
-	elif Input.is_action_just_released("slide"):
-		cam.position.y = -0.5
-		update_state(STATES.MOVING)
 	elif Input.is_action_pressed("jump"):
 		velocity.y += jump_velocity
 		update_state(STATES.AIRBORN)
+	elif Input.is_action_just_released("slide"):
+		cam.position.y = -0.5
+		update_state(STATES.MOVING)
+	elif Input.is_action_just_pressed("crash"):
+		cam.position.y = -0.5
+		update_state(STATES.CRASHING)
+
+
+func crashing():
+	check_and_start_grapple()
+	
+	cam.position.y = -1
+	if not is_on_floor():
+		update_state(STATES.AIRBORN)
+	elif Input.is_action_pressed("jump"):
+		velocity.y += jump_velocity
+		update_state(STATES.AIRBORN)
+	elif Input.is_action_just_released("crash"):
+		cam.position.y = -0.5
+		update_state(STATES.MOVING)
+	elif Input.is_action_just_pressed("slide"):
+		cam.position.y = -0.5
+		update_state(STATES.SLIDING)
 
 
 func grappling(delta):
@@ -199,7 +228,12 @@ func airborn():
 	check_boost()
 	
 	if is_on_floor():
-		update_state(STATES.MOVING)
+		if Input.is_action_just_released("slide"):
+			update_state(STATES.SLIDING)
+		elif Input.is_action_pressed("crash"):
+			update_state(STATES.CRASHING)
+		else:
+			update_state(STATES.MOVING)
 
 
 
@@ -222,9 +256,12 @@ func check_jump():
 		update_state(STATES.JUMPING)
 
 
-func check_slide():
-	if Input.is_action_pressed("slide") and is_on_floor():
-		update_state(STATES.SLIDING)
+func check_slide_and_crash():
+	if is_on_floor():
+		if Input.is_action_pressed("slide"):
+			update_state(STATES.SLIDING)
+		elif Input.is_action_pressed("crash"):
+			update_state(STATES.CRASHING)
 
 
 func check_and_start_grapple():
@@ -271,11 +308,12 @@ func update_state(state_to):
 	accell = state_stats[state][1]
 	
 	match state:
-		STATES.MOVING: $"../2d/Label".text = "moving"
-		STATES.JUMPING: $"../2d/Label".text = "jumping"
-		STATES.SLIDING: $"../2d/Label".text = "sliding"
-		STATES.GRAPPLING: $"../2d/Label".text = "grappling"
-		STATES.AIRBORN: $"../2d/Label".text = "airborn"
+		STATES.MOVING: state_text_display.text = "moving"
+		STATES.JUMPING: state_text_display.text = "jumping"
+		STATES.SLIDING: state_text_display.text = "sliding"
+		STATES.CRASHING: state_text_display.text = "crashing"
+		STATES.GRAPPLING: state_text_display.text = "grappling"
+		STATES.AIRBORN: state_text_display.text = "airborn"
 
 
 #signals

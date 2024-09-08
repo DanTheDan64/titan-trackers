@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://ckhs1q5dhhtbs"]
 
-[ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://line_render_demo/line.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://addons/LineRenderer/line_render_demo/line.png" id="2"]
 [ext_resource type="Script" path="res://addons/LineRenderer/line_renderer.gd" id="2_c14b5"]
-[ext_resource type="Script" path="res://line_render_demo/camera.gd" id="3"]
+[ext_resource type="Script" path="res://addons/LineRenderer/line_render_demo/camera.gd" id="3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7n3p"]
 transparency = 1
@@ -10,7 +10,7 @@ shading_mode = 0
 albedo_color = Color(0.443137, 0.443137, 0.443137, 1)
 albedo_texture = ExtResource("2")
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_i5aqk"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_kfv8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_47h4w"]
 
@@ -25,7 +25,7 @@ sky = SubResource("Sky_mouyc")
 
 [node name="LineRenderer3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_x7n3p")
-mesh = SubResource("ImmediateMesh_i5aqk")
+mesh = SubResource("ImmediateMesh_kfv8a")
 script = ExtResource("2_c14b5")
 points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 1, 0)])
 

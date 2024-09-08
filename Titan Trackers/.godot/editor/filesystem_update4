@@ -1,4 +1,6 @@
 res://test_scene.tscn
 res://enemy.tscn
-res://line_render_demo/demo.tscn
+res://addons/LineRenderer/line_render_demo/demo.tscn
 res://player_3.gd
+res://player.tscn
+res://levels/test_scene.tscn

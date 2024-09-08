@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dui2tjvg431rk"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_t1fe4"]
-[ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://textures/texture_09.png" id="2_hylga"]
+[ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://visuals/textures/texture_09.png" id="2_hylga"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0ijhv"]
 radius = 1.0

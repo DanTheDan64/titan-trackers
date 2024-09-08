@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oce5xjtw33cp"
-path="res://.godot/imported/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png-f7a106ba51530c0aa2ee8ba0bb49d959.ctex"
+path="res://.godot/imported/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png-4f0ee92867bd91ff3d99fc93ce210c1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png"
-dest_files=["res://.godot/imported/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png-f7a106ba51530c0aa2ee8ba0bb49d959.ctex"]
+source_file="res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png"
+dest_files=["res://.godot/imported/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png-4f0ee92867bd91ff3d99fc93ce210c1e.ctex"]
 
 [params]
 
