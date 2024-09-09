@@ -1,7 +1,6 @@
 extends CharacterBody3D
 
 
-
 enum STATES {
 	MOVING,
 	JUMPING,
@@ -70,6 +69,8 @@ var speed = 0
 var normal_fov = 75
 var wanted_fov = 0
 
+var kills_needed = 0
+
 func _ready():
 	grapple_line.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -115,6 +116,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("shoot") and grapple_data:
 		if grapple_data.collider.is_in_group("enemy"):
 			grapple_data.collider.hit()
+			kills_needed -= 1
+			if kills_needed == 0:
+				$gui/AnimationPlayer.play("stage_cleared")
 	
 	#to show if the player can grapple
 	if state != STATES.GRAPPLING:

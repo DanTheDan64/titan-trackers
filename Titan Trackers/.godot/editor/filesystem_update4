@@ -8,4 +8,9 @@ res://Menu/Options/game_menu.tscn
 res://Menu/Options/options_display_button.tscn
 res://Menu/Options/window_mode_button.tscn
 res://Menu/Options/resolution_mode_button.tscn
-res://Menu/Main/Main_Menu.gd
+res://player.tscn
+res://enemy.gd
+res://player_3.gd
+res://levels/test_scene.tscn
+res://exit_gate.gd
+res://Menu/Options/are_you_sure.gd
