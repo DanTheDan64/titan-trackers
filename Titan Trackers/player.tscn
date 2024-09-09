@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx7won6w4lpiy"]
+
+[ext_resource type="Script" path="res://player_3.gd" id="1_5mk6g"]
+[ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://addons/LineRenderer/line_render_demo/line.png" id="2_c16yx"]
+[ext_resource type="Script" path="res://addons/LineRenderer/line_renderer.gd" id="3_qof0h"]
+[ext_resource type="Texture2D" uid="uid://oce5xjtw33cp" path="res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png" id="4_s4oow"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lq231"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kd6ts"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtgjc"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
+albedo_texture = ExtResource("2_c16yx")
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_8west"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
+
+[node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 131.5, 209)
+script = ExtResource("1_5mk6g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("CapsuleMesh_lq231")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="movement_orienter" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("CapsuleShape3D_kd6ts")
+
+[node name="grapple_coyote_time" type="Timer" parent="."]
+one_shot = true
+
+[node name="grapple_cooldown" type="Timer" parent="."]
+
+[node name="LineRenderer3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_qtgjc")
+mesh = SubResource("ImmediateMesh_8west")
+script = ExtResource("3_qof0h")
+points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
+
+[node name="gui" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="gui"]
+
+[node name="Sprite2D" type="Sprite2D" parent="gui"]
+scale = Vector2(0.0625, 0.0625)
+texture = SubResource("CompressedTexture2D_wxa7q")
+
+[node name="Label" type="Label" parent="gui"]
+offset_left = -904.0
+offset_top = -488.0
+offset_right = -344.0
+offset_bottom = -272.0
+theme_override_font_sizes/font_size = 96
+text = "tg yjstgtyjrtj"
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="gui"]
+clip_contents = true
+offset_left = -944.0
+offset_top = 144.0
+offset_right = -485.0
+offset_bottom = 513.0
+max_value = 150.0
+step = 0.01
+value = 100.1
+fill_mode = 5
+texture_under = ExtResource("4_s4oow")
+texture_progress = ExtResource("4_s4oow")
+tint_progress = Color(1, 0, 0, 1)
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="gui/TextureProgressBar"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 56.0
+offset_right = 421.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 96
+text = "rtry"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="grapple_coyote_time" to="." method="_on_grapple_coyote_time_timeout"]
+[connection signal="timeout" from="grapple_cooldown" to="." method="_on_grapple_cooldown_timeout"]
