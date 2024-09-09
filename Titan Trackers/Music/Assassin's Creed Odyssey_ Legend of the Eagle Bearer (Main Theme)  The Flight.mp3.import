@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://44cygc01fk5"
+path="res://.godot/imported/Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3-336ffb9d135b54db6f41fd18c9507408.mp3str"
+
+[deps]
+
+source_file="res://Music/Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3"
+dest_files=["res://.godot/imported/Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3-336ffb9d135b54db6f41fd18c9507408.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
