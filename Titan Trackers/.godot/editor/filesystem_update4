@@ -8,4 +8,3 @@ res://Menu/Options/game_menu.tscn
 res://Menu/Options/options_display_button.tscn
 res://Menu/Options/window_mode_button.tscn
 res://Menu/Options/resolution_mode_button.tscn
-res://Menu/Options/settings_tab_container.gd
