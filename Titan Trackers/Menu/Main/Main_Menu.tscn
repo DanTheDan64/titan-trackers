@@ -79,6 +79,8 @@ text = "Exit"
 visible = false
 layout_mode = 1
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Start_button" to="." method="_on_start_button_button_down"]
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Options_button" to="." method="_on_options_button_button_down"]
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Exit_button" to="." method="_on_exit_button_button_down"]

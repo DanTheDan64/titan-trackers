@@ -1,4 +1,3 @@
-res://Menu/Options/resolution_mode_button.tscn
 res://Menu/Main/Main_Menu.tscn
 res://Menu/Options/settings_tab_container.tscn
 res://Menu/Options/options_menu.tscn
@@ -8,4 +7,5 @@ res://Menu/Options/are_you_sure.tscn
 res://Menu/Options/game_menu.tscn
 res://Menu/Options/options_display_button.tscn
 res://Menu/Options/window_mode_button.tscn
-res://Menu/Options/resolution_mode_button.gd
+res://Menu/Options/resolution_mode_button.tscn
+res://Menu/Options/settings_tab_container.gd

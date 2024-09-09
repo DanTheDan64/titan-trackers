@@ -1,7 +1,7 @@
 class_name Settings_Tab_Container
 extends Control
 
-@onready var user_retical = $UserRetical
+@onready var user_retical = $TabContainer/Crosshair/UserRetical
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

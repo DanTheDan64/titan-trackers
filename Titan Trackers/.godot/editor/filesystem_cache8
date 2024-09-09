@@ -1,33 +1,34 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725775881
+::res://::1725831391
+bhavik.bmp::::-1::1725831331::0::0::::<><>::
 CharacterBody2D.gd::GDScript::-1::1724968850::0::1::::<>CharacterBody2D<>::
 icon.svg::CompressedTexture2D::8737066837938282606::1724281354::1724884772::1::::<><>::
 Node2D.gd::GDScript::-1::1725507168::0::1::::<>Node2D<>::
 node_2d.tscn::PackedScene::8488630568069104840::1725507482::0::1::::<><>::uid://dwqkhj0uy7kd7::::res://icon.svg<>res://CharacterBody2D.gd
 player_3.gd::GDScript::-1::1725225332::0::1::::<>CharacterBody3D<>::
 test_scene.gd::GDScript::-1::1724281354::0::1::::<>Node3D<>::
-test_scene.tscn::PackedScene::3332197728505107212::1725775826::0::1::::<><>::uid://dwqkhj0uy7kd7::::res://icon.svg<>res://Retical/retical.gd<>res://player_3.gd
+test_scene.tscn::PackedScene::3332197728505107212::1725831090::0::1::::<><>::uid://dwqkhj0uy7kd7::::res://icon.svg<>res://Retical/retical.gd<>res://player_3.gd
 ::res://Menu/::1724969139
-::res://Menu/Main/::1725775825
+::res://Menu/Main/::1725828660
 Main_Menu.gd::GDScript::-1::1725241508::0::1::::MainMenu<>Control<>::
-Main_Menu.tscn::PackedScene::3953938440281392187::1725775825::0::1::::<><>::res://Menu/Main/Main_Menu.gd<>uid://dh5ujms38xqey::::res://Menu/Options/options_menu.tscn
-::res://Menu/Options/::1725775827
+Main_Menu.tscn::PackedScene::3953938440281392187::1725828660::0::1::::<><>::res://Menu/Main/Main_Menu.gd<>uid://dh5ujms38xqey::::res://Menu/Options/options_menu.tscn
+::res://Menu/Options/::1725831094
 are_you_sure.gd::GDScript::-1::1725517720::0::1::::<>Control<>::
-are_you_sure.tscn::PackedScene::7264600241009021687::1725775826::0::1::::<><>::res://Menu/Options/are_you_sure.gd
+are_you_sure.tscn::PackedScene::7264600241009021687::1725831091::0::1::::<><>::res://Menu/Options/are_you_sure.gd
 crosshair.gd::GDScript::-1::1725586252::0::1::::Crosshair<>TabBar<>::
 game_menu.gd::GDScript::-1::1725491259::0::1::::<>Control<>::
-game_menu.tscn::PackedScene::8260226518503874967::1725775826::0::1::::<><>::res://Menu/Options/game_menu.gd
+game_menu.tscn::PackedScene::8260226518503874967::1725831092::0::1::::<><>::res://Menu/Options/game_menu.gd
 hotkey_rebind_button.gd::GDScript::-1::1725749830::0::1::::HotkeyRebindButton<>Control<>::
-hotkey_rebind_button.tscn::PackedScene::5369946496832773071::1725775826::0::1::::<><>::res://Menu/Options/hotkey_rebind_button.gd
-options_display_button.tscn::PackedScene::4002382343626648512::1725775826::0::1::::<><>::
+hotkey_rebind_button.tscn::PackedScene::5369946496832773071::1725831089::0::1::::<><>::res://Menu/Options/hotkey_rebind_button.gd
+options_display_button.tscn::PackedScene::4002382343626648512::1725831094::0::1::::<><>::
 options_menu.gd::GDScript::-1::1725225332::0::1::::OptionsMenu<>Control<>::
-options_menu.tscn::PackedScene::7713746360571691304::1725775825::0::1::::<><>::res://Menu/Options/options_menu.gd<>uid://byq6v4758uvab::::res://Menu/Options/settings_tab_container.tscn
-resolution_mode_button.gd::GDScript::-1::1725753755::0::1::::<>Control<>::
-resolution_mode_button.tscn::PackedScene::958027097626080892::1725775827::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/resolution_mode_button.gd
-settings_tab_container.gd::GDScript::-1::1725525825::0::1::::Settings_Tab_Container<>Control<>::
-settings_tab_container.tscn::PackedScene::4105904277537465541::1725775825::0::1::::<><>::res://Menu/Options/crosshair.gd<>uid://cirih71yp56dn::::res://Menu/Options/hotkey_rebind_button.tscn<>res://Retical/retical.gd<>res://Menu/Options/settings_tab_container.gd<>uid://csj2wee15vf2b::::res://Menu/Options/window_mode_button.tscn<>uid://nwctiw8atefk::::res://Menu/Options/resolution_mode_button.tscn
+options_menu.tscn::PackedScene::7713746360571691304::1725828661::0::1::::<><>::res://Menu/Options/options_menu.gd<>uid://byq6v4758uvab::::res://Menu/Options/settings_tab_container.tscn
+resolution_mode_button.gd::GDScript::-1::1725777883::0::1::::<>Control<>::
+resolution_mode_button.tscn::PackedScene::958027097626080892::1725828661::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/resolution_mode_button.gd
+settings_tab_container.gd::GDScript::-1::1725831083::0::1::::Settings_Tab_Container<>Control<>::
+settings_tab_container.tscn::PackedScene::4105904277537465541::1725831086::0::1::::<><>::res://Menu/Options/crosshair.gd<>uid://cirih71yp56dn::::res://Menu/Options/hotkey_rebind_button.tscn<>res://Retical/retical.gd<>res://Menu/Options/settings_tab_container.gd<>uid://csj2wee15vf2b::::res://Menu/Options/window_mode_button.tscn<>uid://nwctiw8atefk::::res://Menu/Options/resolution_mode_button.tscn
 window_mode_button.gd::GDScript::-1::1725775515::0::1::::<>Control<>::
-window_mode_button.tscn::PackedScene::6056498816422786675::1725775826::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/window_mode_button.gd
+window_mode_button.tscn::PackedScene::6056498816422786675::1725828661::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/window_mode_button.gd
 ::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/::1724920599
 @fonts.txt::TextFile::-1::1724920597::0::1::::<><>::
 @hello.txt::TextFile::-1::1724920597::0::1::::<><>::
@@ -747,6 +748,8 @@ Pause_Fullscreen.svg::CompressedTexture2D::6117851575525434755::1724920600::1724
 ::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Star/::1724920619
 Active.svg::CompressedTexture2D::2692549395894571268::1724920600::1724920619::1::::<><>::
 Unactive.svg::CompressedTexture2D::3599936645291334206::1724920600::1724920619::1::::<><>::
+::res://Music/::1725830398
+Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3::AudioStreamMP3::61632589200308006::1725829656::1725830398::1::::<><>::
 ::res://player_old/::1724809162
 grappling_controller.gd::GDScript::-1::1724809162::0::1::::<>RigidBody3D<>::
 moving_controller.gd::GDScript::-1::1724809162::0::1::::<>CharacterBody3D<>::
@@ -756,3 +759,5 @@ player_old.gd::GDScript::-1::1724809162::0::1::::<>CharacterBody3D<>::
 player_old.tscn::PackedScene::6323216948169461569::1724809162::0::1::::<><>::res://player_old/player_old.gd
 ::res://Retical/::1724920616
 retical.gd::GDScript::-1::1724888548::0::1::::<>CenterContainer<>::
+::res://Sprites/::1725829704
+::res://ths/::1725831387
