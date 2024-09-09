@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=40 format=3 uid="uid://bnqe2scl2i4rg"]
 
 [ext_resource type="PackedScene" uid="uid://cx7won6w4lpiy" path="res://player.tscn" id="1_7f7cj"]
 [ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://visuals/textures/texture_09.png" id="2_ui5y4"]
@@ -89,7 +89,10 @@ albedo_texture = ExtResource("5_xsyp0")
 [sub_resource type="BoxMesh" id="BoxMesh_i2j51"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q2v2i"]
-size = Vector3(8.32096, 5.5, 1.28176)
+size = Vector3(2, 5, 1.28176)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2fu3g"]
+size = Vector3(5.10754, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7umf0"]
 size = Vector3(9.62963, 6.66901, 1.99875)
@@ -525,8 +528,16 @@ mesh = SubResource("BoxMesh_i2j51")
 skeleton = NodePath("../MeshInstance3D8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="exit_gate"]
-transform = Transform3D(0.990389, 0, -0.138309, 0, 1, 0, 0.138309, 0, 0.990389, -0.468822, 2.71736, -0.613961)
+transform = Transform3D(0.990389, 0, -0.138309, 0, 1, 0, 0.138309, 0, 0.990389, -3.34187, 2.5, -1)
 shape = SubResource("BoxShape3D_q2v2i")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="exit_gate"]
+transform = Transform3D(0.990389, 0, -0.138309, 0, 1, 0, 0.138309, 0, 0.990389, 2.5, 2.5, 0)
+shape = SubResource("BoxShape3D_q2v2i")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="exit_gate"]
+transform = Transform3D(0.990268, 0, -0.139173, 0, 1, 0, 0.139173, 0, 0.990268, 0.0767381, 5, -0.406693)
+shape = SubResource("BoxShape3D_2fu3g")
 
 [node name="Area3D" type="Area3D" parent="exit_gate"]
 
