@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://danx1erveb837"]
+
+[ext_resource type="Script" path="res://Menu/Level_Select/level_mover.gd" id="1_1gmy6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_b007o"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_b007o")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.61086, 0, 0, 0, 3.61086, 0, 0, 0, 3.61086, 0, 2.73742, 0)
+mesh = SubResource("BoxMesh_b007o")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.98969, 0.19604, -0.206503, -0.179031, 3.98283, 0.322108, 0.221412, -0.312048, 3.9815, 0, 5.69206, 0)
+mesh = SubResource("BoxMesh_b007o")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.97362, 0.240656, -1.32292, -0.146072, 3.24962, 0.26281, 1.33667, -0.180253, 2.97174, 0, 7.81617, 0)
+mesh = SubResource("BoxMesh_b007o")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+script = ExtResource("1_1gmy6")
+
+[node name="Camera3D" type="Camera3D" parent="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 10)

@@ -120,17 +120,24 @@ func _physics_process(delta):
 			if kills_needed == 0:
 				$gui/AnimationPlayer.play("stage_cleared")
 	
-	#to show if the player can grapple
-	if state != STATES.GRAPPLING:
-		if grapple_data:
-			if not grapple_data.collider.is_in_group("enemy"):
-				crosshair.modulate = Color.RED
+	
+	#show what the grapple ray hit
+	if grapple_data:
+		if grapple_data.collider.is_in_group("enemy"):
+			crosshair.modulate = Color.GREEN
 		else:
-			crosshair.modulate = Color.WHITE
+			crosshair.modulate = Color.RED
+	else:
+		crosshair.modulate = Color.WHITE
 	
 	
 	#track speed of player
 	speed = velocity.distance_to(Vector3.ZERO)
+	
+	if speed > 350:
+		velocity = velocity.normalized() * 350
+		speed = velocity.distance_to(Vector3.ZERO)
+	
 	
 	#change fov dependant on speed
 	wanted_fov = move_toward(
@@ -283,7 +290,6 @@ func check_and_start_grapple():
 			grapple_line.points[1] = shoot_to
 			grapple_line.show()
 			
-			crosshair.modulate = Color.GREEN
 			
 			shoot_to = held_pos
 			

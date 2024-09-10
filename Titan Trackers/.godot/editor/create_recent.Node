@@ -1,7 +1,10 @@
+Camera3D
+Marker3D
+SpringArm3D
+MeshInstance3D
 CollisionShape3D
 Area3D
 Node
-MeshInstance3D
 StaticBody3D
 Label
 AnimationPlayer
@@ -10,5 +13,3 @@ MarginContainer
 TextureProgressBar
 ProgressBar
 CPUParticles3D
-GPUParticles3D
-Path3D
