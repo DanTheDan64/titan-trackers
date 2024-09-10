@@ -23,9 +23,10 @@ var sens: float = 0.2
 @onready var movement_orienter: Object = $movement_orienter
 
 @onready var crosshair: Object = $"gui/Sprite2D"
-@onready var state_text_display = $"gui/Label"
-@onready var spedometer = $"gui/TextureProgressBar"
-@onready var speed_text_display = $"gui/TextureProgressBar/Label2"
+@onready var state_text_display: Object = $gui/state_display
+@onready var spedometer: Object = $"gui/TextureProgressBar"
+@onready var speed_text_display: Object = $"gui/TextureProgressBar/Label2"
+@onready var stopwatch = $gui/stopwatch
 
 #movement
 var state_stats = {
@@ -70,6 +71,8 @@ var normal_fov = 75
 var wanted_fov = 0
 
 var kills_needed = 0
+
+var time = 0
 
 func _ready():
 	grapple_line.hide()
@@ -154,6 +157,8 @@ func _physics_process(delta):
 	
 	speed_text_display.text = str(snapped(speed, 0.1))
 	
+	time += delta
+	$gui/stopwatch.text = str(snapped(time, 0.01))
 	
 	move_and_slide()
 
