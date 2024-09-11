@@ -1,8 +1,8 @@
+Node2D
 Node
 TextureProgressBar
 TextureRect
 Node3D
-Node2D
 Label
 Timer
 Button
@@ -12,4 +12,3 @@ HBoxContainer
 Panel
 ColorRect
 OmniLight3D
-AnimationPlayer

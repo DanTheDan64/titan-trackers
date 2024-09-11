@@ -4,10 +4,10 @@ extends Marker3D
 @onready var cam = $Camera3D
 @onready var animation_player = $"../AnimationPlayer"
 
+@onready var windows = $"../gui/windows"
 
-var selected = global.level_on
-var on = selected
-var gap = []
+@onready var selected = global.level_on
+@onready var on = selected
 
 
 func _input(event):
@@ -15,24 +15,23 @@ func _input(event):
 		if Input.get_axis("left", "right"):
 			selected += Input.get_axis("left", "right")
 		selected = clamp(selected, 0, 2)
-		$"../gui".get_node(str(on)).hide()
+		windows.get_node(str(on)).hide()
 		if not animation_player.is_playing():
 			run_animation()
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"../gui".get_node(str(selected)).show()
-	
-	#for child in $"../gui".get_children():
-		#if global.records[child.name.to_int()]:
-			#get_node(str(child.name) + "/VBoxContainer/Panel2/Label").text = \
-			#"record:" + "\n" + \
-			#global.records[child.name.to_int()]
-		#else:
-			#get_node(str(child.name) + "/VBoxContainer/Panel2/Label").text = \
-			#"record:" + "\n" + \
-			#"unavailable"
+	windows.get_node(str(selected)).show()
+	print(global.records[0])
+	for child in windows.get_children():
+		
+		if global.records[child.name.to_int()]:
+			get_node("../gui/windows/" + str(child.name) + "/VBoxContainer/Panel2/Label").text = \
+			"record:" + "\n" + str(global.records[0])
+		else:
+			get_node("../gui/windows/" + str(child.name) + "/VBoxContainer/Panel2/Label").text = \
+			"record:" + "\n" + "unavailable"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,6 +52,6 @@ func run_animation():
 			animation_player.play_backwards("move_between_" + str(on - 1) + "_" + str(on))
 			on -= 1
 	else:
-		$"../gui".get_node(str(selected)).show()
+		windows.get_node(str(selected)).show()
 
 

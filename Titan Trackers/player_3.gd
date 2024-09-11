@@ -348,8 +348,8 @@ func update_state(state_to):
 
 
 func end_level():
-	global.records[get_parent_node_3d().name] = time
-	global.level_on = get_parent_node_3d().name
+	global.records[get_parent_node_3d().name.to_int()] = snapped(time, 0.001)
+	global.level_on = get_parent_node_3d().name.to_int()
 	get_tree().call_deferred("change_scene_to_file", \
 	"res://Menu/Main/Main_Menu.tscn")
 

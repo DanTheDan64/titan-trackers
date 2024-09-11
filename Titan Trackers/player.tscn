@@ -17,7 +17,7 @@ shading_mode = 0
 albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
 albedo_texture = ExtResource("2_c16yx")
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_s3rse"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_e8ctk"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
@@ -90,7 +90,7 @@ one_shot = true
 [node name="LineRenderer3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_qtgjc")
-mesh = SubResource("ImmediateMesh_s3rse")
+mesh = SubResource("ImmediateMesh_e8ctk")
 script = ExtResource("3_qof0h")
 points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
