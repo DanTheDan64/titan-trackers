@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://cx7won6w4lpiy"]
+[gd_scene load_steps=16 format=3 uid="uid://cx7won6w4lpiy"]
 
 [ext_resource type="Script" path="res://player_3.gd" id="1_5mk6g"]
 [ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://addons/LineRenderer/line_render_demo/line.png" id="2_c16yx"]
 [ext_resource type="Script" path="res://addons/LineRenderer/line_renderer.gd" id="3_qof0h"]
 [ext_resource type="Texture2D" uid="uid://oce5xjtw33cp" path="res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png" id="4_s4oow"]
+[ext_resource type="Texture2D" uid="uid://8gmhogjbwdvv" path="res://visuals/sprites/charge_bar.png" id="5_0jgcy"]
+[ext_resource type="Texture2D" uid="uid://dhmnfnnvt0t0h" path="res://visuals/sprites/white_circle-removebg-preview.png" id="6_fn36i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lq231"]
 
@@ -15,7 +17,7 @@ shading_mode = 0
 albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
 albedo_texture = ExtResource("2_c16yx")
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_mc5bu"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_s3rse"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
@@ -83,11 +85,12 @@ shape = SubResource("CapsuleShape3D_kd6ts")
 one_shot = true
 
 [node name="grapple_cooldown" type="Timer" parent="."]
+one_shot = true
 
 [node name="LineRenderer3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_qtgjc")
-mesh = SubResource("ImmediateMesh_mc5bu")
+mesh = SubResource("ImmediateMesh_s3rse")
 script = ExtResource("3_qof0h")
 points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
@@ -100,16 +103,16 @@ scale = Vector2(0.0625, 0.0625)
 texture = SubResource("CompressedTexture2D_wxa7q")
 
 [node name="state_display" type="Label" parent="gui"]
-offset_left = -936.0
-offset_top = -88.0
-offset_right = -375.0
-offset_bottom = 128.0
+offset_left = -992.0
+offset_top = -104.0
+offset_right = -431.0
+offset_bottom = 112.0
 theme_override_font_sizes/font_size = 96
-text = "tgyjstgtyortj"
+text = "tgyjstgtyo"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="stopwatch" type="Label" parent="gui"]
-anchors_preset = -1
 offset_left = -936.0
 offset_top = -512.0
 offset_right = -304.0
@@ -117,7 +120,7 @@ offset_bottom = -304.0
 text = "asedfs"
 label_settings = SubResource("LabelSettings_hnvdx")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="gui"]
+[node name="spedometer" type="TextureProgressBar" parent="gui"]
 clip_contents = true
 offset_left = -944.0
 offset_top = 144.0
@@ -130,9 +133,8 @@ fill_mode = 5
 texture_under = ExtResource("4_s4oow")
 texture_progress = ExtResource("4_s4oow")
 tint_progress = Color(1, 0, 0, 1)
-metadata/_edit_group_ = true
 
-[node name="Label2" type="Label" parent="gui/TextureProgressBar"]
+[node name="speed_display" type="Label" parent="gui/spedometer"]
 layout_mode = 0
 offset_left = 37.0
 offset_top = 56.0
@@ -159,6 +161,32 @@ label_settings = SubResource("LabelSettings_3gq18")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
+
+[node name="grapple_cooldown_display" type="TextureProgressBar" parent="gui"]
+offset_left = 712.0
+offset_top = -64.0
+offset_right = 872.0
+offset_bottom = 448.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("5_0jgcy")
+
+[node name="boost_charges" type="Node" parent="gui"]
+
+[node name="1" type="Sprite2D" parent="gui/boost_charges"]
+position = Vector2(832, -384)
+scale = Vector2(0.266667, 0.266667)
+texture = ExtResource("6_fn36i")
+
+[node name="2" type="Sprite2D" parent="gui/boost_charges"]
+position = Vector2(704, -384)
+scale = Vector2(0.266667, 0.266667)
+texture = ExtResource("6_fn36i")
+
+[node name="3" type="Sprite2D" parent="gui/boost_charges"]
+position = Vector2(576, -384)
+scale = Vector2(0.266667, 0.266667)
+texture = ExtResource("6_fn36i")
 
 [node name="Timer" type="Timer" parent="."]
 

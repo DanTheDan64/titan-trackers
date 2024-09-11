@@ -5,8 +5,8 @@ extends Marker3D
 @onready var animation_player = $"../AnimationPlayer"
 
 
-var selected = 0
-var on = 0
+var selected = global.level_on
+var on = selected
 var gap = []
 
 
@@ -23,6 +23,16 @@ func _input(event):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$"../gui".get_node(str(selected)).show()
+	
+	#for child in $"../gui".get_children():
+		#if global.records[child.name.to_int()]:
+			#get_node(str(child.name) + "/VBoxContainer/Panel2/Label").text = \
+			#"record:" + "\n" + \
+			#global.records[child.name.to_int()]
+		#else:
+			#get_node(str(child.name) + "/VBoxContainer/Panel2/Label").text = \
+			#"record:" + "\n" + \
+			#"unavailable"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -12,8 +12,6 @@ enum STATES {
 
 var state: STATES = STATES.MOVING
 
-var gravity: int = 12
-
 
 #camera
 @onready var cam: Object = $Camera3D
@@ -24,12 +22,13 @@ var sens: float = 0.2
 
 @onready var crosshair: Object = $"gui/Sprite2D"
 @onready var state_text_display: Object = $gui/state_display
-@onready var spedometer: Object = $"gui/TextureProgressBar"
-@onready var speed_text_display: Object = $"gui/TextureProgressBar/Label2"
+@onready var spedometer: Object = $"gui/spedometer"
+@onready var speed_text_display: Object = $"gui/spedometer/speed_display"
 @onready var stopwatch = $gui/stopwatch
+@onready var grapple_cooldown_display = $gui/grapple_cooldown_display
 
-#movement
-var state_stats = {
+#state data
+var state_stats: Dictionary = {
 	STATES.MOVING: [3, 24],
 	STATES.JUMPING: [0.5, 5],
 	STATES.SLIDING: [0.15, 0.3],
@@ -38,10 +37,11 @@ var state_stats = {
 	STATES.AIRBORN: [0.1, 0.1]
 }
 
-#moving
+#general movement
 var friction: float = state_stats[state][0]
 var accell: float = state_stats[state][0]
 var jump_velocity: int = 6
+var gravity: int = 12
 
 @onready var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 @onready var direction: Vector3 = (cam.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -52,27 +52,29 @@ var shoot_to = Vector3.ZERO
 
 var held_pos: Vector3 = Vector3.ZERO
 var coyote_time: float = 0.2
-var grapple_range: int = 800
+var grapple_range: int = 300
 var pull_strength: int = 200
+var grapple_cooldown_length: int = 1
 
 var can_grapple: bool = true
 
-@onready var grapple_line = $LineRenderer3D
+@onready var grapple_line: Object = $LineRenderer3D
 
 
 var grapple_data: Dictionary
 
 
 #random
-var highest = 0
-var speed = 0
+var speed: float = 0.0
 
-var normal_fov = 75
-var wanted_fov = 0
+var normal_fov: float = 75.0
+var wanted_fov: float = 0.0
 
-var kills_needed = 0
+var boosts_left = 3
 
-var time = 0
+var kills_needed: int = 0
+
+var time: float = 0.0
 
 func _ready():
 	grapple_line.hide()
@@ -156,6 +158,16 @@ func _physics_process(delta):
 		spedometer.value, speed, 100 * delta)
 	
 	speed_text_display.text = str(snapped(speed, 0.1))
+	
+	
+	grapple_cooldown_display.value = 100 - $grapple_cooldown.time_left * 100
+	
+	grapple_cooldown_display.modulate = Color(
+		$grapple_cooldown.time_left,
+		1 - $grapple_cooldown.time_left,
+		0,
+		1.0
+	)
 	
 	time += delta
 	$gui/stopwatch.text = str(snapped(time, 0.01))
@@ -300,13 +312,17 @@ func check_and_start_grapple():
 			
 			#go to grapple state
 			can_grapple = false
-			$grapple_cooldown.start(1)
+			$grapple_cooldown.start(grapple_cooldown_length)
 			update_state(STATES.GRAPPLING)
 			return
 
 
 func check_boost():
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and boosts_left:
+		
+		#fancy code toshow the amount of boost charges left
+		$gui/boost_charges.get_node(str(boosts_left)).hide()
+		boosts_left -= 1
 		if direction:
 			velocity += direction * 50
 		else:
@@ -329,6 +345,13 @@ func update_state(state_to):
 		STATES.CRASHING: state_text_display.text = "crashing"
 		STATES.GRAPPLING: state_text_display.text = "grappling"
 		STATES.AIRBORN: state_text_display.text = "airborn"
+
+
+func end_level():
+	global.records[get_parent_node_3d().name] = time
+	global.level_on = get_parent_node_3d().name
+	get_tree().call_deferred("change_scene_to_file", \
+	"res://Menu/Main/Main_Menu.tscn")
 
 
 #signals

@@ -8,5 +8,5 @@ func _ready():
 	pass
 
 
-func _on_crosshair_tab_button_pressed(tab):
+func _on_crosshair_tab_button_pressed(_tab):
 	user_retical.visible = true

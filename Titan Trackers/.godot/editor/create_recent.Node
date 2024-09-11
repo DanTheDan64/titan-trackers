@@ -1,7 +1,11 @@
+Node
+TextureProgressBar
+TextureRect
+Node3D
+Node2D
 Label
 Timer
 Button
-Node2D
 Control
 VBoxContainer
 HBoxContainer
@@ -9,6 +13,3 @@ Panel
 ColorRect
 OmniLight3D
 AnimationPlayer
-Camera3D
-Marker3D
-SpringArm3D
