@@ -173,7 +173,7 @@ func _physics_process(delta):
 	$gui/stopwatch.text = str(snapped(time, 0.01))
 	
 	
-	if position.y < -1000 or position.y > 200:
+	if position.y < -1000 or position.y > 2000:
 		get_tree().call_deferred("reload_current_scene")
 	
 	move_and_slide()

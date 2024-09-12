@@ -300,6 +300,7 @@ theme_override_font_sizes/font_size = 36
 text = "start:"
 
 [node name="back" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 992.0
 offset_right = 128.0

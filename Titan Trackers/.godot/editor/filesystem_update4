@@ -2,6 +2,4 @@ res://levels/test_scene.tscn
 res://player.tscn
 res://Menu/Level_Select/menu_level_select.tscn
 res://Menu/Main/Main_Menu.tscn
-res://Menu/Level_Select/level_mover.gd
-res://Menu/Level_Select/menu_level_select.gd
 res://player_3.gd
