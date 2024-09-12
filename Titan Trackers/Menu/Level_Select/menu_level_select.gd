@@ -13,10 +13,6 @@ func _process(_delta):
 	pass
 
 
-func _on_button_pressed():
-	get_tree().change_scene_to_file(MAIN_MENU)
-
-
 func _on_button_0_pressed():
 	get_tree().change_scene_to_file(TEST_SCENE)
 
@@ -27,3 +23,10 @@ func _on_button_1_pressed():
 
 func _on_button_2_pressed():
 	pass # Replace with function body.
+
+
+
+func _on_back_button_down():
+	get_tree().change_scene_to_file(MAIN_MENU)
+
+

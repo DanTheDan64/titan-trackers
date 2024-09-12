@@ -113,21 +113,16 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-
-[node name="Button" type="Button" parent="gui"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 1024.0
-offset_right = 144.0
-offset_bottom = 1056.0
-text = "back"
+metadata/_edit_lock_ = true
 
 [node name="windows" type="Control" parent="gui"]
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+metadata/_edit_lock_ = true
 
 [node name="0" type="Node2D" parent="gui/windows"]
+visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="gui/windows/0"]
 offset_left = 1504.0
@@ -304,13 +299,15 @@ focus_mode = 0
 theme_override_font_sizes/font_size = 36
 text = "start:"
 
-[node name="Control" type="Control" parent="gui/windows"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="back" type="Button" parent="gui"]
+offset_left = 32.0
+offset_top = 992.0
+offset_right = 128.0
+offset_bottom = 1048.0
+text = "back"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Marker3D" method="_on_animation_player_animation_finished"]
-[connection signal="pressed" from="gui/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="gui/windows/0/VBoxContainer/Button_0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="gui/windows/1/VBoxContainer/Button_1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="gui/windows/2/VBoxContainer/Button-2" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="gui/back" to="." method="_on_back_button_down"]

@@ -24,11 +24,11 @@ func _input(event):
 func _ready():
 	windows.get_node(str(selected)).show()
 	print(global.records[0])
-	for child in windows.get_children():
+	for child in $"../gui/windows".get_children():
 		
 		if global.records[child.name.to_int()]:
 			get_node("../gui/windows/" + str(child.name) + "/VBoxContainer/Panel2/Label").text = \
-			"record:" + "\n" + str(global.records[0])
+			"record:" + "\n" + str(global.records[child.name.to_int()])
 		else:
 			get_node("../gui/windows/" + str(child.name) + "/VBoxContainer/Panel2/Label").text = \
 			"record:" + "\n" + "unavailable"
