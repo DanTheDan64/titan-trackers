@@ -1,8 +1,5 @@
-res://Menu/Main/Main_Menu.tscn
-res://Menu/Options/options_menu.tscn
 res://levels/test_scene.tscn
 res://player.tscn
 res://Menu/Level_Select/menu_level_select.tscn
-res://enemy.tscn
-res://Menu/Level_Select/level_mover.gd
 res://player_3.gd
+res://Menu/Main/Main_Menu.tscn

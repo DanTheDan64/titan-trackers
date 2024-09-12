@@ -1,3 +1,4 @@
+Control
 Node2D
 Node
 TextureProgressBar
@@ -6,7 +7,6 @@ Node3D
 Label
 Timer
 Button
-Control
 VBoxContainer
 HBoxContainer
 Panel

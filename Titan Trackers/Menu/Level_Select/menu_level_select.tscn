@@ -93,7 +93,6 @@ transform = Transform3D(2.97362, 0.240656, -1.32292, -0.146072, 3.24962, 0.26281
 mesh = SubResource("BoxMesh_b007o")
 
 [node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_1gmy6")
 
 [node name="Camera3D" type="Camera3D" parent="Marker3D"]
@@ -115,7 +114,18 @@ anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="windows" type="Node2D" parent="gui"]
+[node name="Button" type="Button" parent="gui"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 1024.0
+offset_right = 144.0
+offset_bottom = 1056.0
+text = "back"
+
+[node name="windows" type="Control" parent="gui"]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="0" type="Node2D" parent="gui/windows"]
 
@@ -294,16 +304,13 @@ focus_mode = 0
 theme_override_font_sizes/font_size = 36
 text = "start:"
 
-[node name="Button" type="Button" parent="gui"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 1024.0
-offset_right = 144.0
-offset_bottom = 1056.0
-text = "back"
+[node name="Control" type="Control" parent="gui/windows"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Marker3D" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="gui/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="gui/windows/0/VBoxContainer/Button_0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="gui/windows/1/VBoxContainer/Button_1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="gui/windows/2/VBoxContainer/Button-2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="gui/Button" to="." method="_on_button_pressed"]
