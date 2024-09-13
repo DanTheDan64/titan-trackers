@@ -7,13 +7,14 @@ extends CenterContainer
 @onready var bottom = $Bottom
 @onready var left = $Left
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	queue_redraw()# This code tells to draw any commends that you have put into the script 
 
 func _draw():

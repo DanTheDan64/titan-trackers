@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CanvasLayer
 WorldEnvironment
 HSlider
@@ -13,3 +14,19 @@ Node
 MeshInstance3D
 StaticBody3D
 Label
+=======
+Button
+Control
+Node2D
+Node
+TextureProgressBar
+TextureRect
+Node3D
+Label
+Timer
+VBoxContainer
+HBoxContainer
+Panel
+ColorRect
+OmniLight3D
+>>>>>>> 6ee863e1ccd91c54bbdd33f0c1122c8d2fda7dab

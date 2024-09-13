@@ -13,7 +13,7 @@ func _process(_delta):
 
 
 func hit():
-	$CPUParticles3D.set_emitting(false)
+	$CPUParticles3D.set_emitting(true)
 	$MeshInstance3D.hide()
 	$CollisionShape3D.disabled = true
 	await get_tree().create_timer( \

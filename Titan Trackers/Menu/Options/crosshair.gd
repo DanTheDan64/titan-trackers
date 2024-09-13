@@ -18,8 +18,18 @@ func _ready():
 	pass
 	
 # Called every frame	. 'delta' is the elapsed time since the previous frame.
+<<<<<<< HEAD
 func _process(delta):
 	queue_redraw()
+=======
+func _process(_delta):
+	pass
+
+
+func _draw():
+	#Edraw_circle(Vector2 (0,0),DOT_RADIUS,DOT_COLOR) #This basickly means that godot draws a circal at 0,0 and can be controled by DOT_RADIUS and DOT_COLOR
+	pass
+>>>>>>> 6ee863e1ccd91c54bbdd33f0c1122c8d2fda7dab
 	
 
 func _draw():

@@ -56,6 +56,7 @@ func set_key_text():
 	
 	button.text =  "%s" % action_keycode
 
+<<<<<<< HEAD
 
 func _on_button_toggled(toggled_on):
 	if toggled_on:
@@ -87,6 +88,19 @@ func rebind_action_key(event):
 	set_process_unhandled_key_input(false)
 	set_key_text()
 	set_action_name()
+=======
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	pass
+
+
+
+
+
+
+
+
+>>>>>>> 6ee863e1ccd91c54bbdd33f0c1122c8d2fda7dab
 
 
 
