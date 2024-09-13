@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwlk12oup7b7h"]
+
+[ext_resource type="Script" path="res://Menu/Main/Main_Menu.gd" id="1_4qifw"]
+[ext_resource type="PackedScene" uid="uid://dh5ujms38xqey" path="res://Menu/Options/Main_menu/options_menu.tscn" id="2_v7sey"]
+[ext_resource type="AudioStream" uid="uid://44cygc01fk5" path="res://Music/Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3" id="3_a0gd3"]
+
+[sub_resource type="SystemFont" id="SystemFont_xpxwn"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4qifw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Specter" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_xpxwn")
+theme_override_font_sizes/font_size = 64
+text = "NightFall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Start_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Start"
+
+[node name="Specter2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Options_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Options
+"
+
+[node name="Specter3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Exit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[node name="Options_Menu" parent="." instance=ExtResource("2_v7sey")]
+visible = false
+layout_mode = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_a0gd3")
+volume_db = -11.693
+autoplay = true
+bus = &"music"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx"
+
+[connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Start_button" to="." method="_on_start_button_button_down"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Options_button" to="." method="_on_options_button_button_down"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Exit_button" to="." method="_on_exit_button_button_down"]
+[connection signal="exit_options_menu" from="Options_Menu" to="." method="_on_options_menu_exit_options_menu"]
