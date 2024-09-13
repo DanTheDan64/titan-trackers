@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://rx76arl40omg"]
+
+[ext_resource type="Script" path="res://Brightness_Display_Button.gd" id="1_jwdjt"]
+[ext_resource type="PackedScene" uid="uid://bkml1j32enpuq" path="res://Menu/Options/world_environment.tscn" id="2_hbj2c"]
+
+[node name="Brightness_Display_Button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwdjt")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_hbj2c")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(468, 86)
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "Brightness
+"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="HBoxContainer"]
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/CanvasLayer"]
+offset_left = 872.0
+offset_right = 1296.0
+offset_bottom = 112.0
+
+[connection signal="value_changed" from="HBoxContainer/CanvasLayer/HSlider" to="." method="_on_h_slider_value_changed"]

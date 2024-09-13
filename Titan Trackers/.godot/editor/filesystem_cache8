@@ -1,782 +1,798 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725866696
-CharacterBody2D.gd::GDScript::-1::1725866673::0::1::::<>CharacterBody2D<>::
-enemy.gd::GDScript::-1::1725531260::0::1::::<>StaticBody3D<>::
-enemy.tscn::PackedScene::8581227740224858084::1725786207::0::1::::<><>::res://enemy.gd<>uid://d5itiblikht6::::res://visuals/textures/texture_09.png
-player.tscn::PackedScene::6454606365877662348::1725866635::0::1::::<><>::res://player_3.gd<>uid://mblnkohmbep2::::res://addons/LineRenderer/line_render_demo/line.png<>res://addons/LineRenderer/line_renderer.gd<>uid://oce5xjtw33cp::::res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png
-player_3.gd::GDScript::-1::1725683204::0::1::::<>CharacterBody3D<>::
-test_scene.tscn::PackedScene::1564319963263337205::1725866674::0::1::::<><>::res://icon.svg<>res://Retical/retical.gd
-::res://addons/::1725671943
-::res://addons/LineRenderer/::1725671949
-line_plugin.gd::GDScript::-1::1725531260::0::1::::<>EditorPlugin<>::
-line_renderer.gd::GDScript::-1::1725531260::0::1::::<>MeshInstance3D<>::
-line_render_icon.svg::CompressedTexture2D::8394506683561103367::1725531260::1725671282::1::::<><>::
-plugin.cfg::TextFile::-1::1725531260::0::1::::<><>::
-README.md::TextFile::-1::1725531260::0::1::::<><>::
-::res://addons/LineRenderer/line_render_demo/::1725683523
-camera.gd::GDScript::-1::1725531260::0::1::::<>Camera3D<>::
-demo.tscn::PackedScene::5490320671419960584::1725683523::0::1::::<><>::uid://mblnkohmbep2::::res://addons/LineRenderer/line_render_demo/line.png<>res://addons/LineRenderer/line_renderer.gd<>res://addons/LineRenderer/line_render_demo/camera.gd
-line.png::CompressedTexture2D::845022150846534865::1725531260::1725671949::1::::<><>::
-::res://levels/::1725786207
-test_scene.tscn::PackedScene::3332197728505107212::1725786207::0::1::::<><>::uid://cx7won6w4lpiy::::res://player.tscn<>uid://d5itiblikht6::::res://visuals/textures/texture_09.png<>uid://dwqkhj0uy7kd7::::res://visuals/sprites/icon.svg<>uid://q1h0snv7rn6f::::res://visuals/textures/texture_02.png<>uid://cna5tup3atw0j::::res://visuals/textures/texture_06.png<>uid://dui2tjvg431rk::::res://enemy.tscn
-::res://Menu/::1725866673
-::res://Menu/Main/::1725866673
-Main_Menu.gd::GDScript::-1::1725866673::0::1::::MainMenu<>Control<>::
-Main_Menu.tscn::PackedScene::3953938440281392187::1725866673::0::1::::<><>::res://Menu/Main/Main_Menu.gd<>uid://dh5ujms38xqey::::res://Menu/Options/options_menu.tscn
-::res://Menu/Options/::1725866673
-are_you_sure.gd::GDScript::-1::1725866673::0::1::::<>Control<>::
-are_you_sure.tscn::PackedScene::7264600241009021687::1725866673::0::1::::<><>::res://Menu/Options/are_you_sure.gd
-crosshair.gd::GDScript::-1::1725866673::0::1::::Crosshair<>TabBar<>::
-game_menu.gd::GDScript::-1::1725866673::0::1::::<>Control<>::
-game_menu.tscn::PackedScene::8260226518503874967::1725866673::0::1::::<><>::res://Menu/Options/game_menu.gd
-hotkey_rebind_button.gd::GDScript::-1::1725866673::0::1::::HotkeyRebindButton<>Control<>::
-hotkey_rebind_button.tscn::PackedScene::5369946496832773071::1725866673::0::1::::<><>::res://Menu/Options/hotkey_rebind_button.gd
-options_display_button.tscn::PackedScene::4002382343626648512::1725866673::0::1::::<><>::
-options_menu.gd::GDScript::-1::1725866673::0::1::::OptionsMenu<>Control<>::
-options_menu.tscn::PackedScene::7713746360571691304::1725866673::0::1::::<><>::res://Menu/Options/options_menu.gd<>uid://byq6v4758uvab::::res://Menu/Options/settings_tab_container.tscn
-resolution_mode_button.gd::GDScript::-1::1725866673::0::1::::<>Control<>::
-resolution_mode_button.tscn::PackedScene::958027097626080892::1725866673::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/resolution_mode_button.gd
-settings_tab_container.gd::GDScript::-1::1725866673::0::1::::Settings_Tab_Container<>Control<>::
-settings_tab_container.tscn::PackedScene::4105904277537465541::1725866673::0::1::::<><>::res://Menu/Options/crosshair.gd<>uid://cirih71yp56dn::::res://Menu/Options/hotkey_rebind_button.tscn<>res://Retical/retical.gd<>res://Menu/Options/settings_tab_container.gd<>uid://csj2wee15vf2b::::res://Menu/Options/window_mode_button.tscn<>uid://nwctiw8atefk::::res://Menu/Options/resolution_mode_button.tscn
-window_mode_button.gd::GDScript::-1::1725866673::0::1::::<>Control<>::
-window_mode_button.tscn::PackedScene::6056498816422786675::1725866673::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/window_mode_button.gd
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/::1725866674
-@fonts.txt::TextFile::-1::1725866673::0::1::::<><>::
-@hello.txt::TextFile::-1::1725866673::0::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/@preview/::1725866673
-@Button Icon.png::CompressedTexture2D::6402501311887026130::1725866673::1725866673::1::::<><>::
-@Button Icon.svg::CompressedTexture2D::8853626499174942201::1725866673::1725866673::1::::<><>::
-@Button Rect.png::CompressedTexture2D::4099748013590905880::1725866673::1725866673::1::::<><>::
-@Button Rect.svg::CompressedTexture2D::6927924792304124976::1725866673::1725866673::1::::<><>::
-@Button Square.png::CompressedTexture2D::8922891786528540668::1725866673::1725866673::1::::<><>::
-@Button Square.svg::CompressedTexture2D::8873007342069138482::1725866673::1725866673::1::::<><>::
-@Counter.png::CompressedTexture2D::7520396491104480645::1725866673::1725866673::1::::<><>::
-@Counter.svg::CompressedTexture2D::8257954296627902081::1725866673::1725866673::1::::<><>::
-@Icons.png::CompressedTexture2D::9181133663305761857::1725866673::1725866673::1::::<><>::
-@Icons.svg::CompressedTexture2D::3376952818986152446::1725866673::1725866673::1::::<><>::
-@Level.png::CompressedTexture2D::1520059755076421623::1725866673::1725866673::1::::<><>::
-@Level.svg::CompressedTexture2D::1444720110776620533::1725866673::1725866673::1::::<><>::
-@Load.png::CompressedTexture2D::7820497523985041543::1725866673::1725866673::1::::<><>::
-@Load.svg::CompressedTexture2D::3681291722348437193::1725866673::1725866673::1::::<><>::
-@Star.png::CompressedTexture2D::5278648742332761224::1725866673::1725866673::1::::<><>::
-@Star.svg::CompressedTexture2D::914987893752930191::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Icon/::1725866673
-ArrowLeft-Bold.png::CompressedTexture2D::4097683595049689121::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin.png::CompressedTexture2D::5772088053689793852::1725866673::1725866673::1::::<><>::
-ArrowRight-Bold.png::CompressedTexture2D::1508326998784507561::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin.png::CompressedTexture2D::5486312366689770489::1725866673::1725866673::1::::<><>::
-Home.png::CompressedTexture2D::614416012090105151::1725866673::1725866673::1::::<><>::
-Levels.png::CompressedTexture2D::5895866699357897695::1725866673::1725866673::1::::<><>::
-Pause.png::CompressedTexture2D::1761226913011072755::1725866673::1725866673::1::::<><>::
-Play.png::CompressedTexture2D::4748473932309706561::1725866673::1725866673::1::::<><>::
-Replay.png::CompressedTexture2D::3771303499925512954::1725866673::1725866673::1::::<><>::
-SoundOff.png::CompressedTexture2D::7879424041102629111::1725866673::1725866673::1::::<><>::
-SoundOn.png::CompressedTexture2D::6649106845645682355::1725866673::1725866673::1::::<><>::
-Star.png::CompressedTexture2D::5166654483659778789::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Rect/::1725866673
-Default.png::CompressedTexture2D::2776285699653045927::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::5379045073552215241::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Square/::1725866673
-Default.png::CompressedTexture2D::3305261492634740437::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::8009161489833859874::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/OKText/::1725866673
-Default.png::CompressedTexture2D::1408804039001595429::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::6895860637555337394::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/PlayIcon/::1725866673
-Default.png::CompressedTexture2D::7184615524364841174::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::4711361839553401559::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/PlayText/::1725866673
-Default.png::CompressedTexture2D::7755085707230202015::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::1379568466259876274::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowLeft-Bold/::1725866673
-Default.png::CompressedTexture2D::5833173674846082228::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::1513619063629766821::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowLeft-Thin/::1725866673
-Default.png::CompressedTexture2D::6466112636730383659::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::956705729730336728::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowRight-Bold/::1725866673
-Default.png::CompressedTexture2D::5417998355265140718::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::4018040326159486211::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowRight-Thin/::1725866673
-Default.png::CompressedTexture2D::7302829821394284654::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::1389116703359211472::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Home/::1725866673
-Default.png::CompressedTexture2D::700721055680197721::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::4313887509197478424::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Levels/::1725866673
-Default.png::CompressedTexture2D::5698508455828155357::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::5027219228081845388::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Pause/::1725866673
-Default.png::CompressedTexture2D::8854250713289765969::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::4672315852245798335::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Play/::1725866673
-Default.png::CompressedTexture2D::3432526255763537879::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::3997437055360930008::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Repeat/::1725866673
-Default.png::CompressedTexture2D::705891838351306325::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::444102550659992482::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/SoundOff/::1725866673
-Default.png::CompressedTexture2D::2810739282760627077::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::8402123504474308979::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/SoundOn/::1725866673
-Default.png::CompressedTexture2D::1735413997699560919::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::6113872564762930460::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Star/::1725866673
-Default.png::CompressedTexture2D::4021117517910112178::1725866673::1725866673::1::::<><>::
-Hover.png::CompressedTexture2D::2435028714057380673::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Counter/::1725866673
-Example.png::CompressedTexture2D::2982759287763044006::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Counter/Icon/::1725866673
-Dummy.png::CompressedTexture2D::302248698270044117::1725866673::1725866673::1::::<><>::
-Money.png::CompressedTexture2D::7547330656067219691::1725866673::1725866673::1::::<><>::
-Time.png::CompressedTexture2D::55152066339707090::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Counter/Plate/::1725866673
-Default.png::CompressedTexture2D::1045427227932265538::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/::1725866673
-ArrowLeft-1.png::CompressedTexture2D::8817925955234647194::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin-1.png::CompressedTexture2D::2522814273551103519::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin.png::CompressedTexture2D::3752334277053480056::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin@0.5x-1.png::CompressedTexture2D::872942877153016948::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin@2x-1.png::CompressedTexture2D::309108655957708714::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin@4x-1.png::CompressedTexture2D::2243881876106145354::1725866673::1725866673::1::::<><>::
-ArrowLeft.png::CompressedTexture2D::9059324130668869721::1725866673::1725866673::1::::<><>::
-ArrowLeft@0.5x-1.png::CompressedTexture2D::5633388335211346029::1725866673::1725866673::1::::<><>::
-ArrowLeft@2x-1.png::CompressedTexture2D::7903338866725566022::1725866673::1725866673::1::::<><>::
-ArrowLeft@4x-1.png::CompressedTexture2D::3631848622844353030::1725866673::1725866673::1::::<><>::
-ArrowRight-1.png::CompressedTexture2D::8724106159760665113::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin-1.png::CompressedTexture2D::6633105944570183063::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin.png::CompressedTexture2D::713883551826463352::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@0.5x-1.png::CompressedTexture2D::9115485377677202899::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@2x-1.png::CompressedTexture2D::7483987604613082397::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@4x-1.png::CompressedTexture2D::4275853598599617745::1725866673::1725866673::1::::<><>::
-ArrowRight.png::CompressedTexture2D::1969572599703261281::1725866673::1725866673::1::::<><>::
-ArrowRight@0.5x-1.png::CompressedTexture2D::8379496150080476388::1725866673::1725866673::1::::<><>::
-ArrowRight@2x-1.png::CompressedTexture2D::6706592670309023594::1725866673::1725866673::1::::<><>::
-ArrowRight@4x-1.png::CompressedTexture2D::2216966389528837690::1725866673::1725866673::1::::<><>::
-Cross-1.png::CompressedTexture2D::8778916816477619167::1725866673::1725866673::1::::<><>::
-Cross.png::CompressedTexture2D::5910462507863165023::1725866673::1725866673::1::::<><>::
-Cross@0.5x-1.png::CompressedTexture2D::2401858617835637512::1725866673::1725866673::1::::<><>::
-Cross@2x-1.png::CompressedTexture2D::383060625532704716::1725866673::1725866673::1::::<><>::
-Cross@4x-1.png::CompressedTexture2D::6141688452934895777::1725866673::1725866673::1::::<><>::
-Heart-1.png::CompressedTexture2D::1380051144520773884::1725866673::1725866673::1::::<><>::
-Heart.png::CompressedTexture2D::8095483105083659787::1725866673::1725866673::1::::<><>::
-Heart@0.5x-1.png::CompressedTexture2D::988694538300713471::1725866673::1725866673::1::::<><>::
-Heart@2x-1.png::CompressedTexture2D::7897639932170741545::1725866673::1725866673::1::::<><>::
-Heart@4x-1.png::CompressedTexture2D::70866053871747294::1725866673::1725866673::1::::<><>::
-Home-1.png::CompressedTexture2D::5553352036945701738::1725866673::1725866673::1::::<><>::
-Home.png::CompressedTexture2D::1458318037599707061::1725866673::1725866673::1::::<><>::
-Home@0.5x-1.png::CompressedTexture2D::8852490205330487920::1725866673::1725866673::1::::<><>::
-Home@2x-1.png::CompressedTexture2D::8818482716843053685::1725866673::1725866673::1::::<><>::
-Home@4x-1.png::CompressedTexture2D::7877875803737582294::1725866673::1725866673::1::::<><>::
-Levels-1.png::CompressedTexture2D::7733510256567563299::1725866673::1725866673::1::::<><>::
-Levels.png::CompressedTexture2D::1332027417524100507::1725866673::1725866673::1::::<><>::
-Levels@0.5x-1.png::CompressedTexture2D::3952506736024689728::1725866673::1725866673::1::::<><>::
-Levels@2x-1.png::CompressedTexture2D::8303871509197799537::1725866673::1725866673::1::::<><>::
-Levels@4x-1.png::CompressedTexture2D::2864067548369905568::1725866673::1725866673::1::::<><>::
-Locker-1.png::CompressedTexture2D::1117018976970368164::1725866673::1725866673::1::::<><>::
-Locker.png::CompressedTexture2D::119346516733493502::1725866673::1725866673::1::::<><>::
-Locker@0.5x-1.png::CompressedTexture2D::2690454513874920507::1725866673::1725866673::1::::<><>::
-Locker@2x-1.png::CompressedTexture2D::6144119045336933808::1725866673::1725866673::1::::<><>::
-Locker@4x-1.png::CompressedTexture2D::5539748632395082643::1725866673::1725866673::1::::<><>::
-Mark-1.png::CompressedTexture2D::2811731259559568802::1725866673::1725866673::1::::<><>::
-Mark.png::CompressedTexture2D::7928557711175989455::1725866673::1725866673::1::::<><>::
-Mark@0.5x-1.png::CompressedTexture2D::4276222283174242541::1725866673::1725866673::1::::<><>::
-Mark@2x-1.png::CompressedTexture2D::849250516666038978::1725866673::1725866673::1::::<><>::
-Mark@4x-1.png::CompressedTexture2D::5505709484792328608::1725866673::1725866673::1::::<><>::
-Pause-1.png::CompressedTexture2D::7100317303479342239::1725866673::1725866673::1::::<><>::
-Pause.png::CompressedTexture2D::6354902220038773540::1725866673::1725866673::1::::<><>::
-Pause@0.5x-1.png::CompressedTexture2D::2088622032482429695::1725866673::1725866673::1::::<><>::
-Pause@2x-1.png::CompressedTexture2D::2145109965419550691::1725866673::1725866673::1::::<><>::
-Pause@4x-1.png::CompressedTexture2D::2958581026412876114::1725866673::1725866673::1::::<><>::
-Play-1.png::CompressedTexture2D::4345761475073124682::1725866673::1725866673::1::::<><>::
-Play.png::CompressedTexture2D::4454639419885191212::1725866673::1725866673::1::::<><>::
-Play@0.5x-1.png::CompressedTexture2D::427322052147119979::1725866673::1725866673::1::::<><>::
-Play@2x-1.png::CompressedTexture2D::8283362636409545413::1725866673::1725866673::1::::<><>::
-Play@4x-1.png::CompressedTexture2D::6619669705168757020::1725866673::1725866673::1::::<><>::
-Replay-1.png::CompressedTexture2D::5301917153077583584::1725866673::1725866673::1::::<><>::
-Replay.png::CompressedTexture2D::4556343414194946833::1725866673::1725866673::1::::<><>::
-Replay@0.5x-1.png::CompressedTexture2D::7951747105294102179::1725866673::1725866673::1::::<><>::
-Replay@2x-1.png::CompressedTexture2D::7150314095544718908::1725866673::1725866673::1::::<><>::
-Replay@4x-1.png::CompressedTexture2D::2040616108657259245::1725866673::1725866673::1::::<><>::
-Shield-1.png::CompressedTexture2D::4888731157190496795::1725866673::1725866673::1::::<><>::
-Shield.png::CompressedTexture2D::3338210571875801882::1725866673::1725866673::1::::<><>::
-Shield@0.5x-1.png::CompressedTexture2D::5224522282615667178::1725866673::1725866673::1::::<><>::
-Shield@2x-1.png::CompressedTexture2D::2074034135329147404::1725866673::1725866673::1::::<><>::
-Shield@4x-1.png::CompressedTexture2D::820694427958207691::1725866673::1725866673::1::::<><>::
-SoundOff-1.png::CompressedTexture2D::3000963115261520644::1725866673::1725866673::1::::<><>::
-SoundOff.png::CompressedTexture2D::7832327492933892680::1725866673::1725866673::1::::<><>::
-SoundOff@0.5x-1.png::CompressedTexture2D::3718693722818954045::1725866673::1725866673::1::::<><>::
-SoundOff@2x-1.png::CompressedTexture2D::779476967086790417::1725866673::1725866673::1::::<><>::
-SoundOff@4x-1.png::CompressedTexture2D::1502005188879047869::1725866673::1725866673::1::::<><>::
-SoundOn-1.png::CompressedTexture2D::2822539072654980234::1725866673::1725866673::1::::<><>::
-SoundOn.png::CompressedTexture2D::5128800101941601274::1725866673::1725866673::1::::<><>::
-SoundOn@0.5x-1.png::CompressedTexture2D::5046062554723781675::1725866673::1725866673::1::::<><>::
-SoundOn@2x-1.png::CompressedTexture2D::8881357770937727096::1725866673::1725866673::1::::<><>::
-SoundOn@4x-1.png::CompressedTexture2D::3409265586238744917::1725866673::1725866673::1::::<><>::
-Spark-1.png::CompressedTexture2D::5969522354220685122::1725866673::1725866673::1::::<><>::
-Spark.png::CompressedTexture2D::606916281979482130::1725866673::1725866673::1::::<><>::
-Spark@0.5x-1.png::CompressedTexture2D::3328462262815002753::1725866673::1725866673::1::::<><>::
-Spark@2x-1.png::CompressedTexture2D::3745181571677059851::1725866673::1725866673::1::::<><>::
-Spark@4x-1.png::CompressedTexture2D::6704007706049372279::1725866673::1725866673::1::::<><>::
-Star-1.png::CompressedTexture2D::9181029397970368181::1725866673::1725866673::1::::<><>::
-Star.png::CompressedTexture2D::3853064959632287642::1725866673::1725866673::1::::<><>::
-Star@0.5x-1.png::CompressedTexture2D::2936176616911112424::1725866673::1725866673::1::::<><>::
-Star@2x-1.png::CompressedTexture2D::7285122056754154279::1725866673::1725866673::1::::<><>::
-Star@4x-1.png::CompressedTexture2D::4385713395313303850::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/Button/::1725866673
-Dummy.png::CompressedTexture2D::4790871985501845164::1725866673::1725866673::1::::<><>::
-Locked.png::CompressedTexture2D::2110534564629151481::1725866673::1725866673::1::::<><>::
-Unlocked.png::CompressedTexture2D::4073977074137950820::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/Star/::1725866673
-Active.png::CompressedTexture2D::4914510933291618416::1725866673::1725866673::1::::<><>::
-Unactive.png::CompressedTexture2D::1592749805683971630::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/Star/Group/::1725866673
-0-3.png::CompressedTexture2D::265242516883805686::1725866673::1725866673::1::::<><>::
-1-3.png::CompressedTexture2D::7729933934280784273::1725866673::1725866673::1::::<><>::
-2-3.png::CompressedTexture2D::367662149521231080::1725866673::1725866673::1::::<><>::
-3-3.png::CompressedTexture2D::8371316735681185113::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Load/::1725866673
-Bullet.png::CompressedTexture2D::6432470543471259989::1725866673::1725866673::1::::<><>::
-Example.png::CompressedTexture2D::801160533988858053::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Load/Magazine/::1725866673
-Bottom.png::CompressedTexture2D::1330283709645108338::1725866673::1725866673::1::::<><>::
-Dummy.png::CompressedTexture2D::6805818059205176379::1725866673::1725866673::1::::<><>::
-Top.png::CompressedTexture2D::7062080584480408144::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Scene/::1725866673
-GameOver_Fullscreen.png::CompressedTexture2D::1837755332602944942::1725866673::1725866673::1::::<><>::
-Home.png::CompressedTexture2D::4058385660231612183::1725866673::1725866673::1::::<><>::
-LevelComplete_Fullscreen.png::CompressedTexture2D::4715628517115913386::1725866673::1725866673::1::::<><>::
-Levels.png::CompressedTexture2D::8320112457986853200::1725866673::1725866673::1::::<><>::
-Loading.png::CompressedTexture2D::9166911678890610151::1725866673::1725866673::1::::<><>::
-Pause_Fullscreen.png::CompressedTexture2D::921824085909896300::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Star/::1725866673
-Active.png::CompressedTexture2D::5308798064408840014::1725866673::1725866673::1::::<><>::
-Unactive.png::CompressedTexture2D::7106425760798919984::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Icon/::1725866673
-ArrowLeft-Bold@0.5x.png::CompressedTexture2D::6745502587621216053::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin@0.5x.png::CompressedTexture2D::7304207777704035246::1725866673::1725866673::1::::<><>::
-ArrowRight-Bold@0.5x.png::CompressedTexture2D::2389075293280056465::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@0.5x.png::CompressedTexture2D::192465029534292634::1725866673::1725866673::1::::<><>::
-Home@0.5x.png::CompressedTexture2D::1518033397227464627::1725866673::1725866673::1::::<><>::
-Levels@0.5x.png::CompressedTexture2D::6300133271545678625::1725866673::1725866673::1::::<><>::
-Pause@0.5x.png::CompressedTexture2D::5278876144678298435::1725866673::1725866673::1::::<><>::
-Play@0.5x.png::CompressedTexture2D::5151385087440224444::1725866673::1725866673::1::::<><>::
-Replay@0.5x.png::CompressedTexture2D::9149275538425751668::1725866673::1725866673::1::::<><>::
-SoundOff@0.5x.png::CompressedTexture2D::8681052832926019953::1725866673::1725866673::1::::<><>::
-SoundOn@0.5x.png::CompressedTexture2D::7942163325789838238::1725866673::1725866673::1::::<><>::
-Star@0.5x.png::CompressedTexture2D::4883517054553782628::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Rect/::1725866673
-Default@0.5x.png::CompressedTexture2D::6197570259447122221::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::8703954159644145832::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Square/::1725866673
-Default@0.5x.png::CompressedTexture2D::5257662222694551258::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::3851608005249164570::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/OKText/::1725866673
-Default@0.5x.png::CompressedTexture2D::20914600277130159::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::8773260511249294140::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/PlayIcon/::1725866673
-Default@0.5x.png::CompressedTexture2D::1359160752570699940::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::4410634902625840734::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/PlayText/::1725866673
-Default@0.5x.png::CompressedTexture2D::1602437375471247136::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::2346219471369203536::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowLeft-Bold/::1725866673
-Default@0.5x.png::CompressedTexture2D::3238463499917366618::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::9199953918454745940::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowLeft-Thin/::1725866673
-Default@0.5x.png::CompressedTexture2D::4525241889021120306::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::3083248354899550262::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowRight-Bold/::1725866673
-Default@0.5x.png::CompressedTexture2D::5188688314686610963::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::8536410116107928132::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowRight-Thin/::1725866673
-Default@0.5x.png::CompressedTexture2D::188953882548586706::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::5647359944989164026::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Home/::1725866673
-Default@0.5x.png::CompressedTexture2D::8245452463413671412::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::1263649408381125761::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Levels/::1725866673
-Default@0.5x.png::CompressedTexture2D::5844223544204833432::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::2679798547656758579::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Pause/::1725866673
-Default@0.5x.png::CompressedTexture2D::9178910107134172413::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::7157979827396266345::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Play/::1725866673
-Default@0.5x.png::CompressedTexture2D::5593405512140375530::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::4027195040610401727::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Repeat/::1725866673
-Default@0.5x.png::CompressedTexture2D::6374413247633758104::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::7218262644186147254::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/SoundOff/::1725866673
-Default@0.5x.png::CompressedTexture2D::7173623746921286637::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::5453033172467146219::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/SoundOn/::1725866673
-Default@0.5x.png::CompressedTexture2D::4269660558048488140::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::6564331865968641991::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Star/::1725866673
-Default@0.5x.png::CompressedTexture2D::6608061067886474625::1725866673::1725866673::1::::<><>::
-Hover@0.5x.png::CompressedTexture2D::6082592752314438179::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/::1725866673
-Example@0.5x.png::CompressedTexture2D::6064575682373296947::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/Icon/::1725866673
-Dummy@0.5x.png::CompressedTexture2D::3574466410725653674::1725866673::1725866673::1::::<><>::
-Money@0.5x.png::CompressedTexture2D::6711328661687766035::1725866673::1725866673::1::::<><>::
-Time@0.5x.png::CompressedTexture2D::5215049639297936058::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/Plate/::1725866673
-Default@0.5x.png::CompressedTexture2D::285438379783693403::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Icon/::1725866673
-ArrowLeft-Thin@0.5x.png::CompressedTexture2D::8639332713745770366::1725866673::1725866673::1::::<><>::
-ArrowLeft@0.5x.png::CompressedTexture2D::715531358207354379::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@0.5x.png::CompressedTexture2D::3976534613651328069::1725866673::1725866673::1::::<><>::
-ArrowRight@0.5x.png::CompressedTexture2D::8812688346902306781::1725866673::1725866673::1::::<><>::
-Cross@0.5x.png::CompressedTexture2D::4641674104045496910::1725866673::1725866673::1::::<><>::
-Heart@0.5x.png::CompressedTexture2D::7712513587839365401::1725866673::1725866673::1::::<><>::
-Home@0.5x.png::CompressedTexture2D::315402589941763415::1725866673::1725866673::1::::<><>::
-Levels@0.5x.png::CompressedTexture2D::5169608409215026360::1725866673::1725866673::1::::<><>::
-Locker@0.5x.png::CompressedTexture2D::190945485706974982::1725866673::1725866673::1::::<><>::
-Mark@0.5x.png::CompressedTexture2D::2190462716859575799::1725866673::1725866673::1::::<><>::
-Pause@0.5x.png::CompressedTexture2D::4157548681598835191::1725866673::1725866673::1::::<><>::
-Play@0.5x.png::CompressedTexture2D::4665120714846323901::1725866673::1725866673::1::::<><>::
-Replay@0.5x.png::CompressedTexture2D::773218836853116232::1725866673::1725866673::1::::<><>::
-Shield@0.5x.png::CompressedTexture2D::5596949896025489526::1725866673::1725866673::1::::<><>::
-SoundOff@0.5x.png::CompressedTexture2D::4931893806844133922::1725866673::1725866673::1::::<><>::
-SoundOn@0.5x.png::CompressedTexture2D::8404016134691469582::1725866673::1725866673::1::::<><>::
-Spark@0.5x.png::CompressedTexture2D::2707715405331472843::1725866673::1725866673::1::::<><>::
-Star@0.5x.png::CompressedTexture2D::7961426221884585009::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/Button/::1725866673
-Dummy@0.5x.png::CompressedTexture2D::7214240809522171329::1725866673::1725866673::1::::<><>::
-Locked@0.5x.png::CompressedTexture2D::6988713920634077209::1725866673::1725866673::1::::<><>::
-Unlocked@0.5x.png::CompressedTexture2D::1041872678437196025::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/Star/::1725866673
-Active@0.5x.png::CompressedTexture2D::4167316773628846908::1725866673::1725866673::1::::<><>::
-Unactive@0.5x.png::CompressedTexture2D::7445529908866097580::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/Star/Group/::1725866673
-0-3@0.5x.png::CompressedTexture2D::1344748341955283619::1725866673::1725866673::1::::<><>::
-1-3@0.5x.png::CompressedTexture2D::3950591433694106879::1725866673::1725866673::1::::<><>::
-2-3@0.5x.png::CompressedTexture2D::5982203493718716498::1725866673::1725866673::1::::<><>::
-3-3@0.5x.png::CompressedTexture2D::261484350795249081::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Load/::1725866673
-Bullet@0.5x.png::CompressedTexture2D::6147049510880197092::1725866673::1725866673::1::::<><>::
-Example@0.5x.png::CompressedTexture2D::2995337435873154851::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Load/Magazine/::1725866673
-Bottom@0.5x.png::CompressedTexture2D::5914770191211810100::1725866673::1725866673::1::::<><>::
-Dummy@0.5x.png::CompressedTexture2D::1573434342278611318::1725866673::1725866673::1::::<><>::
-Top@0.5x.png::CompressedTexture2D::8985237801509382435::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Star/::1725866673
-Active@0.5x.png::CompressedTexture2D::7228263786225496136::1725866673::1725866673::1::::<><>::
-Unactive@0.5x.png::CompressedTexture2D::8700245870189076551::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/Icon/::1725866673
-ArrowLeft-Bold@2x.png::CompressedTexture2D::8689308525015447341::1725866673::1725866673::1::::<><>::
-ArrowLeft-Thin@2x.png::CompressedTexture2D::3478668624555382774::1725866673::1725866673::1::::<><>::
-ArrowRight-Bold@2x.png::CompressedTexture2D::1007851279338371039::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@2x.png::CompressedTexture2D::2609170427504251667::1725866673::1725866673::1::::<><>::
-Home@2x.png::CompressedTexture2D::8491472391848732200::1725866673::1725866673::1::::<><>::
-Levels@2x.png::CompressedTexture2D::131550215461398692::1725866673::1725866673::1::::<><>::
-Pause@2x.png::CompressedTexture2D::1819499171628090739::1725866673::1725866673::1::::<><>::
-Play@2x.png::CompressedTexture2D::5849371974424011077::1725866673::1725866673::1::::<><>::
-Replay@2x.png::CompressedTexture2D::1008167448116314018::1725866673::1725866673::1::::<><>::
-SoundOff@2x.png::CompressedTexture2D::7710862100904527395::1725866673::1725866673::1::::<><>::
-SoundOn@2x.png::CompressedTexture2D::388895833132231791::1725866673::1725866673::1::::<><>::
-Star@2x.png::CompressedTexture2D::5058291920413618209::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/Rect/::1725866673
-Default@2x.png::CompressedTexture2D::3450732523807926171::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::2653022796828436243::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/Square/::1725866673
-Default@2x.png::CompressedTexture2D::5987035107423744035::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::1184581700653782536::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/OKText/::1725866673
-Default@2x.png::CompressedTexture2D::5358123669671213284::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::8485227940483057966::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/PlayIcon/::1725866673
-Default@2x.png::CompressedTexture2D::5259584850500411990::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::7793406314472613734::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/PlayText/::1725866673
-Default@2x.png::CompressedTexture2D::993294882440692278::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::5223705250893101978::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/::1725866673
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowLeft-Bold/::1725866673
-Default@2x.png::CompressedTexture2D::4992130995397853406::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::8480739731106356070::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowLeft-Thin/::1725866673
-Default@2x.png::CompressedTexture2D::8788850089203756726::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::1199433087562801490::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowRight-Bold/::1725866673
-Default@2x.png::CompressedTexture2D::4830122330907656930::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::1985228222616142353::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowRight-Thin/::1725866673
-Default@2x.png::CompressedTexture2D::6261393100045933064::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::3281831036886255026::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Home/::1725866673
-Default@2x.png::CompressedTexture2D::4721394522801763373::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::7582002871310456534::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Levels/::1725866673
-Default@2x.png::CompressedTexture2D::2854643515962142754::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::7960745938773070886::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Pause/::1725866673
-Default@2x.png::CompressedTexture2D::6960356503010342282::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::958415690786858127::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Play/::1725866673
-Default@2x.png::CompressedTexture2D::7237671947706536444::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::4144328524983509973::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Repeat/::1725866673
-Default@2x.png::CompressedTexture2D::3603421445613941586::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::1642239336883512402::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/SoundOff/::1725866673
-Default@2x.png::CompressedTexture2D::3555953031890634374::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::3016919442051943944::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/SoundOn/::1725866673
-Default@2x.png::CompressedTexture2D::7798784088549227903::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::915110612201254177::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Star/::1725866673
-Default@2x.png::CompressedTexture2D::679018932001941808::1725866673::1725866673::1::::<><>::
-Hover@2x.png::CompressedTexture2D::2884980721706552414::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Counter/::1725866673
-Example@2x.png::CompressedTexture2D::3625107204213488843::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Counter/Icon/::1725866673
-Dummy@2x.png::CompressedTexture2D::606760669096376902::1725866673::1725866673::1::::<><>::
-Money@2x.png::CompressedTexture2D::358621386672620705::1725866673::1725866673::1::::<><>::
-Time@2x.png::CompressedTexture2D::7518922030278608910::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Counter/Plate/::1725866673
-Default@2x.png::CompressedTexture2D::3703674488845829754::1725866673::1725866673::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Icon/::1725866674
-ArrowLeft-Thin@2x.png::CompressedTexture2D::862490661508650158::1725866673::1725866673::1::::<><>::
-ArrowLeft@2x.png::CompressedTexture2D::3292559919197176233::1725866673::1725866673::1::::<><>::
-ArrowRight-Thin@2x.png::CompressedTexture2D::2426267031452798364::1725866673::1725866673::1::::<><>::
-ArrowRight@2x.png::CompressedTexture2D::3844996531149345540::1725866674::1725866674::1::::<><>::
-Cross@2x.png::CompressedTexture2D::8862192008968290059::1725866674::1725866674::1::::<><>::
-Heart@2x.png::CompressedTexture2D::5218754643528190397::1725866674::1725866674::1::::<><>::
-Home@2x.png::CompressedTexture2D::6189459943345663771::1725866674::1725866674::1::::<><>::
-Levels@2x.png::CompressedTexture2D::2042238992968378656::1725866674::1725866674::1::::<><>::
-Locker@2x.png::CompressedTexture2D::1614662501120623520::1725866674::1725866674::1::::<><>::
-Mark@2x.png::CompressedTexture2D::1301846170056847765::1725866674::1725866674::1::::<><>::
-Pause@2x.png::CompressedTexture2D::4650604608484716563::1725866674::1725866674::1::::<><>::
-Play@2x.png::CompressedTexture2D::8414401669450761734::1725866674::1725866674::1::::<><>::
-Replay@2x.png::CompressedTexture2D::1118825586369409709::1725866674::1725866674::1::::<><>::
-Shield@2x.png::CompressedTexture2D::3829659278931719123::1725866674::1725866674::1::::<><>::
-SoundOff@2x.png::CompressedTexture2D::949775814118800454::1725866674::1725866674::1::::<><>::
-SoundOn@2x.png::CompressedTexture2D::5024222913333817920::1725866674::1725866674::1::::<><>::
-Spark@2x.png::CompressedTexture2D::6433935877185150972::1725866674::1725866674::1::::<><>::
-Star@2x.png::CompressedTexture2D::6742501431218140167::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Button/::1725866674
-Dummy@2x.png::CompressedTexture2D::4521284295091363358::1725866674::1725866674::1::::<><>::
-Locked@2x.png::CompressedTexture2D::7418074325492193337::1725866674::1725866674::1::::<><>::
-Unlocked@2x.png::CompressedTexture2D::4005147563691626898::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Star/::1725866674
-Active@2x.png::CompressedTexture2D::2674133964575614129::1725866674::1725866674::1::::<><>::
-Unactive@2x.png::CompressedTexture2D::7000439563791165544::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Star/Group/::1725866674
-0-3@2x.png::CompressedTexture2D::3923528437135522666::1725866674::1725866674::1::::<><>::
-1-3@2x.png::CompressedTexture2D::4699030831778359965::1725866674::1725866674::1::::<><>::
-2-3@2x.png::CompressedTexture2D::3271562285430640053::1725866674::1725866674::1::::<><>::
-3-3@2x.png::CompressedTexture2D::5694869763844781673::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Load/::1725866674
-Bullet@2x.png::CompressedTexture2D::90756462553023824::1725866674::1725866674::1::::<><>::
-Example@2x.png::CompressedTexture2D::3993475092888250070::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Load/Magazine/::1725866674
-Bottom@2x.png::CompressedTexture2D::2357197141332847002::1725866674::1725866674::1::::<><>::
-Dummy@2x.png::CompressedTexture2D::6953140923587843751::1725866674::1725866674::1::::<><>::
-Top@2x.png::CompressedTexture2D::8795907352499758200::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Star/::1725866674
-Active@2x.png::CompressedTexture2D::6417244236595886522::1725866674::1725866674::1::::<><>::
-Unactive@2x.png::CompressedTexture2D::5801087652999566780::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Icon/::1725866674
-ArrowLeft-Bold@4x.png::CompressedTexture2D::3661290046028991485::1725866674::1725866674::1::::<><>::
-ArrowLeft-Thin@4x.png::CompressedTexture2D::8273604887660560085::1725866674::1725866674::1::::<><>::
-ArrowRight-Bold@4x.png::CompressedTexture2D::5263043307042821750::1725866674::1725866674::1::::<><>::
-ArrowRight-Thin@4x.png::CompressedTexture2D::4979628762163022927::1725866674::1725866674::1::::<><>::
-Home@4x.png::CompressedTexture2D::8585721907654174887::1725866674::1725866674::1::::<><>::
-Levels@4x.png::CompressedTexture2D::8689658234063626366::1725866674::1725866674::1::::<><>::
-Pause@4x.png::CompressedTexture2D::8242442311105255777::1725866674::1725866674::1::::<><>::
-Play@4x.png::CompressedTexture2D::1769461587792162030::1725866674::1725866674::1::::<><>::
-Replay@4x.png::CompressedTexture2D::3514094963376915900::1725866674::1725866674::1::::<><>::
-SoundOff@4x.png::CompressedTexture2D::1158450636284985413::1725866674::1725866674::1::::<><>::
-SoundOn@4x.png::CompressedTexture2D::1289367058559026695::1725866674::1725866674::1::::<><>::
-Star@4x.png::CompressedTexture2D::8765595298930852745::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Rect/::1725866674
-Default@4x.png::CompressedTexture2D::6495928409168792754::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::2447872192048035930::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Square/::1725866674
-Default@4x.png::CompressedTexture2D::7459440907442416070::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::4782204412270372622::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/OKText/::1725866674
-Default@4x.png::CompressedTexture2D::3532238902851948531::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::8959065739252431234::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/PlayIcon/::1725866674
-Default@4x.png::CompressedTexture2D::1098568742661937650::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::4342087563872623215::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/PlayText/::1725866674
-Default@4x.png::CompressedTexture2D::4335999200979828100::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::6057884561636791855::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowLeft-Bold/::1725866674
-Default@4x.png::CompressedTexture2D::8912181656666122270::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::7156572300659489056::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowLeft-Thin/::1725866674
-Default@4x.png::CompressedTexture2D::4472356595283978255::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::8999084635912130260::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowRight-Bold/::1725866674
-Default@4x.png::CompressedTexture2D::3960512853834390575::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::6269350315346062567::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowRight-Thin/::1725866674
-Default@4x.png::CompressedTexture2D::7407672017367847385::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::743428075718272158::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Home/::1725866674
-Default@4x.png::CompressedTexture2D::8923504587532720349::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::8460553967792598976::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Levels/::1725866674
-Default@4x.png::CompressedTexture2D::8193822545799565686::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::8999727830064385542::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Pause/::1725866674
-Default@4x.png::CompressedTexture2D::3912652904649466008::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::2086567431620302431::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Play/::1725866674
-Default@4x.png::CompressedTexture2D::3373593439367851715::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::8788401582339836943::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Repeat/::1725866674
-Default@4x.png::CompressedTexture2D::4433561957014265718::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::2487356263356096917::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/SoundOff/::1725866674
-Default@4x.png::CompressedTexture2D::6415171193772442776::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::8050075345786734727::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/SoundOn/::1725866674
-Default@4x.png::CompressedTexture2D::8114823602730246917::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::3662632933036667687::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Star/::1725866674
-Default@4x.png::CompressedTexture2D::2286515558081453356::1725866674::1725866674::1::::<><>::
-Hover@4x.png::CompressedTexture2D::1265389373224175580::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/::1725866674
-Example@4x.png::CompressedTexture2D::1880673873622331728::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/Icon/::1725866674
-Dummy@4x.png::CompressedTexture2D::6511125411080054764::1725866674::1725866674::1::::<><>::
-Money@4x.png::CompressedTexture2D::5324298542370151380::1725866674::1725866674::1::::<><>::
-Time@4x.png::CompressedTexture2D::3019926978982063514::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/Plate/::1725866674
-Default@4x.png::CompressedTexture2D::903210318749764631::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Icon/::1725866674
-ArrowLeft-Thin@4x.png::CompressedTexture2D::7727323488677759766::1725866674::1725866674::1::::<><>::
-ArrowLeft@4x.png::CompressedTexture2D::7118425817452639229::1725866674::1725866674::1::::<><>::
-ArrowRight-Thin@4x.png::CompressedTexture2D::2669377931912397416::1725866674::1725866674::1::::<><>::
-ArrowRight@4x.png::CompressedTexture2D::7125325893091857590::1725866674::1725866674::1::::<><>::
-Cross@4x.png::CompressedTexture2D::2516853483670564986::1725866674::1725866674::1::::<><>::
-Heart@4x.png::CompressedTexture2D::796681915119470191::1725866674::1725866674::1::::<><>::
-Home@4x.png::CompressedTexture2D::5436645350885003689::1725866674::1725866674::1::::<><>::
-Levels@4x.png::CompressedTexture2D::8289464426529648087::1725866674::1725866674::1::::<><>::
-Locker@4x.png::CompressedTexture2D::8530480416392240950::1725866674::1725866674::1::::<><>::
-Mark@4x.png::CompressedTexture2D::6863060263892159521::1725866674::1725866674::1::::<><>::
-Pause@4x.png::CompressedTexture2D::1761110355040309453::1725866674::1725866674::1::::<><>::
-Play@4x.png::CompressedTexture2D::1330940809937535904::1725866674::1725866674::1::::<><>::
-Replay@4x.png::CompressedTexture2D::7493844261957576420::1725866674::1725866674::1::::<><>::
-Shield@4x.png::CompressedTexture2D::4243688974978990350::1725866674::1725866674::1::::<><>::
-SoundOff@4x.png::CompressedTexture2D::5520015136276756764::1725866674::1725866674::1::::<><>::
-SoundOn@4x.png::CompressedTexture2D::2439214667204369700::1725866674::1725866674::1::::<><>::
-Spark@4x.png::CompressedTexture2D::6305429415856380225::1725866674::1725866674::1::::<><>::
-Star@4x.png::CompressedTexture2D::1708345485902040522::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/Button/::1725866674
-Dummy@4x.png::CompressedTexture2D::4956295797130564351::1725866674::1725866674::1::::<><>::
-Locked@4x.png::CompressedTexture2D::7560387441446815173::1725866674::1725866674::1::::<><>::
-Unlocked@4x.png::CompressedTexture2D::3844915914383904714::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/Star/::1725866674
-Active@4x.png::CompressedTexture2D::4222934853618452689::1725866674::1725866674::1::::<><>::
-Unactive@4x.png::CompressedTexture2D::6161683492494062586::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/Star/Group/::1725866674
-0-3@4x.png::CompressedTexture2D::4945051181523919555::1725866674::1725866674::1::::<><>::
-1-3@4x.png::CompressedTexture2D::5809154477224316959::1725866674::1725866674::1::::<><>::
-2-3@4x.png::CompressedTexture2D::2098206137761840158::1725866674::1725866674::1::::<><>::
-3-3@4x.png::CompressedTexture2D::6726771874304746000::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Load/::1725866674
-Bullet@4x.png::CompressedTexture2D::2729837615944494550::1725866674::1725866674::1::::<><>::
-Example@4x.png::CompressedTexture2D::3588937230681141563::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Load/Magazine/::1725866674
-Bottom@4x.png::CompressedTexture2D::566409831773012327::1725866674::1725866674::1::::<><>::
-Dummy@4x.png::CompressedTexture2D::1992071492908289055::1725866674::1725866674::1::::<><>::
-Top@4x.png::CompressedTexture2D::1728127828484523184::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Star/::1725866674
-Active@4x.png::CompressedTexture2D::541906141796731946::1725866674::1725866674::1::::<><>::
-Unactive@4x.png::CompressedTexture2D::1016738333721024302::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Icon/::1725866674
-ArrowLeft-Bold.svg::CompressedTexture2D::4348756243729112888::1725866674::1725866674::1::::<><>::
-ArrowLeft-Thin.svg::CompressedTexture2D::4594834706682060856::1725866674::1725866674::1::::<><>::
-ArrowRight-Bold.svg::CompressedTexture2D::6307385949992617269::1725866674::1725866674::1::::<><>::
-ArrowRight-Thin.svg::CompressedTexture2D::3517415395577612039::1725866674::1725866674::1::::<><>::
-Home.svg::CompressedTexture2D::6917448593798817008::1725866674::1725866674::1::::<><>::
-Levels.svg::CompressedTexture2D::3021111708754975368::1725866674::1725866674::1::::<><>::
-Pause.svg::CompressedTexture2D::7023820136279908776::1725866674::1725866674::1::::<><>::
-Play.svg::CompressedTexture2D::1401315697921652715::1725866674::1725866674::1::::<><>::
-Replay.svg::CompressedTexture2D::5809027472200991577::1725866674::1725866674::1::::<><>::
-SoundOff.svg::CompressedTexture2D::1167546665608166779::1725866674::1725866674::1::::<><>::
-SoundOn.svg::CompressedTexture2D::9196423466384777337::1725866674::1725866674::1::::<><>::
-Star.svg::CompressedTexture2D::7274446902173184331::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Rect/::1725866674
-Default.svg::CompressedTexture2D::4713371952028589908::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::6035019284870815804::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Square/::1725866674
-Default.svg::CompressedTexture2D::8835113575905077778::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::6926355468850821281::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/OKText/::1725866674
-Default.svg::CompressedTexture2D::1322127007676072275::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::666368427313449767::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/PlayIcon/::1725866674
-Default.svg::CompressedTexture2D::2184734372252163214::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::2404036219540111902::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/PlayText/::1725866674
-Default.svg::CompressedTexture2D::6287320644667429985::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::5622124744123956520::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowLeft-Bold/::1725866674
-Default.svg::CompressedTexture2D::6403567973955884626::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::4004560358026014191::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowLeft-Thin/::1725866674
-Default.svg::CompressedTexture2D::842687457635898963::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::5407972108583877333::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowRight-Bold/::1725866674
-Default.svg::CompressedTexture2D::269524030385789523::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::8524270080760256092::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowRight-Thin/::1725866674
-Default.svg::CompressedTexture2D::69000868382940533::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::4914913402911748577::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Home/::1725866674
-Default.svg::CompressedTexture2D::4379729084929997205::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::49923082503109815::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Levels/::1725866674
-Default.svg::CompressedTexture2D::7289986937449064912::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::7375744858364725675::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Pause/::1725866674
-Default.svg::CompressedTexture2D::4806583482080906623::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::6347944321487052797::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Play/::1725866674
-Default.svg::CompressedTexture2D::8366378585535948823::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::8134749280614072869::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Repeat/::1725866674
-Default.svg::CompressedTexture2D::7379979966182611231::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::1686757600856399445::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/SoundOff/::1725866674
-Default.svg::CompressedTexture2D::644039107014494579::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::5668883890643396766::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/SoundOn/::1725866674
-Default.svg::CompressedTexture2D::5597235737767328571::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::1156452129625270608::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Star/::1725866674
-Default.svg::CompressedTexture2D::2496142064562103129::1725866674::1725866674::1::::<><>::
-Hover.svg::CompressedTexture2D::4182110427460285368::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Counter/::1725866674
-Example.svg::CompressedTexture2D::8727543229306412752::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Counter/Icon/::1725866674
-Dummy.svg::CompressedTexture2D::3658052241306925883::1725866674::1725866674::1::::<><>::
-Money.svg::CompressedTexture2D::5969581517751219562::1725866674::1725866674::1::::<><>::
-Time.svg::CompressedTexture2D::7715641359777909540::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Counter/Plate/::1725866674
-Default.svg::CompressedTexture2D::9167124012216594219::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Icon/::1725866674
-ArrowLeft-1.svg::CompressedTexture2D::2087840092832786545::1725866674::1725866674::1::::<><>::
-ArrowLeft-Thin-1.svg::CompressedTexture2D::2675059240809139146::1725866674::1725866674::1::::<><>::
-ArrowLeft-Thin.svg::CompressedTexture2D::9163713715530719583::1725866674::1725866674::1::::<><>::
-ArrowLeft.svg::CompressedTexture2D::5678672768506104824::1725866674::1725866674::1::::<><>::
-ArrowRight-1.svg::CompressedTexture2D::6296187426124516972::1725866674::1725866674::1::::<><>::
-ArrowRight-Thin-1.svg::CompressedTexture2D::7800582868369996270::1725866674::1725866674::1::::<><>::
-ArrowRight-Thin.svg::CompressedTexture2D::3424856503762492360::1725866674::1725866674::1::::<><>::
-ArrowRight.svg::CompressedTexture2D::2497143368097941895::1725866674::1725866674::1::::<><>::
-Cross-1.svg::CompressedTexture2D::3874063769344410453::1725866674::1725866674::1::::<><>::
-Cross.svg::CompressedTexture2D::6638969098224666369::1725866674::1725866674::1::::<><>::
-Heart-1.svg::CompressedTexture2D::8262912632290910684::1725866674::1725866674::1::::<><>::
-Heart.svg::CompressedTexture2D::2847674212121593177::1725866674::1725866674::1::::<><>::
-Home-1.svg::CompressedTexture2D::9205573567606483815::1725866674::1725866674::1::::<><>::
-Home.svg::CompressedTexture2D::7682607545787464210::1725866674::1725866674::1::::<><>::
-Levels-1.svg::CompressedTexture2D::8360780782588522751::1725866674::1725866674::1::::<><>::
-Levels.svg::CompressedTexture2D::4299041041154027826::1725866674::1725866674::1::::<><>::
-Locker-1.svg::CompressedTexture2D::8587335299269121374::1725866674::1725866674::1::::<><>::
-Locker.svg::CompressedTexture2D::2072264768503871861::1725866674::1725866674::1::::<><>::
-Mark-1.svg::CompressedTexture2D::3246627061017320572::1725866674::1725866674::1::::<><>::
-Mark.svg::CompressedTexture2D::4608485730068931996::1725866674::1725866674::1::::<><>::
-Pause-1.svg::CompressedTexture2D::2570705405582947387::1725866674::1725866674::1::::<><>::
-Pause.svg::CompressedTexture2D::6991904706148869611::1725866674::1725866674::1::::<><>::
-Play-1.svg::CompressedTexture2D::2657658477039052188::1725866674::1725866674::1::::<><>::
-Play.svg::CompressedTexture2D::2112403371782822421::1725866674::1725866674::1::::<><>::
-Replay-1.svg::CompressedTexture2D::2364510954533286069::1725866674::1725866674::1::::<><>::
-Replay.svg::CompressedTexture2D::1098941276028833257::1725866674::1725866674::1::::<><>::
-Shield-1.svg::CompressedTexture2D::8383000639131216212::1725866674::1725866674::1::::<><>::
-Shield.svg::CompressedTexture2D::8078008673453579296::1725866674::1725866674::1::::<><>::
-SoundOff-1.svg::CompressedTexture2D::4253240580294960588::1725866674::1725866674::1::::<><>::
-SoundOff.svg::CompressedTexture2D::7005485395276823787::1725866674::1725866674::1::::<><>::
-SoundOn-1.svg::CompressedTexture2D::3650140098491205974::1725866674::1725866674::1::::<><>::
-SoundOn.svg::CompressedTexture2D::1164546590714377366::1725866674::1725866674::1::::<><>::
-Spark-1.svg::CompressedTexture2D::2111789273110461874::1725866674::1725866674::1::::<><>::
-Spark.svg::CompressedTexture2D::6495603803864136370::1725866674::1725866674::1::::<><>::
-Star-1.svg::CompressedTexture2D::9074725500524986030::1725866674::1725866674::1::::<><>::
-Star.svg::CompressedTexture2D::4613048149833233410::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/::1725866674
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/Button/::1725866674
-Dummy.svg::CompressedTexture2D::5952541109992081373::1725866674::1725866674::1::::<><>::
-Locked.svg::CompressedTexture2D::55808840566618159::1725866674::1725866674::1::::<><>::
-Unlocked.svg::CompressedTexture2D::1902174381007386056::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/Star/::1725866674
-Active.svg::CompressedTexture2D::5392524368682025806::1725866674::1725866674::1::::<><>::
-Unactive.svg::CompressedTexture2D::5130117004442618129::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/Star/Group/::1725866674
-0-3.svg::CompressedTexture2D::4579233844334379189::1725866674::1725866674::1::::<><>::
-1-3.svg::CompressedTexture2D::938961520000211239::1725866674::1725866674::1::::<><>::
-2-3.svg::CompressedTexture2D::2564741598784194864::1725866674::1725866674::1::::<><>::
-3-3.svg::CompressedTexture2D::5871402835409279945::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Load/::1725866674
-Bullet.svg::CompressedTexture2D::7813546391263503508::1725866674::1725866674::1::::<><>::
-Example.svg::CompressedTexture2D::2511440258952504444::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Load/Magazine/::1725866674
-Bottom.svg::CompressedTexture2D::7847325434066275110::1725866674::1725866674::1::::<><>::
-Dummy.svg::CompressedTexture2D::4595655264401166691::1725866674::1725866674::1::::<><>::
-Top.svg::CompressedTexture2D::2154476082875076087::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Scene/::1725866674
-GameOver_Fullscreen.svg::CompressedTexture2D::2346480509290205328::1725866674::1725866674::1::::<><>::
-Home.svg::CompressedTexture2D::273570622767102749::1725866674::1725866674::1::::<><>::
-LevelComplete_Fullscreen.svg::CompressedTexture2D::3633815796063441660::1725866674::1725866674::1::::<><>::
-Levels.svg::CompressedTexture2D::3542869799507597229::1725866674::1725866674::1::::<><>::
-Loading.svg::CompressedTexture2D::3513877322409551805::1725866674::1725866674::1::::<><>::
-Pause_Fullscreen.svg::CompressedTexture2D::6117851575525434755::1725866674::1725866674::1::::<><>::
-::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Star/::1725866674
-Active.svg::CompressedTexture2D::2692549395894571268::1725866674::1725866674::1::::<><>::
-Unactive.svg::CompressedTexture2D::3599936645291334206::1725866674::1725866674::1::::<><>::
-::res://Music/::1725866674
-Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3::AudioStreamMP3::61632589200308006::1725866674::1725866674::1::::<><>::
-::res://player_old/::1724647357
-grappling_controller.gd::GDScript::-1::1724647357::0::1::::<>RigidBody3D<>::
-moving_controller.gd::GDScript::-1::1724647357::0::1::::<>CharacterBody3D<>::
-player_2.tscn::PackedScene::2163976333798825042::1724647357::0::1::::<><>::res://player_old/player_master_controller.gd<>res://player_old/moving_controller.gd<>res://player_old/grappling_controller.gd
-player_master_controller.gd::GDScript::-1::1724647357::0::1::::<>Marker3D<>::
-player_old.gd::GDScript::-1::1724647357::0::1::::<>CharacterBody3D<>::
-player_old.tscn::PackedScene::6323216948169461569::1724647357::0::1::::<><>::res://player_old/player_old.gd
-::res://Retical/::1725866674
-retical.gd::GDScript::-1::1725866674::0::1::::<>CenterContainer<>::
-::res://visuals/::1725672074
-::res://visuals/sprites/::1725672082
-283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png::CompressedTexture2D::987070231062884131::1725532534::1725672076::1::::<><>::
-icon.svg::CompressedTexture2D::8737066837938282606::1723098708::1725866699::1::::<><>::
-::res://visuals/textures/::1725672082
-texture_01.png::CompressedTexture2D::6124509384743627468::1725437385::1725672066::1::::<><>::
-texture_02.png::CompressedTexture2D::1177165950111410879::1725437385::1725672066::1::::<><>::
-texture_05.png::CompressedTexture2D::3855379335516052810::1725437385::1725672066::1::::<><>::
-texture_06.png::CompressedTexture2D::5687152849459844107::1725437385::1725672066::1::::<><>::
-texture_09.png::CompressedTexture2D::273017951804702897::1725106364::1725672066::1::::<><>::
+::res://::1726228429
+Control.gd::GDScript::-1::1725967988::0::1::::<>HSlider<>::
+default_bus_layout.tres::AudioBusLayout::4168370829428768767::1725966281::0::1::::<><>::
+enemy.gd::GDScript::-1::1725876190::0::1::::<>StaticBody3D<>::
+enemy.tscn::PackedScene::4399804326633623045::1726212745::0::1::::<><>::res://enemy.gd<>uid://d5itiblikht6::::res://visuals/textures/texture_09.png
+exit_gate.gd::GDScript::-1::1725873454::0::1::::<>StaticBody3D<>::
+HSlider.gd::GDScript::-1::1726015922::0::1::::<>HSlider<>::
+player.tscn::PackedScene::5296310812957273126::1726212745::0::1::::<><>::res://player_3.gd<>uid://mblnkohmbep2::::res://addons/LineRenderer/line_render_demo/line.png<>res://addons/LineRenderer/line_renderer.gd<>uid://oce5xjtw33cp::::res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png
+player_3.gd::GDScript::-1::1725873454::0::1::::<>CharacterBody3D<>::
+Brightness_Display_Button.gd::GDScript::-1::1726228429::0::1::::<>Control<>::
+::res://addons/::1725843326
+::res://addons/LineRenderer/::1725843326
+line_plugin.gd::GDScript::-1::1725843326::0::1::::<>EditorPlugin<>::
+line_renderer.gd::GDScript::-1::1725843326::0::1::::<>MeshInstance3D<>::
+line_render_icon.svg::CompressedTexture2D::8394506683561103367::1725843326::1725843326::1::::<><>::
+plugin.cfg::TextFile::-1::1725843326::0::1::::<><>::
+README.md::TextFile::-1::1725843326::0::1::::<><>::
+::res://addons/LineRenderer/line_render_demo/::1725843326
+camera.gd::GDScript::-1::1725843326::0::1::::<>Camera3D<>::
+demo.tscn::PackedScene::5490320671419960584::1725843326::0::1::::<><>::uid://mblnkohmbep2::::res://addons/LineRenderer/line_render_demo/line.png<>res://addons/LineRenderer/line_renderer.gd<>res://addons/LineRenderer/line_render_demo/camera.gd
+line.png::CompressedTexture2D::845022150846534865::1725843326::1725843326::1::::<><>::
+::res://levels/::1726212745
+test_scene.tscn::PackedScene::3332197728505107212::1726212745::0::1::::<><>::uid://chptp24yb6vh3::::res://player.tscn<>uid://d5itiblikht6::::res://visuals/textures/texture_09.png<>uid://dwqkhj0uy7kd7::::res://visuals/sprites/icon.svg<>uid://q1h0snv7rn6f::::res://visuals/textures/texture_02.png<>uid://cna5tup3atw0j::::res://visuals/textures/texture_06.png<>uid://b3xketobjo0ab::::res://enemy.tscn
+::res://Menu/::1725872144
+::res://Menu/Main/::1726228429
+Main_Menu.gd::GDScript::-1::1725876169::0::1::::MainMenu<>Control<>::
+Main_Menu.tscn::PackedScene::3953938440281392187::1726228429::0::1::::<><>::res://Menu/Main/Main_Menu.gd<>uid://dh5ujms38xqey::::res://Menu/Options/options_menu.tscn<>uid://44cygc01fk5::::res://Music/Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3
+::res://Menu/Options/::1726228429
+are_you_sure.gd::GDScript::-1::1725873454::0::1::::<>Control<>::
+are_you_sure.tscn::PackedScene::7264600241009021687::1726212746::0::1::::<><>::res://Menu/Options/are_you_sure.gd
+crosshair.gd::GDScript::-1::1726212745::0::1::::Crosshair<>TabBar<>::
+game_menu.gd::GDScript::-1::1725872144::0::1::::<>Control<>::
+game_menu.tscn::PackedScene::8260226518503874967::1726228429::0::1::::<><>::res://Menu/Options/game_menu.gd
+hotkey_rebind_button.gd::GDScript::-1::1725915743::0::1::::HotkeyRebindButton<>Control<>::
+hotkey_rebind_button.tscn::PackedScene::5369946496832773071::1726228429::0::1::::<><>::res://Menu/Options/hotkey_rebind_button.gd
+MarginContainer.gd::GDScript::-1::1726021122::0::1::::<>MarginContainer<>::
+music_music_slider.tscn::PackedScene::4673266705564235986::1726039240::0::1::::<><>::uid://dlbgbe4oj1fiy::::res://Menu/Options/music_slider.tscn
+music_slider.tscn::PackedScene::7933770052144102428::1726039240::0::1::::<><>::uid://xyyfnjeoxuia::::res://Menu/Options/volume_slider.tscn
+options_display_button.tscn::PackedScene::4002382343626648512::1726228429::0::1::::<><>::
+options_menu.gd::GDScript::-1::1725872144::0::1::::OptionsMenu<>Control<>::
+options_menu.tscn::PackedScene::7713746360571691304::1726212746::0::1::::<><>::res://Menu/Options/options_menu.gd<>uid://byq6v4758uvab::::res://Menu/Options/settings_tab_container.tscn
+nsync_display_button.tscn::PackedScene::3450881896846227175::1726228429::0::1::::<><>::res://Menu/Options/nsync_display_button.gd
+nsync_display_button.gd::GDScript::-1::1726225945::0::1::::<>Control<>::
+brightness_display_button.tscn::PackedScene::1242689360370721678::1726228429::0::1::::<><>::res://Brightness_Display_Button.gd<>uid://bkml1j32enpuq::::res://Menu/Options/world_environment.tscn
+world_environment.tscn::PackedScene::3113796487881406332::1726228429::0::1::::<><>::
+resolution_mode_button.gd::GDScript::-1::1725872144::0::1::::<>Control<>::
+resolution_mode_button.tscn::PackedScene::958027097626080892::1726039239::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/resolution_mode_button.gd
+settings_tab_container.gd::GDScript::-1::1726227336::0::1::::Settings_Tab_Container<>Control<>::
+settings_tab_container.tscn::PackedScene::4105904277537465541::1726228429::0::1::::<><>::res://Menu/Options/crosshair.gd<>uid://cirih71yp56dn::::res://Menu/Options/hotkey_rebind_button.tscn<>res://Menu/Options/settings_tab_container.gd<>uid://csj2wee15vf2b::::res://Menu/Options/window_mode_button.tscn<>uid://nwctiw8atefk::::res://Menu/Options/resolution_mode_button.tscn<>uid://bpfvrx5b54j4b::::res://Menu/Options/nsync_display_button.tscn<>uid://rx76arl40omg::::res://Menu/Options/brightness_display_button.tscn<>res://Retical/retical.gd<>uid://dlbgbe4oj1fiy::::res://Menu/Options/music_slider.tscn<>uid://b7t1aw75dngvy::::res://Menu/Options/music_music_slider.tscn<>uid://bf7qwlfbu2tb1::::res://Menu/Options/sfx_slider.tscn<>uid://bkml1j32enpuq::::res://Menu/Options/world_environment.tscn
+sfx_slider.tscn::PackedScene::2804436334917465984::1726039240::0::1::::<><>::uid://dlbgbe4oj1fiy::::res://Menu/Options/music_slider.tscn
+volume_slider.gd::GDScript::-1::1726016186::0::1::::<>HSlider<>::
+volume_slider.tscn::PackedScene::1665355303476268472::1726039239::0::1::::<><>::res://HSlider.gd
+window_mode_button.gd::GDScript::-1::1725872144::0::1::::<>Control<>::
+window_mode_button.tscn::PackedScene::6056498816422786675::1726039239::0::1::::<><>::uid://bxa1wghwuxvwi::::res://Menu/Options/options_display_button.tscn<>res://Menu/Options/window_mode_button.gd
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/::1725872145
+@fonts.txt::TextFile::-1::1725872144::0::1::::<><>::
+@hello.txt::TextFile::-1::1725872144::0::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/@preview/::1725872144
+@Button Icon.png::CompressedTexture2D::6402501311887026130::1725872144::1725872144::1::::<><>::
+@Button Icon.svg::CompressedTexture2D::8853626499174942201::1725872144::1725872144::1::::<><>::
+@Button Rect.png::CompressedTexture2D::4099748013590905880::1725872144::1725872144::1::::<><>::
+@Button Rect.svg::CompressedTexture2D::6927924792304124976::1725872144::1725872144::1::::<><>::
+@Button Square.png::CompressedTexture2D::8922891786528540668::1725872144::1725872144::1::::<><>::
+@Button Square.svg::CompressedTexture2D::8873007342069138482::1725872144::1725872144::1::::<><>::
+@Counter.png::CompressedTexture2D::7520396491104480645::1725872144::1725872144::1::::<><>::
+@Counter.svg::CompressedTexture2D::8257954296627902081::1725872144::1725872144::1::::<><>::
+@Icons.png::CompressedTexture2D::9181133663305761857::1725872144::1725872144::1::::<><>::
+@Icons.svg::CompressedTexture2D::3376952818986152446::1725872144::1725872144::1::::<><>::
+@Level.png::CompressedTexture2D::1520059755076421623::1725872144::1725872144::1::::<><>::
+@Level.svg::CompressedTexture2D::1444720110776620533::1725872144::1725872144::1::::<><>::
+@Load.png::CompressedTexture2D::7820497523985041543::1725872144::1725872144::1::::<><>::
+@Load.svg::CompressedTexture2D::3681291722348437193::1725872144::1725872144::1::::<><>::
+@Star.png::CompressedTexture2D::5278648742332761224::1725872144::1725872144::1::::<><>::
+@Star.svg::CompressedTexture2D::914987893752930191::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Icon/::1725872144
+ArrowLeft-Bold.png::CompressedTexture2D::4097683595049689121::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin.png::CompressedTexture2D::5772088053689793852::1725872144::1725872144::1::::<><>::
+ArrowRight-Bold.png::CompressedTexture2D::1508326998784507561::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin.png::CompressedTexture2D::5486312366689770489::1725872144::1725872144::1::::<><>::
+Home.png::CompressedTexture2D::614416012090105151::1725872144::1725872144::1::::<><>::
+Levels.png::CompressedTexture2D::5895866699357897695::1725872144::1725872144::1::::<><>::
+Pause.png::CompressedTexture2D::1761226913011072755::1725872144::1725872144::1::::<><>::
+Play.png::CompressedTexture2D::4748473932309706561::1725872144::1725872144::1::::<><>::
+Replay.png::CompressedTexture2D::3771303499925512954::1725872144::1725872144::1::::<><>::
+SoundOff.png::CompressedTexture2D::7879424041102629111::1725872144::1725872144::1::::<><>::
+SoundOn.png::CompressedTexture2D::6649106845645682355::1725872144::1725872144::1::::<><>::
+Star.png::CompressedTexture2D::5166654483659778789::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Rect/::1725872144
+Default.png::CompressedTexture2D::2776285699653045927::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::5379045073552215241::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Square/::1725872144
+Default.png::CompressedTexture2D::3305261492634740437::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::8009161489833859874::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/OKText/::1725872144
+Default.png::CompressedTexture2D::1408804039001595429::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::6895860637555337394::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/PlayIcon/::1725872144
+Default.png::CompressedTexture2D::7184615524364841174::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::4711361839553401559::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Rect/PlayText/::1725872144
+Default.png::CompressedTexture2D::7755085707230202015::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::1379568466259876274::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowLeft-Bold/::1725872144
+Default.png::CompressedTexture2D::5833173674846082228::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::1513619063629766821::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowLeft-Thin/::1725872144
+Default.png::CompressedTexture2D::6466112636730383659::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::956705729730336728::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowRight-Bold/::1725872144
+Default.png::CompressedTexture2D::5417998355265140718::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::4018040326159486211::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/ArrowRight-Thin/::1725872144
+Default.png::CompressedTexture2D::7302829821394284654::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::1389116703359211472::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Home/::1725872144
+Default.png::CompressedTexture2D::700721055680197721::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::4313887509197478424::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Levels/::1725872144
+Default.png::CompressedTexture2D::5698508455828155357::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::5027219228081845388::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Pause/::1725872144
+Default.png::CompressedTexture2D::8854250713289765969::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::4672315852245798335::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Play/::1725872144
+Default.png::CompressedTexture2D::3432526255763537879::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::3997437055360930008::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Repeat/::1725872144
+Default.png::CompressedTexture2D::705891838351306325::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::444102550659992482::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/SoundOff/::1725872144
+Default.png::CompressedTexture2D::2810739282760627077::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::8402123504474308979::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/SoundOn/::1725872144
+Default.png::CompressedTexture2D::1735413997699560919::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::6113872564762930460::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Star/::1725872144
+Default.png::CompressedTexture2D::4021117517910112178::1725872144::1725872144::1::::<><>::
+Hover.png::CompressedTexture2D::2435028714057380673::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Counter/::1725872144
+Example.png::CompressedTexture2D::2982759287763044006::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Counter/Icon/::1725872144
+Dummy.png::CompressedTexture2D::302248698270044117::1725872144::1725872144::1::::<><>::
+Money.png::CompressedTexture2D::7547330656067219691::1725872144::1725872144::1::::<><>::
+Time.png::CompressedTexture2D::55152066339707090::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Counter/Plate/::1725872144
+Default.png::CompressedTexture2D::1045427227932265538::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/::1725872144
+ArrowLeft-1.png::CompressedTexture2D::8817925955234647194::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin-1.png::CompressedTexture2D::2522814273551103519::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin.png::CompressedTexture2D::3752334277053480056::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin@0.5x-1.png::CompressedTexture2D::872942877153016948::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin@2x-1.png::CompressedTexture2D::309108655957708714::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin@4x-1.png::CompressedTexture2D::2243881876106145354::1725872144::1725872144::1::::<><>::
+ArrowLeft.png::CompressedTexture2D::9059324130668869721::1725872144::1725872144::1::::<><>::
+ArrowLeft@0.5x-1.png::CompressedTexture2D::5633388335211346029::1725872144::1725872144::1::::<><>::
+ArrowLeft@2x-1.png::CompressedTexture2D::7903338866725566022::1725872144::1725872144::1::::<><>::
+ArrowLeft@4x-1.png::CompressedTexture2D::3631848622844353030::1725872144::1725872144::1::::<><>::
+ArrowRight-1.png::CompressedTexture2D::8724106159760665113::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin-1.png::CompressedTexture2D::6633105944570183063::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin.png::CompressedTexture2D::713883551826463352::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin@0.5x-1.png::CompressedTexture2D::9115485377677202899::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin@2x-1.png::CompressedTexture2D::7483987604613082397::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin@4x-1.png::CompressedTexture2D::4275853598599617745::1725872144::1725872144::1::::<><>::
+ArrowRight.png::CompressedTexture2D::1969572599703261281::1725872144::1725872144::1::::<><>::
+ArrowRight@0.5x-1.png::CompressedTexture2D::8379496150080476388::1725872144::1725872144::1::::<><>::
+ArrowRight@2x-1.png::CompressedTexture2D::6706592670309023594::1725872144::1725872144::1::::<><>::
+ArrowRight@4x-1.png::CompressedTexture2D::2216966389528837690::1725872144::1725872144::1::::<><>::
+Cross-1.png::CompressedTexture2D::8778916816477619167::1725872144::1725872144::1::::<><>::
+Cross.png::CompressedTexture2D::5910462507863165023::1725872144::1725872144::1::::<><>::
+Cross@0.5x-1.png::CompressedTexture2D::2401858617835637512::1725872144::1725872144::1::::<><>::
+Cross@2x-1.png::CompressedTexture2D::383060625532704716::1725872144::1725872144::1::::<><>::
+Cross@4x-1.png::CompressedTexture2D::6141688452934895777::1725872144::1725872144::1::::<><>::
+Heart-1.png::CompressedTexture2D::1380051144520773884::1725872144::1725872144::1::::<><>::
+Heart.png::CompressedTexture2D::8095483105083659787::1725872144::1725872144::1::::<><>::
+Heart@0.5x-1.png::CompressedTexture2D::988694538300713471::1725872144::1725872144::1::::<><>::
+Heart@2x-1.png::CompressedTexture2D::7897639932170741545::1725872144::1725872144::1::::<><>::
+Heart@4x-1.png::CompressedTexture2D::70866053871747294::1725872144::1725872144::1::::<><>::
+Home-1.png::CompressedTexture2D::5553352036945701738::1725872144::1725872144::1::::<><>::
+Home.png::CompressedTexture2D::1458318037599707061::1725872144::1725872144::1::::<><>::
+Home@0.5x-1.png::CompressedTexture2D::8852490205330487920::1725872144::1725872144::1::::<><>::
+Home@2x-1.png::CompressedTexture2D::8818482716843053685::1725872144::1725872144::1::::<><>::
+Home@4x-1.png::CompressedTexture2D::7877875803737582294::1725872144::1725872144::1::::<><>::
+Levels-1.png::CompressedTexture2D::7733510256567563299::1725872144::1725872144::1::::<><>::
+Levels.png::CompressedTexture2D::1332027417524100507::1725872144::1725872144::1::::<><>::
+Levels@0.5x-1.png::CompressedTexture2D::3952506736024689728::1725872144::1725872144::1::::<><>::
+Levels@2x-1.png::CompressedTexture2D::8303871509197799537::1725872144::1725872144::1::::<><>::
+Levels@4x-1.png::CompressedTexture2D::2864067548369905568::1725872144::1725872144::1::::<><>::
+Locker-1.png::CompressedTexture2D::1117018976970368164::1725872144::1725872144::1::::<><>::
+Locker.png::CompressedTexture2D::119346516733493502::1725872144::1725872144::1::::<><>::
+Locker@0.5x-1.png::CompressedTexture2D::2690454513874920507::1725872144::1725872144::1::::<><>::
+Locker@2x-1.png::CompressedTexture2D::6144119045336933808::1725872144::1725872144::1::::<><>::
+Locker@4x-1.png::CompressedTexture2D::5539748632395082643::1725872144::1725872144::1::::<><>::
+Mark-1.png::CompressedTexture2D::2811731259559568802::1725872144::1725872144::1::::<><>::
+Mark.png::CompressedTexture2D::7928557711175989455::1725872144::1725872144::1::::<><>::
+Mark@0.5x-1.png::CompressedTexture2D::4276222283174242541::1725872144::1725872144::1::::<><>::
+Mark@2x-1.png::CompressedTexture2D::849250516666038978::1725872144::1725872144::1::::<><>::
+Mark@4x-1.png::CompressedTexture2D::5505709484792328608::1725872144::1725872144::1::::<><>::
+Pause-1.png::CompressedTexture2D::7100317303479342239::1725872144::1725872144::1::::<><>::
+Pause.png::CompressedTexture2D::6354902220038773540::1725872144::1725872144::1::::<><>::
+Pause@0.5x-1.png::CompressedTexture2D::2088622032482429695::1725872144::1725872144::1::::<><>::
+Pause@2x-1.png::CompressedTexture2D::2145109965419550691::1725872144::1725872144::1::::<><>::
+Pause@4x-1.png::CompressedTexture2D::2958581026412876114::1725872144::1725872144::1::::<><>::
+Play-1.png::CompressedTexture2D::4345761475073124682::1725872144::1725872144::1::::<><>::
+Play.png::CompressedTexture2D::4454639419885191212::1725872144::1725872144::1::::<><>::
+Play@0.5x-1.png::CompressedTexture2D::427322052147119979::1725872144::1725872144::1::::<><>::
+Play@2x-1.png::CompressedTexture2D::8283362636409545413::1725872144::1725872144::1::::<><>::
+Play@4x-1.png::CompressedTexture2D::6619669705168757020::1725872144::1725872144::1::::<><>::
+Replay-1.png::CompressedTexture2D::5301917153077583584::1725872144::1725872144::1::::<><>::
+Replay.png::CompressedTexture2D::4556343414194946833::1725872144::1725872144::1::::<><>::
+Replay@0.5x-1.png::CompressedTexture2D::7951747105294102179::1725872144::1725872144::1::::<><>::
+Replay@2x-1.png::CompressedTexture2D::7150314095544718908::1725872144::1725872144::1::::<><>::
+Replay@4x-1.png::CompressedTexture2D::2040616108657259245::1725872144::1725872144::1::::<><>::
+Shield-1.png::CompressedTexture2D::4888731157190496795::1725872144::1725872144::1::::<><>::
+Shield.png::CompressedTexture2D::3338210571875801882::1725872144::1725872144::1::::<><>::
+Shield@0.5x-1.png::CompressedTexture2D::5224522282615667178::1725872144::1725872144::1::::<><>::
+Shield@2x-1.png::CompressedTexture2D::2074034135329147404::1725872144::1725872144::1::::<><>::
+Shield@4x-1.png::CompressedTexture2D::820694427958207691::1725872144::1725872144::1::::<><>::
+SoundOff-1.png::CompressedTexture2D::3000963115261520644::1725872144::1725872144::1::::<><>::
+SoundOff.png::CompressedTexture2D::7832327492933892680::1725872144::1725872144::1::::<><>::
+SoundOff@0.5x-1.png::CompressedTexture2D::3718693722818954045::1725872144::1725872144::1::::<><>::
+SoundOff@2x-1.png::CompressedTexture2D::779476967086790417::1725872144::1725872144::1::::<><>::
+SoundOff@4x-1.png::CompressedTexture2D::1502005188879047869::1725872144::1725872144::1::::<><>::
+SoundOn-1.png::CompressedTexture2D::2822539072654980234::1725872144::1725872144::1::::<><>::
+SoundOn.png::CompressedTexture2D::5128800101941601274::1725872144::1725872144::1::::<><>::
+SoundOn@0.5x-1.png::CompressedTexture2D::5046062554723781675::1725872144::1725872144::1::::<><>::
+SoundOn@2x-1.png::CompressedTexture2D::8881357770937727096::1725872144::1725872144::1::::<><>::
+SoundOn@4x-1.png::CompressedTexture2D::3409265586238744917::1725872144::1725872144::1::::<><>::
+Spark-1.png::CompressedTexture2D::5969522354220685122::1725872144::1725872144::1::::<><>::
+Spark.png::CompressedTexture2D::606916281979482130::1725872144::1725872144::1::::<><>::
+Spark@0.5x-1.png::CompressedTexture2D::3328462262815002753::1725872144::1725872144::1::::<><>::
+Spark@2x-1.png::CompressedTexture2D::3745181571677059851::1725872144::1725872144::1::::<><>::
+Spark@4x-1.png::CompressedTexture2D::6704007706049372279::1725872144::1725872144::1::::<><>::
+Star-1.png::CompressedTexture2D::9181029397970368181::1725872144::1725872144::1::::<><>::
+Star.png::CompressedTexture2D::3853064959632287642::1725872144::1725872144::1::::<><>::
+Star@0.5x-1.png::CompressedTexture2D::2936176616911112424::1725872144::1725872144::1::::<><>::
+Star@2x-1.png::CompressedTexture2D::7285122056754154279::1725872144::1725872144::1::::<><>::
+Star@4x-1.png::CompressedTexture2D::4385713395313303850::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/Button/::1725872144
+Dummy.png::CompressedTexture2D::4790871985501845164::1725872144::1725872144::1::::<><>::
+Locked.png::CompressedTexture2D::2110534564629151481::1725872144::1725872144::1::::<><>::
+Unlocked.png::CompressedTexture2D::4073977074137950820::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/Star/::1725872144
+Active.png::CompressedTexture2D::4914510933291618416::1725872144::1725872144::1::::<><>::
+Unactive.png::CompressedTexture2D::1592749805683971630::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Level/Star/Group/::1725872144
+0-3.png::CompressedTexture2D::265242516883805686::1725872144::1725872144::1::::<><>::
+1-3.png::CompressedTexture2D::7729933934280784273::1725872144::1725872144::1::::<><>::
+2-3.png::CompressedTexture2D::367662149521231080::1725872144::1725872144::1::::<><>::
+3-3.png::CompressedTexture2D::8371316735681185113::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Load/::1725872144
+Bullet.png::CompressedTexture2D::6432470543471259989::1725872144::1725872144::1::::<><>::
+Example.png::CompressedTexture2D::801160533988858053::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Load/Magazine/::1725872144
+Bottom.png::CompressedTexture2D::1330283709645108338::1725872144::1725872144::1::::<><>::
+Dummy.png::CompressedTexture2D::6805818059205176379::1725872144::1725872144::1::::<><>::
+Top.png::CompressedTexture2D::7062080584480408144::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Scene/::1725872144
+GameOver_Fullscreen.png::CompressedTexture2D::1837755332602944942::1725872144::1725872144::1::::<><>::
+Home.png::CompressedTexture2D::4058385660231612183::1725872144::1725872144::1::::<><>::
+LevelComplete_Fullscreen.png::CompressedTexture2D::4715628517115913386::1725872144::1725872144::1::::<><>::
+Levels.png::CompressedTexture2D::8320112457986853200::1725872144::1725872144::1::::<><>::
+Loading.png::CompressedTexture2D::9166911678890610151::1725872144::1725872144::1::::<><>::
+Pause_Fullscreen.png::CompressedTexture2D::921824085909896300::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Star/::1725872144
+Active.png::CompressedTexture2D::5308798064408840014::1725872144::1725872144::1::::<><>::
+Unactive.png::CompressedTexture2D::7106425760798919984::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/::1725872144
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Icon/::1725872144
+ArrowLeft-Bold@0.5x.png::CompressedTexture2D::6745502587621216053::1725872144::1725872144::1::::<><>::
+ArrowLeft-Thin@0.5x.png::CompressedTexture2D::7304207777704035246::1725872144::1725872144::1::::<><>::
+ArrowRight-Bold@0.5x.png::CompressedTexture2D::2389075293280056465::1725872144::1725872144::1::::<><>::
+ArrowRight-Thin@0.5x.png::CompressedTexture2D::192465029534292634::1725872144::1725872144::1::::<><>::
+Home@0.5x.png::CompressedTexture2D::1518033397227464627::1725872144::1725872144::1::::<><>::
+Levels@0.5x.png::CompressedTexture2D::6300133271545678625::1725872144::1725872144::1::::<><>::
+Pause@0.5x.png::CompressedTexture2D::5278876144678298435::1725872144::1725872144::1::::<><>::
+Play@0.5x.png::CompressedTexture2D::5151385087440224444::1725872144::1725872144::1::::<><>::
+Replay@0.5x.png::CompressedTexture2D::9149275538425751668::1725872144::1725872144::1::::<><>::
+SoundOff@0.5x.png::CompressedTexture2D::8681052832926019953::1725872144::1725872144::1::::<><>::
+SoundOn@0.5x.png::CompressedTexture2D::7942163325789838238::1725872144::1725872144::1::::<><>::
+Star@0.5x.png::CompressedTexture2D::4883517054553782628::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Rect/::1725872144
+Default@0.5x.png::CompressedTexture2D::6197570259447122221::1725872144::1725872144::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::8703954159644145832::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Square/::1725872144
+Default@0.5x.png::CompressedTexture2D::5257662222694551258::1725872144::1725872144::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::3851608005249164570::1725872144::1725872144::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/OKText/::1725872145
+Default@0.5x.png::CompressedTexture2D::20914600277130159::1725872144::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::8773260511249294140::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/PlayIcon/::1725872145
+Default@0.5x.png::CompressedTexture2D::1359160752570699940::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::4410634902625840734::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Rect/PlayText/::1725872145
+Default@0.5x.png::CompressedTexture2D::1602437375471247136::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::2346219471369203536::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowLeft-Bold/::1725872145
+Default@0.5x.png::CompressedTexture2D::3238463499917366618::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::9199953918454745940::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowLeft-Thin/::1725872145
+Default@0.5x.png::CompressedTexture2D::4525241889021120306::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::3083248354899550262::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowRight-Bold/::1725872145
+Default@0.5x.png::CompressedTexture2D::5188688314686610963::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::8536410116107928132::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/ArrowRight-Thin/::1725872145
+Default@0.5x.png::CompressedTexture2D::188953882548586706::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::5647359944989164026::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Home/::1725872145
+Default@0.5x.png::CompressedTexture2D::8245452463413671412::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::1263649408381125761::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Levels/::1725872145
+Default@0.5x.png::CompressedTexture2D::5844223544204833432::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::2679798547656758579::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Pause/::1725872145
+Default@0.5x.png::CompressedTexture2D::9178910107134172413::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::7157979827396266345::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Play/::1725872145
+Default@0.5x.png::CompressedTexture2D::5593405512140375530::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::4027195040610401727::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Repeat/::1725872145
+Default@0.5x.png::CompressedTexture2D::6374413247633758104::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::7218262644186147254::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/SoundOff/::1725872145
+Default@0.5x.png::CompressedTexture2D::7173623746921286637::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::5453033172467146219::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/SoundOn/::1725872145
+Default@0.5x.png::CompressedTexture2D::4269660558048488140::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::6564331865968641991::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Buttons/Square/Star/::1725872145
+Default@0.5x.png::CompressedTexture2D::6608061067886474625::1725872145::1725872145::1::::<><>::
+Hover@0.5x.png::CompressedTexture2D::6082592752314438179::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/::1725872145
+Example@0.5x.png::CompressedTexture2D::6064575682373296947::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/Icon/::1725872145
+Dummy@0.5x.png::CompressedTexture2D::3574466410725653674::1725872145::1725872145::1::::<><>::
+Money@0.5x.png::CompressedTexture2D::6711328661687766035::1725872145::1725872145::1::::<><>::
+Time@0.5x.png::CompressedTexture2D::5215049639297936058::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/Plate/::1725872145
+Default@0.5x.png::CompressedTexture2D::285438379783693403::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Icon/::1725872145
+ArrowLeft-Thin@0.5x.png::CompressedTexture2D::8639332713745770366::1725872145::1725872145::1::::<><>::
+ArrowLeft@0.5x.png::CompressedTexture2D::715531358207354379::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin@0.5x.png::CompressedTexture2D::3976534613651328069::1725872145::1725872145::1::::<><>::
+ArrowRight@0.5x.png::CompressedTexture2D::8812688346902306781::1725872145::1725872145::1::::<><>::
+Cross@0.5x.png::CompressedTexture2D::4641674104045496910::1725872145::1725872145::1::::<><>::
+Heart@0.5x.png::CompressedTexture2D::7712513587839365401::1725872145::1725872145::1::::<><>::
+Home@0.5x.png::CompressedTexture2D::315402589941763415::1725872145::1725872145::1::::<><>::
+Levels@0.5x.png::CompressedTexture2D::5169608409215026360::1725872145::1725872145::1::::<><>::
+Locker@0.5x.png::CompressedTexture2D::190945485706974982::1725872145::1725872145::1::::<><>::
+Mark@0.5x.png::CompressedTexture2D::2190462716859575799::1725872145::1725872145::1::::<><>::
+Pause@0.5x.png::CompressedTexture2D::4157548681598835191::1725872145::1725872145::1::::<><>::
+Play@0.5x.png::CompressedTexture2D::4665120714846323901::1725872145::1725872145::1::::<><>::
+Replay@0.5x.png::CompressedTexture2D::773218836853116232::1725872145::1725872145::1::::<><>::
+Shield@0.5x.png::CompressedTexture2D::5596949896025489526::1725872145::1725872145::1::::<><>::
+SoundOff@0.5x.png::CompressedTexture2D::4931893806844133922::1725872145::1725872145::1::::<><>::
+SoundOn@0.5x.png::CompressedTexture2D::8404016134691469582::1725872145::1725872145::1::::<><>::
+Spark@0.5x.png::CompressedTexture2D::2707715405331472843::1725872145::1725872145::1::::<><>::
+Star@0.5x.png::CompressedTexture2D::7961426221884585009::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/Button/::1725872145
+Dummy@0.5x.png::CompressedTexture2D::7214240809522171329::1725872145::1725872145::1::::<><>::
+Locked@0.5x.png::CompressedTexture2D::6988713920634077209::1725872145::1725872145::1::::<><>::
+Unlocked@0.5x.png::CompressedTexture2D::1041872678437196025::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/Star/::1725872145
+Active@0.5x.png::CompressedTexture2D::4167316773628846908::1725872145::1725872145::1::::<><>::
+Unactive@0.5x.png::CompressedTexture2D::7445529908866097580::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Level/Star/Group/::1725872145
+0-3@0.5x.png::CompressedTexture2D::1344748341955283619::1725872145::1725872145::1::::<><>::
+1-3@0.5x.png::CompressedTexture2D::3950591433694106879::1725872145::1725872145::1::::<><>::
+2-3@0.5x.png::CompressedTexture2D::5982203493718716498::1725872145::1725872145::1::::<><>::
+3-3@0.5x.png::CompressedTexture2D::261484350795249081::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Load/::1725872145
+Bullet@0.5x.png::CompressedTexture2D::6147049510880197092::1725872145::1725872145::1::::<><>::
+Example@0.5x.png::CompressedTexture2D::2995337435873154851::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Load/Magazine/::1725872145
+Bottom@0.5x.png::CompressedTexture2D::5914770191211810100::1725872145::1725872145::1::::<><>::
+Dummy@0.5x.png::CompressedTexture2D::1573434342278611318::1725872145::1725872145::1::::<><>::
+Top@0.5x.png::CompressedTexture2D::8985237801509382435::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Star/::1725872145
+Active@0.5x.png::CompressedTexture2D::7228263786225496136::1725872145::1725872145::1::::<><>::
+Unactive@0.5x.png::CompressedTexture2D::8700245870189076551::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/Icon/::1725872145
+ArrowLeft-Bold@2x.png::CompressedTexture2D::8689308525015447341::1725872145::1725872145::1::::<><>::
+ArrowLeft-Thin@2x.png::CompressedTexture2D::3478668624555382774::1725872145::1725872145::1::::<><>::
+ArrowRight-Bold@2x.png::CompressedTexture2D::1007851279338371039::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin@2x.png::CompressedTexture2D::2609170427504251667::1725872145::1725872145::1::::<><>::
+Home@2x.png::CompressedTexture2D::8491472391848732200::1725872145::1725872145::1::::<><>::
+Levels@2x.png::CompressedTexture2D::131550215461398692::1725872145::1725872145::1::::<><>::
+Pause@2x.png::CompressedTexture2D::1819499171628090739::1725872145::1725872145::1::::<><>::
+Play@2x.png::CompressedTexture2D::5849371974424011077::1725872145::1725872145::1::::<><>::
+Replay@2x.png::CompressedTexture2D::1008167448116314018::1725872145::1725872145::1::::<><>::
+SoundOff@2x.png::CompressedTexture2D::7710862100904527395::1725872145::1725872145::1::::<><>::
+SoundOn@2x.png::CompressedTexture2D::388895833132231791::1725872145::1725872145::1::::<><>::
+Star@2x.png::CompressedTexture2D::5058291920413618209::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/Rect/::1725872145
+Default@2x.png::CompressedTexture2D::3450732523807926171::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::2653022796828436243::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Button/Square/::1725872145
+Default@2x.png::CompressedTexture2D::5987035107423744035::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::1184581700653782536::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/OKText/::1725872145
+Default@2x.png::CompressedTexture2D::5358123669671213284::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::8485227940483057966::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/PlayIcon/::1725872145
+Default@2x.png::CompressedTexture2D::5259584850500411990::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::7793406314472613734::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Rect/PlayText/::1725872145
+Default@2x.png::CompressedTexture2D::993294882440692278::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::5223705250893101978::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowLeft-Bold/::1725872145
+Default@2x.png::CompressedTexture2D::4992130995397853406::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::8480739731106356070::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowLeft-Thin/::1725872145
+Default@2x.png::CompressedTexture2D::8788850089203756726::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::1199433087562801490::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowRight-Bold/::1725872145
+Default@2x.png::CompressedTexture2D::4830122330907656930::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::1985228222616142353::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/ArrowRight-Thin/::1725872145
+Default@2x.png::CompressedTexture2D::6261393100045933064::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::3281831036886255026::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Home/::1725872145
+Default@2x.png::CompressedTexture2D::4721394522801763373::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::7582002871310456534::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Levels/::1725872145
+Default@2x.png::CompressedTexture2D::2854643515962142754::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::7960745938773070886::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Pause/::1725872145
+Default@2x.png::CompressedTexture2D::6960356503010342282::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::958415690786858127::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Play/::1725872145
+Default@2x.png::CompressedTexture2D::7237671947706536444::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::4144328524983509973::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Repeat/::1725872145
+Default@2x.png::CompressedTexture2D::3603421445613941586::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::1642239336883512402::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/SoundOff/::1725872145
+Default@2x.png::CompressedTexture2D::3555953031890634374::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::3016919442051943944::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/SoundOn/::1725872145
+Default@2x.png::CompressedTexture2D::7798784088549227903::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::915110612201254177::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Buttons/Square/Star/::1725872145
+Default@2x.png::CompressedTexture2D::679018932001941808::1725872145::1725872145::1::::<><>::
+Hover@2x.png::CompressedTexture2D::2884980721706552414::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Counter/::1725872145
+Example@2x.png::CompressedTexture2D::3625107204213488843::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Counter/Icon/::1725872145
+Dummy@2x.png::CompressedTexture2D::606760669096376902::1725872145::1725872145::1::::<><>::
+Money@2x.png::CompressedTexture2D::358621386672620705::1725872145::1725872145::1::::<><>::
+Time@2x.png::CompressedTexture2D::7518922030278608910::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Counter/Plate/::1725872145
+Default@2x.png::CompressedTexture2D::3703674488845829754::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Icon/::1725872145
+ArrowLeft-Thin@2x.png::CompressedTexture2D::862490661508650158::1725872145::1725872145::1::::<><>::
+ArrowLeft@2x.png::CompressedTexture2D::3292559919197176233::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin@2x.png::CompressedTexture2D::2426267031452798364::1725872145::1725872145::1::::<><>::
+ArrowRight@2x.png::CompressedTexture2D::3844996531149345540::1725872145::1725872145::1::::<><>::
+Cross@2x.png::CompressedTexture2D::8862192008968290059::1725872145::1725872145::1::::<><>::
+Heart@2x.png::CompressedTexture2D::5218754643528190397::1725872145::1725872145::1::::<><>::
+Home@2x.png::CompressedTexture2D::6189459943345663771::1725872145::1725872145::1::::<><>::
+Levels@2x.png::CompressedTexture2D::2042238992968378656::1725872145::1725872145::1::::<><>::
+Locker@2x.png::CompressedTexture2D::1614662501120623520::1725872145::1725872145::1::::<><>::
+Mark@2x.png::CompressedTexture2D::1301846170056847765::1725872145::1725872145::1::::<><>::
+Pause@2x.png::CompressedTexture2D::4650604608484716563::1725872145::1725872145::1::::<><>::
+Play@2x.png::CompressedTexture2D::8414401669450761734::1725872145::1725872145::1::::<><>::
+Replay@2x.png::CompressedTexture2D::1118825586369409709::1725872145::1725872145::1::::<><>::
+Shield@2x.png::CompressedTexture2D::3829659278931719123::1725872145::1725872145::1::::<><>::
+SoundOff@2x.png::CompressedTexture2D::949775814118800454::1725872145::1725872145::1::::<><>::
+SoundOn@2x.png::CompressedTexture2D::5024222913333817920::1725872145::1725872145::1::::<><>::
+Spark@2x.png::CompressedTexture2D::6433935877185150972::1725872145::1725872145::1::::<><>::
+Star@2x.png::CompressedTexture2D::6742501431218140167::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Button/::1725872145
+Dummy@2x.png::CompressedTexture2D::4521284295091363358::1725872145::1725872145::1::::<><>::
+Locked@2x.png::CompressedTexture2D::7418074325492193337::1725872145::1725872145::1::::<><>::
+Unlocked@2x.png::CompressedTexture2D::4005147563691626898::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Star/::1725872145
+Active@2x.png::CompressedTexture2D::2674133964575614129::1725872145::1725872145::1::::<><>::
+Unactive@2x.png::CompressedTexture2D::7000439563791165544::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Star/Group/::1725872145
+0-3@2x.png::CompressedTexture2D::3923528437135522666::1725872145::1725872145::1::::<><>::
+1-3@2x.png::CompressedTexture2D::4699030831778359965::1725872145::1725872145::1::::<><>::
+2-3@2x.png::CompressedTexture2D::3271562285430640053::1725872145::1725872145::1::::<><>::
+3-3@2x.png::CompressedTexture2D::5694869763844781673::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Load/::1725872145
+Bullet@2x.png::CompressedTexture2D::90756462553023824::1725872145::1725872145::1::::<><>::
+Example@2x.png::CompressedTexture2D::3993475092888250070::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Load/Magazine/::1725872145
+Bottom@2x.png::CompressedTexture2D::2357197141332847002::1725872145::1725872145::1::::<><>::
+Dummy@2x.png::CompressedTexture2D::6953140923587843751::1725872145::1725872145::1::::<><>::
+Top@2x.png::CompressedTexture2D::8795907352499758200::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Star/::1725872145
+Active@2x.png::CompressedTexture2D::6417244236595886522::1725872145::1725872145::1::::<><>::
+Unactive@2x.png::CompressedTexture2D::5801087652999566780::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Icon/::1725872145
+ArrowLeft-Bold@4x.png::CompressedTexture2D::3661290046028991485::1725872145::1725872145::1::::<><>::
+ArrowLeft-Thin@4x.png::CompressedTexture2D::8273604887660560085::1725872145::1725872145::1::::<><>::
+ArrowRight-Bold@4x.png::CompressedTexture2D::5263043307042821750::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin@4x.png::CompressedTexture2D::4979628762163022927::1725872145::1725872145::1::::<><>::
+Home@4x.png::CompressedTexture2D::8585721907654174887::1725872145::1725872145::1::::<><>::
+Levels@4x.png::CompressedTexture2D::8689658234063626366::1725872145::1725872145::1::::<><>::
+Pause@4x.png::CompressedTexture2D::8242442311105255777::1725872145::1725872145::1::::<><>::
+Play@4x.png::CompressedTexture2D::1769461587792162030::1725872145::1725872145::1::::<><>::
+Replay@4x.png::CompressedTexture2D::3514094963376915900::1725872145::1725872145::1::::<><>::
+SoundOff@4x.png::CompressedTexture2D::1158450636284985413::1725872145::1725872145::1::::<><>::
+SoundOn@4x.png::CompressedTexture2D::1289367058559026695::1725872145::1725872145::1::::<><>::
+Star@4x.png::CompressedTexture2D::8765595298930852745::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Rect/::1725872145
+Default@4x.png::CompressedTexture2D::6495928409168792754::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::2447872192048035930::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Square/::1725872145
+Default@4x.png::CompressedTexture2D::7459440907442416070::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::4782204412270372622::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/OKText/::1725872145
+Default@4x.png::CompressedTexture2D::3532238902851948531::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::8959065739252431234::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/PlayIcon/::1725872145
+Default@4x.png::CompressedTexture2D::1098568742661937650::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::4342087563872623215::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Rect/PlayText/::1725872145
+Default@4x.png::CompressedTexture2D::4335999200979828100::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::6057884561636791855::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowLeft-Bold/::1725872145
+Default@4x.png::CompressedTexture2D::8912181656666122270::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::7156572300659489056::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowLeft-Thin/::1725872145
+Default@4x.png::CompressedTexture2D::4472356595283978255::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::8999084635912130260::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowRight-Bold/::1725872145
+Default@4x.png::CompressedTexture2D::3960512853834390575::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::6269350315346062567::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/ArrowRight-Thin/::1725872145
+Default@4x.png::CompressedTexture2D::7407672017367847385::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::743428075718272158::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Home/::1725872145
+Default@4x.png::CompressedTexture2D::8923504587532720349::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::8460553967792598976::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Levels/::1725872145
+Default@4x.png::CompressedTexture2D::8193822545799565686::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::8999727830064385542::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Pause/::1725872145
+Default@4x.png::CompressedTexture2D::3912652904649466008::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::2086567431620302431::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Play/::1725872145
+Default@4x.png::CompressedTexture2D::3373593439367851715::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::8788401582339836943::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Repeat/::1725872145
+Default@4x.png::CompressedTexture2D::4433561957014265718::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::2487356263356096917::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/SoundOff/::1725872145
+Default@4x.png::CompressedTexture2D::6415171193772442776::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::8050075345786734727::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/SoundOn/::1725872145
+Default@4x.png::CompressedTexture2D::8114823602730246917::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::3662632933036667687::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Buttons/Square/Star/::1725872145
+Default@4x.png::CompressedTexture2D::2286515558081453356::1725872145::1725872145::1::::<><>::
+Hover@4x.png::CompressedTexture2D::1265389373224175580::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/::1725872145
+Example@4x.png::CompressedTexture2D::1880673873622331728::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/Icon/::1725872145
+Dummy@4x.png::CompressedTexture2D::6511125411080054764::1725872145::1725872145::1::::<><>::
+Money@4x.png::CompressedTexture2D::5324298542370151380::1725872145::1725872145::1::::<><>::
+Time@4x.png::CompressedTexture2D::3019926978982063514::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/Plate/::1725872145
+Default@4x.png::CompressedTexture2D::903210318749764631::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Icon/::1725872145
+ArrowLeft-Thin@4x.png::CompressedTexture2D::7727323488677759766::1725872145::1725872145::1::::<><>::
+ArrowLeft@4x.png::CompressedTexture2D::7118425817452639229::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin@4x.png::CompressedTexture2D::2669377931912397416::1725872145::1725872145::1::::<><>::
+ArrowRight@4x.png::CompressedTexture2D::7125325893091857590::1725872145::1725872145::1::::<><>::
+Cross@4x.png::CompressedTexture2D::2516853483670564986::1725872145::1725872145::1::::<><>::
+Heart@4x.png::CompressedTexture2D::796681915119470191::1725872145::1725872145::1::::<><>::
+Home@4x.png::CompressedTexture2D::5436645350885003689::1725872145::1725872145::1::::<><>::
+Levels@4x.png::CompressedTexture2D::8289464426529648087::1725872145::1725872145::1::::<><>::
+Locker@4x.png::CompressedTexture2D::8530480416392240950::1725872145::1725872145::1::::<><>::
+Mark@4x.png::CompressedTexture2D::6863060263892159521::1725872145::1725872145::1::::<><>::
+Pause@4x.png::CompressedTexture2D::1761110355040309453::1725872145::1725872145::1::::<><>::
+Play@4x.png::CompressedTexture2D::1330940809937535904::1725872145::1725872145::1::::<><>::
+Replay@4x.png::CompressedTexture2D::7493844261957576420::1725872145::1725872145::1::::<><>::
+Shield@4x.png::CompressedTexture2D::4243688974978990350::1725872145::1725872145::1::::<><>::
+SoundOff@4x.png::CompressedTexture2D::5520015136276756764::1725872145::1725872145::1::::<><>::
+SoundOn@4x.png::CompressedTexture2D::2439214667204369700::1725872145::1725872145::1::::<><>::
+Spark@4x.png::CompressedTexture2D::6305429415856380225::1725872145::1725872145::1::::<><>::
+Star@4x.png::CompressedTexture2D::1708345485902040522::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/Button/::1725872145
+Dummy@4x.png::CompressedTexture2D::4956295797130564351::1725872145::1725872145::1::::<><>::
+Locked@4x.png::CompressedTexture2D::7560387441446815173::1725872145::1725872145::1::::<><>::
+Unlocked@4x.png::CompressedTexture2D::3844915914383904714::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/Star/::1725872145
+Active@4x.png::CompressedTexture2D::4222934853618452689::1725872145::1725872145::1::::<><>::
+Unactive@4x.png::CompressedTexture2D::6161683492494062586::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Level/Star/Group/::1725872145
+0-3@4x.png::CompressedTexture2D::4945051181523919555::1725872145::1725872145::1::::<><>::
+1-3@4x.png::CompressedTexture2D::5809154477224316959::1725872145::1725872145::1::::<><>::
+2-3@4x.png::CompressedTexture2D::2098206137761840158::1725872145::1725872145::1::::<><>::
+3-3@4x.png::CompressedTexture2D::6726771874304746000::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Load/::1725872145
+Bullet@4x.png::CompressedTexture2D::2729837615944494550::1725872145::1725872145::1::::<><>::
+Example@4x.png::CompressedTexture2D::3588937230681141563::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Load/Magazine/::1725872145
+Bottom@4x.png::CompressedTexture2D::566409831773012327::1725872145::1725872145::1::::<><>::
+Dummy@4x.png::CompressedTexture2D::1992071492908289055::1725872145::1725872145::1::::<><>::
+Top@4x.png::CompressedTexture2D::1728127828484523184::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Star/::1725872145
+Active@4x.png::CompressedTexture2D::541906141796731946::1725872145::1725872145::1::::<><>::
+Unactive@4x.png::CompressedTexture2D::1016738333721024302::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/::1725872146
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Icon/::1725872145
+ArrowLeft-Bold.svg::CompressedTexture2D::4348756243729112888::1725872145::1725872145::1::::<><>::
+ArrowLeft-Thin.svg::CompressedTexture2D::4594834706682060856::1725872145::1725872145::1::::<><>::
+ArrowRight-Bold.svg::CompressedTexture2D::6307385949992617269::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin.svg::CompressedTexture2D::3517415395577612039::1725872145::1725872145::1::::<><>::
+Home.svg::CompressedTexture2D::6917448593798817008::1725872145::1725872145::1::::<><>::
+Levels.svg::CompressedTexture2D::3021111708754975368::1725872145::1725872145::1::::<><>::
+Pause.svg::CompressedTexture2D::7023820136279908776::1725872145::1725872145::1::::<><>::
+Play.svg::CompressedTexture2D::1401315697921652715::1725872145::1725872145::1::::<><>::
+Replay.svg::CompressedTexture2D::5809027472200991577::1725872145::1725872145::1::::<><>::
+SoundOff.svg::CompressedTexture2D::1167546665608166779::1725872145::1725872145::1::::<><>::
+SoundOn.svg::CompressedTexture2D::9196423466384777337::1725872145::1725872145::1::::<><>::
+Star.svg::CompressedTexture2D::7274446902173184331::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Rect/::1725872145
+Default.svg::CompressedTexture2D::4713371952028589908::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::6035019284870815804::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Square/::1725872145
+Default.svg::CompressedTexture2D::8835113575905077778::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::6926355468850821281::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/OKText/::1725872145
+Default.svg::CompressedTexture2D::1322127007676072275::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::666368427313449767::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/PlayIcon/::1725872145
+Default.svg::CompressedTexture2D::2184734372252163214::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::2404036219540111902::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Rect/PlayText/::1725872145
+Default.svg::CompressedTexture2D::6287320644667429985::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::5622124744123956520::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/::1725872145
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowLeft-Bold/::1725872145
+Default.svg::CompressedTexture2D::6403567973955884626::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::4004560358026014191::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowLeft-Thin/::1725872145
+Default.svg::CompressedTexture2D::842687457635898963::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::5407972108583877333::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowRight-Bold/::1725872145
+Default.svg::CompressedTexture2D::269524030385789523::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::8524270080760256092::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/ArrowRight-Thin/::1725872145
+Default.svg::CompressedTexture2D::69000868382940533::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::4914913402911748577::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Home/::1725872145
+Default.svg::CompressedTexture2D::4379729084929997205::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::49923082503109815::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Levels/::1725872145
+Default.svg::CompressedTexture2D::7289986937449064912::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::7375744858364725675::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Pause/::1725872145
+Default.svg::CompressedTexture2D::4806583482080906623::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::6347944321487052797::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Play/::1725872145
+Default.svg::CompressedTexture2D::8366378585535948823::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::8134749280614072869::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Repeat/::1725872145
+Default.svg::CompressedTexture2D::7379979966182611231::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::1686757600856399445::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/SoundOff/::1725872145
+Default.svg::CompressedTexture2D::644039107014494579::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::5668883890643396766::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/SoundOn/::1725872145
+Default.svg::CompressedTexture2D::5597235737767328571::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::1156452129625270608::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Buttons/Square/Star/::1725872145
+Default.svg::CompressedTexture2D::2496142064562103129::1725872145::1725872145::1::::<><>::
+Hover.svg::CompressedTexture2D::4182110427460285368::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Counter/::1725872145
+Example.svg::CompressedTexture2D::8727543229306412752::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Counter/Icon/::1725872145
+Dummy.svg::CompressedTexture2D::3658052241306925883::1725872145::1725872145::1::::<><>::
+Money.svg::CompressedTexture2D::5969581517751219562::1725872145::1725872145::1::::<><>::
+Time.svg::CompressedTexture2D::7715641359777909540::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Counter/Plate/::1725872145
+Default.svg::CompressedTexture2D::9167124012216594219::1725872145::1725872145::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Icon/::1725872146
+ArrowLeft-1.svg::CompressedTexture2D::2087840092832786545::1725872145::1725872145::1::::<><>::
+ArrowLeft-Thin-1.svg::CompressedTexture2D::2675059240809139146::1725872145::1725872145::1::::<><>::
+ArrowLeft-Thin.svg::CompressedTexture2D::9163713715530719583::1725872145::1725872145::1::::<><>::
+ArrowLeft.svg::CompressedTexture2D::5678672768506104824::1725872145::1725872145::1::::<><>::
+ArrowRight-1.svg::CompressedTexture2D::6296187426124516972::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin-1.svg::CompressedTexture2D::7800582868369996270::1725872145::1725872145::1::::<><>::
+ArrowRight-Thin.svg::CompressedTexture2D::3424856503762492360::1725872145::1725872145::1::::<><>::
+ArrowRight.svg::CompressedTexture2D::2497143368097941895::1725872145::1725872145::1::::<><>::
+Cross-1.svg::CompressedTexture2D::3874063769344410453::1725872145::1725872145::1::::<><>::
+Cross.svg::CompressedTexture2D::6638969098224666369::1725872145::1725872145::1::::<><>::
+Heart-1.svg::CompressedTexture2D::8262912632290910684::1725872145::1725872145::1::::<><>::
+Heart.svg::CompressedTexture2D::2847674212121593177::1725872145::1725872145::1::::<><>::
+Home-1.svg::CompressedTexture2D::9205573567606483815::1725872145::1725872145::1::::<><>::
+Home.svg::CompressedTexture2D::7682607545787464210::1725872145::1725872145::1::::<><>::
+Levels-1.svg::CompressedTexture2D::8360780782588522751::1725872145::1725872145::1::::<><>::
+Levels.svg::CompressedTexture2D::4299041041154027826::1725872145::1725872145::1::::<><>::
+Locker-1.svg::CompressedTexture2D::8587335299269121374::1725872145::1725872145::1::::<><>::
+Locker.svg::CompressedTexture2D::2072264768503871861::1725872145::1725872145::1::::<><>::
+Mark-1.svg::CompressedTexture2D::3246627061017320572::1725872145::1725872145::1::::<><>::
+Mark.svg::CompressedTexture2D::4608485730068931996::1725872145::1725872145::1::::<><>::
+Pause-1.svg::CompressedTexture2D::2570705405582947387::1725872146::1725872146::1::::<><>::
+Pause.svg::CompressedTexture2D::6991904706148869611::1725872146::1725872146::1::::<><>::
+Play-1.svg::CompressedTexture2D::2657658477039052188::1725872146::1725872146::1::::<><>::
+Play.svg::CompressedTexture2D::2112403371782822421::1725872146::1725872146::1::::<><>::
+Replay-1.svg::CompressedTexture2D::2364510954533286069::1725872146::1725872146::1::::<><>::
+Replay.svg::CompressedTexture2D::1098941276028833257::1725872146::1725872146::1::::<><>::
+Shield-1.svg::CompressedTexture2D::8383000639131216212::1725872146::1725872146::1::::<><>::
+Shield.svg::CompressedTexture2D::8078008673453579296::1725872146::1725872146::1::::<><>::
+SoundOff-1.svg::CompressedTexture2D::4253240580294960588::1725872146::1725872146::1::::<><>::
+SoundOff.svg::CompressedTexture2D::7005485395276823787::1725872146::1725872146::1::::<><>::
+SoundOn-1.svg::CompressedTexture2D::3650140098491205974::1725872146::1725872146::1::::<><>::
+SoundOn.svg::CompressedTexture2D::1164546590714377366::1725872146::1725872146::1::::<><>::
+Spark-1.svg::CompressedTexture2D::2111789273110461874::1725872146::1725872146::1::::<><>::
+Spark.svg::CompressedTexture2D::6495603803864136370::1725872146::1725872146::1::::<><>::
+Star-1.svg::CompressedTexture2D::9074725500524986030::1725872146::1725872146::1::::<><>::
+Star.svg::CompressedTexture2D::4613048149833233410::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/::1725872146
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/Button/::1725872146
+Dummy.svg::CompressedTexture2D::5952541109992081373::1725872146::1725872146::1::::<><>::
+Locked.svg::CompressedTexture2D::55808840566618159::1725872146::1725872146::1::::<><>::
+Unlocked.svg::CompressedTexture2D::1902174381007386056::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/Star/::1725872146
+Active.svg::CompressedTexture2D::5392524368682025806::1725872146::1725872146::1::::<><>::
+Unactive.svg::CompressedTexture2D::5130117004442618129::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Level/Star/Group/::1725872146
+0-3.svg::CompressedTexture2D::4579233844334379189::1725872146::1725872146::1::::<><>::
+1-3.svg::CompressedTexture2D::938961520000211239::1725872146::1725872146::1::::<><>::
+2-3.svg::CompressedTexture2D::2564741598784194864::1725872146::1725872146::1::::<><>::
+3-3.svg::CompressedTexture2D::5871402835409279945::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Load/::1725872146
+Bullet.svg::CompressedTexture2D::7813546391263503508::1725872146::1725872146::1::::<><>::
+Example.svg::CompressedTexture2D::2511440258952504444::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Load/Magazine/::1725872146
+Bottom.svg::CompressedTexture2D::7847325434066275110::1725872146::1725872146::1::::<><>::
+Dummy.svg::CompressedTexture2D::4595655264401166691::1725872146::1725872146::1::::<><>::
+Top.svg::CompressedTexture2D::2154476082875076087::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Scene/::1725872146
+GameOver_Fullscreen.svg::CompressedTexture2D::2346480509290205328::1725872146::1725872146::1::::<><>::
+Home.svg::CompressedTexture2D::273570622767102749::1725872146::1725872146::1::::<><>::
+LevelComplete_Fullscreen.svg::CompressedTexture2D::3633815796063441660::1725872146::1725872146::1::::<><>::
+Levels.svg::CompressedTexture2D::3542869799507597229::1725872146::1725872146::1::::<><>::
+Loading.svg::CompressedTexture2D::3513877322409551805::1725872146::1725872146::1::::<><>::
+Pause_Fullscreen.svg::CompressedTexture2D::6117851575525434755::1725872146::1725872146::1::::<><>::
+::res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Star/::1725872146
+Active.svg::CompressedTexture2D::2692549395894571268::1725872146::1725872146::1::::<><>::
+Unactive.svg::CompressedTexture2D::3599936645291334206::1725872146::1725872146::1::::<><>::
+::res://Music/::1725882124
+Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3::AudioStreamMP3::61632589200308006::1725872146::1725882124::1::::<><>::
+::res://player_old/::1724809162
+grappling_controller.gd::GDScript::-1::1724809162::0::1::::<>RigidBody3D<>::
+moving_controller.gd::GDScript::-1::1724809162::0::1::::<>CharacterBody3D<>::
+player_2.tscn::PackedScene::2163976333798825042::1724809162::0::1::::<><>::res://player_old/player_master_controller.gd<>res://player_old/moving_controller.gd<>res://player_old/grappling_controller.gd
+player_master_controller.gd::GDScript::-1::1724809162::0::1::::<>Marker3D<>::
+player_old.gd::GDScript::-1::1724809162::0::1::::<>CharacterBody3D<>::
+player_old.tscn::PackedScene::6323216948169461569::1724809162::0::1::::<><>::res://player_old/player_old.gd
+::res://Retical/::1726212746
+retical.gd::GDScript::-1::1726212745::0::1::::<>CenterContainer<>::
+user_retical.tscn::PackedScene::7414782994762939745::1726212746::0::1::::<><>::res://Retical/retical.gd
+::res://Sprites/::1725829704
+::res://ths/::1725831387
+::res://visuals/::1725843326
+::res://visuals/sprites/::1725877073
+283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png::CompressedTexture2D::987070231062884131::1725843326::1725843326::1::::<><>::
+icon.svg::CompressedTexture2D::8737066837938282606::1725843326::1725877073::1::::<><>::
+::res://visuals/textures/::1725843326
+texture_01.png::CompressedTexture2D::6124509384743627468::1725843326::1725843326::1::::<><>::
+texture_02.png::CompressedTexture2D::1177165950111410879::1725843326::1725843326::1::::<><>::
+texture_05.png::CompressedTexture2D::3855379335516052810::1725843326::1725843326::1::::<><>::
+texture_06.png::CompressedTexture2D::5687152849459844107::1725843326::1725843326::1::::<><>::
+texture_09.png::CompressedTexture2D::273017951804702897::1725843326::1725843326::1::::<><>::
