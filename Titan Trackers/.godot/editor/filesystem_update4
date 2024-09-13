@@ -29,3 +29,11 @@ res://Menu/Options/Pause/are_you_sure.gd
 res://Menu/Options/Crosshair/crosshair.gd
 res://Menu/Options/Main_menu/game_menu.gd
 res://Menu/Options/KeyBind/hotkey_rebind_button.gd
+res://Menu/Options/Main_menu/settings_tab_container.gd
+res://Menu/Options/KeyBind/hotkey_rebind_button.tscn
+res://Menu/Options/Main_menu/game_menu.tscn
+res://Menu/Options/Video/options_display_button.tscn
+res://Menu/Options/Video/nsync_display_button.tscn
+res://Menu/Options/Video/resolution_mode_button.tscn
+res://Menu/Options/Audio/sfx_slider.tscn
+res://Menu/Options/Audio/music_music_slider.tscn
