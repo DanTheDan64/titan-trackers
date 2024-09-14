@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwlk12oup7b7h"]
 
 [ext_resource type="Script" path="res://Menu/Main/Main_Menu.gd" id="1_4qifw"]
-[ext_resource type="PackedScene" uid="uid://dh5ujms38xqey" path="res://Menu/Options/Main_menu/options_menu.tscn" id="2_v7sey"]
+[ext_resource type="PackedScene" uid="uid://dh5ujms38xqey" path="res://Menu/Options/options_menu.tscn" id="2_v7sey"]
 [ext_resource type="AudioStream" uid="uid://44cygc01fk5" path="res://Music/Assassin's Creed Odyssey_ Legend of the Eagle Bearer (Main Theme)  The Flight.mp3" id="3_a0gd3"]
 
 [sub_resource type="SystemFont" id="SystemFont_xpxwn"]

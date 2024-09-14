@@ -1,12 +1,12 @@
 class_name MainMenu
 extends Control
 
-@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Start_button as Button
+@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Button as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/Exit_button as Button
 @onready var options_button = $MarginContainer/HBoxContainer/VBoxContainer/Options_button as Button
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
-@onready var start_level = preload("res://Menu/Level_Select/menu_level_select.tscn")
+@onready var start_level = preload("res://levels/test_scene.tscn")
 
 
 func _ready():
@@ -26,3 +26,4 @@ func _on_exit_button_button_down():
 func _on_options_menu_exit_options_menu():
 	margin_container.visible = true
 	options_menu.visible = false
+	
