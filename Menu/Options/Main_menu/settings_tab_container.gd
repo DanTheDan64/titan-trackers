@@ -6,8 +6,7 @@ extends Control
 @onready var key_bind = $"TabContainer/Key Bind"
 @onready var crosshair = $TabContainer/Crosshair
 @onready var audio = $TabContainer/Audio
-@onready var user_retical = $TabContainer/Crosshair/UserReticalretical
-@onready var world_environment = $WorldEnvironment
+@onready var user_retical = $TabContainer/Crosshair/UserRetical
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

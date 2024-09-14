@@ -1,7 +1,7 @@
 class_name MainMenu
 extends Control
 
-@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Button as Button
+@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Start_button as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/Exit_button as Button
 @onready var options_button = $MarginContainer/HBoxContainer/VBoxContainer/Options_button as Button
 @onready var options_menu = $Options_Menu as OptionsMenu
