@@ -53,5 +53,3 @@ func run_animation():
 			on -= 1
 	else:
 		windows.get_node(str(selected)).show()
-
-

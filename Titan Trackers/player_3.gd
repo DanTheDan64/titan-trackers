@@ -370,10 +370,3 @@ func _on_grapple_coyote_time_timeout():
 
 func _on_grapple_cooldown_timeout():
 	can_grapple = true
-
-
-
-
-
-
-

@@ -90,11 +90,3 @@ func rebind_action_key(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
-
-
-
-
-
-
-
-

@@ -20,5 +20,3 @@ static func load_savegame():
 		return load(SAVE_GAME_PATH)
 	return null
 	
-
-
