@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7t1aw75dngvy"]
 
-[ext_resource type="PackedScene" uid="uid://dlbgbe4oj1fiy" path="res://Menu/Options/music_slider.tscn" id="1_x36vp"]
+[ext_resource type="PackedScene" uid="uid://dlbgbe4oj1fiy" path="res://Menu/Options/Audio/music_slider.tscn" id="1_6mb68"]
 
-[node name="Music Slider" instance=ExtResource("1_x36vp")]
+[node name="Music Slider" instance=ExtResource("1_6mb68")]
 
 [node name="Label" parent="VBoxContainer" index="0"]
 text = "Music

@@ -18,6 +18,7 @@ func _ready():
 	pass
 	
 # Called every frame	. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	queue_redraw()
 
@@ -60,3 +61,10 @@ func _on_on_or_off_line_toggled(toggled_on):
 		right.visible = true
 		bottom.visible = true
 		left.visible = true
+
+
+func _on_color_picker_button_color_changed(color):
+	top.default_color = color
+	right.default_color = color
+	bottom.default_color = color
+	left.default_color = color
