@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv3nrbo56jthp"
-path="res://.godot/imported/Spark@4x.png-9f2af7889e270a540b83e78f498e08bb.ctex"
+path="res://.godot/imported/Spark@4x.png-53d188ccba944e568e5a03b0816086c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Icon/Spark@4x.png"
-dest_files=["res://.godot/imported/Spark@4x.png-9f2af7889e270a540b83e78f498e08bb.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Icon/Spark@4x.png"
+dest_files=["res://.godot/imported/Spark@4x.png-53d188ccba944e568e5a03b0816086c7.ctex"]
 
 [params]
 

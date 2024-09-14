@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk7wgmk2uk6c6"
-path="res://.godot/imported/Mark.png-989ff19018b7e2bfcb5292c3f38e3cc6.ctex"
+path="res://.godot/imported/Mark.png-df57f8967cf2ab1acf15167a6959a4ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/Mark.png"
-dest_files=["res://.godot/imported/Mark.png-989ff19018b7e2bfcb5292c3f38e3cc6.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/Mark.png"
+dest_files=["res://.godot/imported/Mark.png-df57f8967cf2ab1acf15167a6959a4ca.ctex"]
 
 [params]
 

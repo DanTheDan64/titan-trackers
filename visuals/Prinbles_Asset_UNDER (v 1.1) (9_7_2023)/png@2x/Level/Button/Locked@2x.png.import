@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddxmuoaa2382p"
-path="res://.godot/imported/Locked@2x.png-e80b57df59906b13d1a1eeb072f34f6f.ctex"
+path="res://.godot/imported/Locked@2x.png-d352a211fef57ad3549f31997a736d74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Button/Locked@2x.png"
-dest_files=["res://.godot/imported/Locked@2x.png-e80b57df59906b13d1a1eeb072f34f6f.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@2x/Level/Button/Locked@2x.png"
+dest_files=["res://.godot/imported/Locked@2x.png-d352a211fef57ad3549f31997a736d74.ctex"]
 
 [params]
 

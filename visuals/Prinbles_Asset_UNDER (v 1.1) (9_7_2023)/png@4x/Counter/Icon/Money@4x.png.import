@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch4eoiqoslap5"
-path="res://.godot/imported/Money@4x.png-0bd42050b1bcca2b6858bd4630532566.ctex"
+path="res://.godot/imported/Money@4x.png-78e010127a76066e9afc62724cc4f727.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/Icon/Money@4x.png"
-dest_files=["res://.godot/imported/Money@4x.png-0bd42050b1bcca2b6858bd4630532566.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Counter/Icon/Money@4x.png"
+dest_files=["res://.godot/imported/Money@4x.png-78e010127a76066e9afc62724cc4f727.ctex"]
 
 [params]
 

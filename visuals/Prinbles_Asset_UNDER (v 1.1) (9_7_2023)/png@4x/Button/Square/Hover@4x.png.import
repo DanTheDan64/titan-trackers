@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://caeshcoq43pis"
-path="res://.godot/imported/Hover@4x.png-fee3da229595eeb012afef23f42a92e0.ctex"
+path="res://.godot/imported/Hover@4x.png-2fd35c7eeea5cdc82ec73dbafe88228b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Square/Hover@4x.png"
-dest_files=["res://.godot/imported/Hover@4x.png-fee3da229595eeb012afef23f42a92e0.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@4x/Button/Square/Hover@4x.png"
+dest_files=["res://.godot/imported/Hover@4x.png-2fd35c7eeea5cdc82ec73dbafe88228b.ctex"]
 
 [params]
 

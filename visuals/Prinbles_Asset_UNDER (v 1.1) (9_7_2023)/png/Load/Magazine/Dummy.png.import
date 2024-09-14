@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3713gowl60ot"
-path="res://.godot/imported/Dummy.png-a6bf5eda8868fef5654229905cc05777.ctex"
+path="res://.godot/imported/Dummy.png-180f86337a880f5fb985a3cd776aadf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Load/Magazine/Dummy.png"
-dest_files=["res://.godot/imported/Dummy.png-a6bf5eda8868fef5654229905cc05777.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Load/Magazine/Dummy.png"
+dest_files=["res://.godot/imported/Dummy.png-180f86337a880f5fb985a3cd776aadf1.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://csj2wee15vf2b"]
 
-[ext_resource type="PackedScene" uid="uid://bxa1wghwuxvwi" path="res://Menu/Options/options_display_button.tscn" id="1_8oqdw"]
-[ext_resource type="Script" path="res://Menu/Options/window_mode_button.gd" id="2_mv4fb"]
+[ext_resource type="PackedScene" uid="uid://bxa1wghwuxvwi" path="res://Menu/Options/Video/options_display_button.tscn" id="1_8oqdw"]
+[ext_resource type="Script" path="res://Menu/Options/Video/window_mode_button.gd" id="2_pbj6n"]
 
 [node name="Window_Mode_Button" instance=ExtResource("1_8oqdw")]
-script = ExtResource("2_mv4fb")
+script = ExtResource("2_pbj6n")
 
 [node name="HBoxContainer" parent="." index="0"]
 alignment = 1

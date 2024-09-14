@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4sxblkji226k"
-path="res://.godot/imported/Shield@2x-1.png-419f35c0dfc6cce9f07f0ec030dab2e5.ctex"
+path="res://.godot/imported/Shield@2x-1.png-d2fff2944b4d7ddf3c0936999b9dfbe5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/Shield@2x-1.png"
-dest_files=["res://.godot/imported/Shield@2x-1.png-419f35c0dfc6cce9f07f0ec030dab2e5.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/Shield@2x-1.png"
+dest_files=["res://.godot/imported/Shield@2x-1.png-d2fff2944b4d7ddf3c0936999b9dfbe5.ctex"]
 
 [params]
 

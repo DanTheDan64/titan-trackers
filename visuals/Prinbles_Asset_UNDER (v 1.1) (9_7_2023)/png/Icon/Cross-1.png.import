@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxctqh23d1pc6"
-path="res://.godot/imported/Cross-1.png-c260e3af5a6cbf7eac8bc0761124539f.ctex"
+path="res://.godot/imported/Cross-1.png-9180c5e1bfb5c0c6a5bf105c4d95df5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/Cross-1.png"
-dest_files=["res://.godot/imported/Cross-1.png-c260e3af5a6cbf7eac8bc0761124539f.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Icon/Cross-1.png"
+dest_files=["res://.godot/imported/Cross-1.png-9180c5e1bfb5c0c6a5bf105c4d95df5f.ctex"]
 
 [params]
 

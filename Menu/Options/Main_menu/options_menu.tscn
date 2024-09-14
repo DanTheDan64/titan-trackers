@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh5ujms38xqey"]
 
-[ext_resource type="Script" path="res://Menu/Options/options_menu.gd" id="1_6vont"]
-[ext_resource type="PackedScene" uid="uid://byq6v4758uvab" path="res://Menu/Options/settings_tab_container.tscn" id="2_4tr81"]
+[ext_resource type="Script" path="res://Menu/Options/Main_menu/options_menu.gd" id="1_6tase"]
+[ext_resource type="PackedScene" uid="uid://byq6v4758uvab" path="res://Menu/Options/Main_menu/settings_tab_container.tscn" id="2_4tr81"]
 
 [node name="Options_Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6vont")
+script = ExtResource("1_6tase")
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

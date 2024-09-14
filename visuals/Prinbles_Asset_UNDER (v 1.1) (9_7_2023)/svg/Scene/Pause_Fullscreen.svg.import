@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctfseeuewg61d"
-path="res://.godot/imported/Pause_Fullscreen.svg-842fb3f0f5fcbb1bcf1dfc1d1e3b0ed9.ctex"
+path="res://.godot/imported/Pause_Fullscreen.svg-b0411e3453206ce4deff943984ea5fbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Scene/Pause_Fullscreen.svg"
-dest_files=["res://.godot/imported/Pause_Fullscreen.svg-842fb3f0f5fcbb1bcf1dfc1d1e3b0ed9.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Scene/Pause_Fullscreen.svg"
+dest_files=["res://.godot/imported/Pause_Fullscreen.svg-b0411e3453206ce4deff943984ea5fbf.ctex"]
 
 [params]
 

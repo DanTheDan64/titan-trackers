@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgkhdudyo70je"
-path="res://.godot/imported/Time@0.5x.png-41d81528a94d1d1ab002a7b06c0e6849.ctex"
+path="res://.godot/imported/Time@0.5x.png-35a4749a8e3008bf1a5d1345856461a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/Icon/Time@0.5x.png"
-dest_files=["res://.godot/imported/Time@0.5x.png-41d81528a94d1d1ab002a7b06c0e6849.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Counter/Icon/Time@0.5x.png"
+dest_files=["res://.godot/imported/Time@0.5x.png-35a4749a8e3008bf1a5d1345856461a5.ctex"]
 
 [params]
 

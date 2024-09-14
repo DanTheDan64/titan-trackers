@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co063l3ak0t6h"
-path="res://.godot/imported/Replay.svg-162c466e42b5c93893a6b4bd8efa1d48.ctex"
+path="res://.godot/imported/Replay.svg-0506292906c10849e331d49e3e71fbea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Icon/Replay.svg"
-dest_files=["res://.godot/imported/Replay.svg-162c466e42b5c93893a6b4bd8efa1d48.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Button/Icon/Replay.svg"
+dest_files=["res://.godot/imported/Replay.svg-0506292906c10849e331d49e3e71fbea.ctex"]
 
 [params]
 

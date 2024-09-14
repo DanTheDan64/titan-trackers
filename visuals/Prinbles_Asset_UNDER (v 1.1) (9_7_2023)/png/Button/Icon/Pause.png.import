@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0dffdlgv4k5x"
-path="res://.godot/imported/Pause.png-4e3bba12986761c5555e382494ff3b33.ctex"
+path="res://.godot/imported/Pause.png-711f9a95637a9eb5b15d9184934f1ee5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Icon/Pause.png"
-dest_files=["res://.godot/imported/Pause.png-4e3bba12986761c5555e382494ff3b33.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Button/Icon/Pause.png"
+dest_files=["res://.godot/imported/Pause.png-711f9a95637a9eb5b15d9184934f1ee5.ctex"]
 
 [params]
 

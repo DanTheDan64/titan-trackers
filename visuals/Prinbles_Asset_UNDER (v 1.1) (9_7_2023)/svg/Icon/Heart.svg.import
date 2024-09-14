@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgto1pvjyts2d"
-path="res://.godot/imported/Heart.svg-f679703c47b9e60118818f9eece14899.ctex"
+path="res://.godot/imported/Heart.svg-0486e50db5692159eca78f5aca73a491.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Icon/Heart.svg"
-dest_files=["res://.godot/imported/Heart.svg-f679703c47b9e60118818f9eece14899.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Icon/Heart.svg"
+dest_files=["res://.godot/imported/Heart.svg-0486e50db5692159eca78f5aca73a491.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyq3x7qqsvqc"
-path="res://.godot/imported/Locker@0.5x.png-8e489b5b1d871635159b2a129945866b.ctex"
+path="res://.godot/imported/Locker@0.5x.png-d320e8942954f5931e6b1d8aedda7f7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Icon/Locker@0.5x.png"
-dest_files=["res://.godot/imported/Locker@0.5x.png-8e489b5b1d871635159b2a129945866b.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Icon/Locker@0.5x.png"
+dest_files=["res://.godot/imported/Locker@0.5x.png-d320e8942954f5931e6b1d8aedda7f7e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb1tb3t42ochg"
-path="res://.godot/imported/Example.svg-881e74a032dce753578505a72a60a87e.ctex"
+path="res://.godot/imported/Example.svg-c4d93018764562d73358861912140cb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Load/Example.svg"
-dest_files=["res://.godot/imported/Example.svg-881e74a032dce753578505a72a60a87e.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Load/Example.svg"
+dest_files=["res://.godot/imported/Example.svg-c4d93018764562d73358861912140cb0.ctex"]
 
 [params]
 

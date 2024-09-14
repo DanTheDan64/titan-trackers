@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8owgq8p5gcrw"
-path="res://.godot/imported/GameOver_Fullscreen.svg-e68ee4efe44a6f271c4ff53ef8906373.ctex"
+path="res://.godot/imported/GameOver_Fullscreen.svg-82ca013e3278dc7eda8e74ed2a2e509e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Scene/GameOver_Fullscreen.svg"
-dest_files=["res://.godot/imported/GameOver_Fullscreen.svg-e68ee4efe44a6f271c4ff53ef8906373.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Scene/GameOver_Fullscreen.svg"
+dest_files=["res://.godot/imported/GameOver_Fullscreen.svg-82ca013e3278dc7eda8e74ed2a2e509e.ctex"]
 
 [params]
 

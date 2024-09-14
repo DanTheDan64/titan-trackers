@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh488buxbealt"
-path="res://.godot/imported/Heart@0.5x.png-2adcf35ecdb259b3338a5de7bcbf9996.ctex"
+path="res://.godot/imported/Heart@0.5x.png-61ce853a532812223556539bc338853c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Icon/Heart@0.5x.png"
-dest_files=["res://.godot/imported/Heart@0.5x.png-2adcf35ecdb259b3338a5de7bcbf9996.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Icon/Heart@0.5x.png"
+dest_files=["res://.godot/imported/Heart@0.5x.png-61ce853a532812223556539bc338853c.ctex"]
 
 [params]
 

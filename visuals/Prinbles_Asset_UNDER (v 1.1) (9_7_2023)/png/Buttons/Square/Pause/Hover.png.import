@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7tkmhr6pipyd"
-path="res://.godot/imported/Hover.png-7349195af1a38e0073706b12a89c6870.ctex"
+path="res://.godot/imported/Hover.png-4c95813e4235071ff59bf90d9f397642.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Pause/Hover.png"
-dest_files=["res://.godot/imported/Hover.png-7349195af1a38e0073706b12a89c6870.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png/Buttons/Square/Pause/Hover.png"
+dest_files=["res://.godot/imported/Hover.png-4c95813e4235071ff59bf90d9f397642.ctex"]
 
 [params]
 

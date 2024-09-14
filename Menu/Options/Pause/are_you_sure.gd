@@ -7,7 +7,7 @@ extends Control
 @onready var leave = $MarginContainer/VBoxContainer/HBoxContainer/leave as Button
 @onready var no = $MarginContainer2/VBoxContainer/HBoxContainer/no as Button
 @onready var yes = $MarginContainer2/VBoxContainer/HBoxContainer/yes as Button
-@onready var game_menu = preload("res://Menu/Options/are_you_sure.gd")
+@onready var game_menu = preload("res://Menu/Options/Pause/are_you_sure.gd")
 @onready var start_level = preload("res://levels/test_scene.tscn") 
 
 # Called when the node enters the scene tree for the first time.

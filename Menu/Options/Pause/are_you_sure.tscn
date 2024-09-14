@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbra50yk6rmxb"]
 
-[ext_resource type="Script" path="res://Menu/Options/are_you_sure.gd" id="1_dc263"]
+[ext_resource type="Script" path="res://Menu/Options/Pause/are_you_sure.gd" id="1_biaer"]
 
 [node name="Are_you_sure" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dc263")
+script = ExtResource("1_biaer")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

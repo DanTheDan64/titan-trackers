@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3dtpbb26ls5j"
-path="res://.godot/imported/ArrowLeft-Bold@0.5x.png-828835b200005cebddc042e3aae7d8de.ctex"
+path="res://.godot/imported/ArrowLeft-Bold@0.5x.png-205aa216f198981bd2b998e994e03869.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Icon/ArrowLeft-Bold@0.5x.png"
-dest_files=["res://.godot/imported/ArrowLeft-Bold@0.5x.png-828835b200005cebddc042e3aae7d8de.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/png@0.5x/Button/Icon/ArrowLeft-Bold@0.5x.png"
+dest_files=["res://.godot/imported/ArrowLeft-Bold@0.5x.png-205aa216f198981bd2b998e994e03869.ctex"]
 
 [params]
 

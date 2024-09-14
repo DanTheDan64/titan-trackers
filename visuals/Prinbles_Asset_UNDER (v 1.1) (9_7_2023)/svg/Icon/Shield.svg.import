@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dndbvf1if2myy"
-path="res://.godot/imported/Shield.svg-bac5ccbdc06c561a503ac5ce69820f61.ctex"
+path="res://.godot/imported/Shield.svg-862db603435abc9fdc8d0ed8972e9777.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Icon/Shield.svg"
-dest_files=["res://.godot/imported/Shield.svg-bac5ccbdc06c561a503ac5ce69820f61.ctex"]
+source_file="res://visuals/Prinbles_Asset_UNDER (v 1.1) (9_7_2023)/svg/Icon/Shield.svg"
+dest_files=["res://.godot/imported/Shield.svg-862db603435abc9fdc8d0ed8972e9777.ctex"]
 
 [params]
 
