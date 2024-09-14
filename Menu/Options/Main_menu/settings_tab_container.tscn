@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://csj2wee15vf2b" path="res://Menu/Options/Video/window_mode_button.tscn" id="2_btrjl"]
 [ext_resource type="PackedScene" uid="uid://nwctiw8atefk" path="res://Menu/Options/Video/resolution_mode_button.tscn" id="3_jky41"]
 [ext_resource type="PackedScene" uid="uid://bpfvrx5b54j4b" path="res://Menu/Options/Video/nsync_display_button.tscn" id="4_f84su"]
-[ext_resource type="PackedScene" uid="uid://cirih71yp56dn" path="res://Menu/Options/KeyBind/hotkey_rebind_button.tscn" id="5_uui1b"]
+[ext_resource type="PackedScene" uid="uid://cirih71yp56dn" path="res://Menu/Options/Keybind/hotkey_rebind_button.tscn" id="5_uui1b"]
 [ext_resource type="Script" path="res://Menu/Options/Crosshair/crosshair.gd" id="6_y3hha"]
 [ext_resource type="PackedScene" uid="uid://dlbgbe4oj1fiy" path="res://Menu/Options/Audio/music_slider.tscn" id="8_jvi0a"]
 [ext_resource type="PackedScene" uid="uid://b7t1aw75dngvy" path="res://Menu/Options/Audio/music_music_slider.tscn" id="9_68xfu"]
@@ -210,35 +210,27 @@ layout_mode = 2
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "right"
 
 [node name="Hotkey_Rebind_Button3" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "up"
 
 [node name="Hotkey_Rebind_Button4" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "down"
 
 [node name="Hotkey_Rebind_Button5" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "jump"
 
 [node name="Hotkey_Rebind_Button6" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "sneak"
 
 [node name="Hotkey_Rebind_Button7" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "fire_hook"
 
 [node name="Hotkey_Rebind_Button8" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "shoot"
 
 [node name="Hotkey_Rebind_Button9" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "escape"
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
