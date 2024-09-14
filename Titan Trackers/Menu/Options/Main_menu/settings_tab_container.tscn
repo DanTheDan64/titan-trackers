@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bpfvrx5b54j4b" path="res://Menu/Options/Video/nsync_display_button.tscn" id="4_f84su"]
 [ext_resource type="PackedScene" uid="uid://cirih71yp56dn" path="res://Menu/Options/KeyBind/hotkey_rebind_button.tscn" id="5_uui1b"]
 [ext_resource type="Script" path="res://Menu/Options/Crosshair/crosshair.gd" id="6_y3hha"]
-[ext_resource type="Script" path="res://Retical/retical.gd" id="7_peuxg"]
 [ext_resource type="PackedScene" uid="uid://dlbgbe4oj1fiy" path="res://Menu/Options/Audio/music_slider.tscn" id="8_jvi0a"]
 [ext_resource type="PackedScene" uid="uid://b7t1aw75dngvy" path="res://Menu/Options/Audio/music_music_slider.tscn" id="9_68xfu"]
 [ext_resource type="PackedScene" uid="uid://bf7qwlfbu2tb1" path="res://Menu/Options/Audio/sfx_slider.tscn" id="10_spt2o"]
@@ -14,6 +13,34 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5do5k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mjlf"]
+
+[sub_resource type="GDScript" id="GDScript_hhqc8"]
+script/source = "extends CenterContainer
+
+@export var DOT_RADIUS :float = 1.0
+@export var DOT_COLOR : Color = Color.WHITE
+@onready var top = $\"../Top\"
+@onready var right = $\"../Right\"
+@onready var bottom = $\"../Bottom\"
+@onready var left = $\"../Left\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	queue_redraw()# This code tells to draw any commends that you have put into the script 
+
+func _draw():
+	draw_circle(Vector2 (0,0),DOT_RADIUS,DOT_COLOR) #This basickly means that godot draws a circal at 0,0 and can be controled by DOT_RADIUS and DOT_COLOR
+
+
+func _on_dot_size_value_changed(value):
+	DOT_RADIUS = value
+"
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -180,7 +207,6 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_5do5k")
 
 [node name="Hotkey_Rebind_Button" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-action_name = "left"
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
@@ -248,7 +274,7 @@ offset_left = 56.0
 offset_top = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("7_peuxg")
+script = SubResource("GDScript_hhqc8")
 DOT_RADIUS = 3.0
 
 [node name="Top" type="Line2D" parent="TabContainer/Crosshair/UserRetical"]

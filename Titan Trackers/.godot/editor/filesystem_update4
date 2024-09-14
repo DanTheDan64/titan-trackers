@@ -37,3 +37,4 @@ res://Menu/Options/Video/nsync_display_button.tscn
 res://Menu/Options/Video/resolution_mode_button.tscn
 res://Menu/Options/Audio/sfx_slider.tscn
 res://Menu/Options/Audio/music_music_slider.tscn
+res://Menu/Level_Select/level_mover.gd
