@@ -13,7 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	queue_redraw()# This code tells to draw any commends that you have put into the script 
 
 func _draw():

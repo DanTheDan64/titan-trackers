@@ -13,7 +13,6 @@ extends Control
 func _ready():
 	pass
 
-
 func _on_general_tab_button_pressed(tab):
 	general.visible = true
 	video.visible = false

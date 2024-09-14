@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bnqe2scl2i4rg"]
+[gd_scene load_steps=40 format=3 uid="uid://bnqe2scl2i4rg"]
 
 [ext_resource type="PackedScene" uid="uid://chptp24yb6vh3" path="res://player.tscn" id="1_7f7cj"]
 [ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://visuals/textures/texture_09.png" id="2_ui5y4"]
@@ -15,6 +15,17 @@ sky_material = SubResource("ProceduralSkyMaterial_1rktv")
 [sub_resource type="Environment" id="Environment_h8gqh"]
 background_mode = 2
 sky = SubResource("Sky_jbla2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_i2j51"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2v2i"]
+size = Vector3(2, 5, 1.28176)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2fu3g"]
+size = Vector3(5.10754, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7umf0"]
+size = Vector3(9.62963, 6.66901, 1.99875)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kequ4"]
 albedo_texture = ExtResource("2_ui5y4")
@@ -85,7 +96,7 @@ albedo_texture = ExtResource("5_xsyp0")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1wwky"]
 
-[node name="Node3D" type="Node3D"]
+[node name="0" type="Node3D"]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.822543, -0.298169, 0.484271, 0.0074801, 0.857134, 0.515039, -0.568654, -0.420019, 0.70726, 247.732, 193.805, 1059.92)
@@ -96,6 +107,136 @@ spot_range = 4096.0
 environment = SubResource("Environment_h8gqh")
 
 [node name="player" parent="." instance=ExtResource("1_7f7cj")]
+
+[node name="exit_gate" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 163.206, 151)
+script = ExtResource("7_q4wc4")
+metadata/_edit_group_ = true
+
+[node name="gate_mesh" type="Node3D" parent="exit_gate"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.989263, 0.263005, 0, -0.280735, 0.926784, 0, 0, 0, 0.87466, 3.02577, 0.903965, -0.03618)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.989263, 0.263005, 0, -0.280735, 0.926784, 0, 0, 0, 0.87466, 3.02577, 0.903965, -0.03618)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(1.02557, -0.42713, 0, 0.455925, 0.960794, 0, 0, 0, 0.954628, 2.81928, 1.53943, -0.106131)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(1.11494, 0.120542, 0, -0.128668, 1.04453, 0, 0, 0, 0.954628, 2.46662, 2.32031, -0.298276)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.533279, -0.925184, 0, 0.987556, 0.499599, 0, 0, 0, 0.954628, 2.43951, 3.1748, -0.21339)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.208317, -1.03197, -0.0454874, 1.10277, 0.195494, -0.00217352, 0.0124511, -0.0487833, 0.953542, 1.82873, 3.49932, -0.284367)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.208317, -1.03197, -0.0454874, 1.10277, 0.195494, -0.00217352, 0.0124511, -0.0487833, 0.953542, 2.03705, 4.60209, -0.271916)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.495792, -0.901627, -0.039786, 1.03605, 0.471214, -0.0019011, 0.0260126, -0.0419368, 0.834025, 1.11119, 4.80731, -0.350193)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.495792, -0.901627, -0.039786, 1.03605, 0.471214, -0.0019011, 0.0260126, -0.0419368, 0.834025, 1.11119, 4.80731, -0.350193)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-0.25686, -1.08049, -0.0434236, 1.2201, -0.283197, -0.00207491, -0.00947207, -0.0521889, 0.910278, 0.415574, 4.70398, -0.450465)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(0.365043, -1.05281, -0.0434236, 1.20437, 0.337128, -0.00207491, 0.0201592, -0.0494545, 0.910278, -0.454992, 4.46815, -0.676168)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-0.90804, -0.708304, -0.0434236, 0.781146, -0.922598, -0.00207491, -0.0415363, -0.0358917, 0.910278, -1.34632, 4.60511, -0.637248)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-1.0952, -0.414503, -0.0506069, 0.445284, -1.09971, -0.0526597, -0.0393303, -0.0689029, 0.908781, -1.80522, 3.99516, -0.728363)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D7")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-1.0952, -0.414503, -0.0506069, 0.445284, -1.09971, -0.0526597, -0.0393303, -0.068903, 0.908781, -2.65319, 3.93777, -0.997842)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-0.967075, -0.672197, -0.0442639, 0.749229, -0.902078, -0.0460593, -0.0195645, -0.0742022, 0.794875, -3.3015, 3.45973, -0.863873)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-0.967075, -0.672197, -0.0442639, 0.749229, -0.902078, -0.0460593, -0.0195645, -0.0742022, 0.794875, -3.3015, 3.45973, -0.863873)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-1.31218, 0.0695411, -0.0483108, -0.0447156, -1.24678, -0.0502704, -0.0717504, -0.0494024, 0.867549, -3.33522, 2.67264, -0.963107)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-1.16775, -0.564976, -0.0483108, 0.637963, -1.095, -0.0502704, -0.0349854, -0.0767119, 0.867549, -3.26294, 1.66699, -1.17766)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-0.993392, 0.806177, -0.0483108, -0.848561, -0.961381, -0.0502704, -0.0890196, 0.00196394, 0.867549, -3.59173, 0.710755, -1.15833)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="exit_gate/gate_mesh"]
+transform = Transform3D(-0.685881, 1.05165, 0.00246292, -1.12062, -0.671938, -0.0680777, -0.072862, -0.0172156, 0.8685, -3.05373, 0.0856481, -1.22117)
+mesh = SubResource("BoxMesh_i2j51")
+skeleton = NodePath("../MeshInstance3D8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="exit_gate"]
+transform = Transform3D(0.990389, 0, -0.138309, 0, 1, 0, 0.138309, 0, 0.990389, -3.34187, 2.5, -1)
+shape = SubResource("BoxShape3D_q2v2i")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="exit_gate"]
+transform = Transform3D(0.990389, 0, -0.138309, 0, 1, 0, 0.138309, 0, 0.990389, 2.5, 2.5, 0)
+shape = SubResource("BoxShape3D_q2v2i")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="exit_gate"]
+transform = Transform3D(0.990268, 0, -0.139173, 0, 1, 0, 0.139173, 0, 0.990268, 0.0767381, 5, -0.406693)
+shape = SubResource("BoxShape3D_2fu3g")
+
+[node name="Area3D" type="Area3D" parent="exit_gate"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="exit_gate/Area3D"]
+transform = Transform3D(0.987097, 0, -0.160122, 0, 1, 0, 0.160122, 0, 0.987097, -0.277627, 2.64218, -0.705722)
+shape = SubResource("BoxShape3D_7umf0")
 
 [node name="terrain" type="Node" parent="."]
 
@@ -158,7 +299,6 @@ metadata/_edit_group_ = true
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D53"]
 material_override = SubResource("StandardMaterial3D_d375c")
 mesh = SubResource("BoxMesh_6jl8c")
-skeleton = NodePath("../../StaticBody3D53")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D53"]
 shape = SubResource("BoxShape3D_rl4ip")
@@ -215,7 +355,6 @@ metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="terrain/StaticBody3D6"]
 mesh = SubResource("BoxMesh_kcjtk")
-skeleton = NodePath("../../StaticBody3D6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain/StaticBody3D6"]
 shape = SubResource("BoxShape3D_0a7ug")
@@ -387,3 +526,5 @@ constant_linear_velocity = Vector3(-25, -50, 1.015)
 [node name="enemy4" parent="." instance=ExtResource("6_8e6ga")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 622, 262, 65)
 constant_linear_velocity = Vector3(-25, -50, 1.015)
+
+[connection signal="body_entered" from="exit_gate/Area3D" to="exit_gate" method="_on_area_3d_body_entered"]

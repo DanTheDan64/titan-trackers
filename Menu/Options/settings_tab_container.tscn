@@ -180,6 +180,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_5do5k")
 
 [node name="Hotkey_Rebind_Button" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_f2duc")]
 layout_mode = 2
+action_name = null
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_f2duc")]
 layout_mode = 2
@@ -223,6 +224,8 @@ visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
 script = ExtResource("1_7wpwo")
+DOT_RADIUS = null
+DOT_COLOR = null
 metadata/_tab_index = 3
 
 [node name="UserRetical" type="Control" parent="TabContainer/Crosshair"]
