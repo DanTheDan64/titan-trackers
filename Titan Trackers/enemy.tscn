@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://b3xketobjo0ab"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_t1fe4"]
-[ext_resource type="Texture2D" uid="uid://cddr82msyjpoc" path="res://visuals/textures/texture_03.png" id="2_hjbwn"]
+[ext_resource type="Texture2D" uid="uid://d5itiblikht6" path="res://visuals/textures/texture_09.png" id="2_hylga"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0ijhv"]
 radius = 1.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vf4o2"]
-albedo_texture = ExtResource("2_hjbwn")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfar5"]
+albedo_texture = ExtResource("2_hylga")
 
 [sub_resource type="SphereMesh" id="SphereMesh_55ppy"]
 radius = 0.8
@@ -27,22 +27,18 @@ script = ExtResource("1_t1fe4")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 shape = SubResource("SphereShape3D_0ijhv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_vf4o2")
+material_override = SubResource("StandardMaterial3D_tfar5")
 mesh = SubResource("SphereMesh_55ppy")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
-emitting = false
-amount = 500
+amount = 200
 lifetime = 2.0
 speed_scale = 0.5
-explosiveness = 0.8
 mesh = SubResource("SphereMesh_vsvy0")
-emission_shape = 1
+emission_shape = 2
 emission_sphere_radius = 1.0
 direction = Vector3(0, 1, 0)
 spread = 0.0
