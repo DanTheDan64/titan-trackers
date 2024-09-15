@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://mblnkohmbep2" path="res://addons/LineRenderer/line_render_demo/line.png" id="2_c16yx"]
 [ext_resource type="Script" path="res://addons/LineRenderer/line_renderer.gd" id="3_qof0h"]
 [ext_resource type="Texture2D" uid="uid://oce5xjtw33cp" path="res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png" id="4_s4oow"]
-[ext_resource type="Texture2D" uid="uid://8gmhogjbwdvv" path="res://visuals/sprites/charge_bar.png" id="5_0jgcy"]
-[ext_resource type="Texture2D" uid="uid://dhmnfnnvt0t0h" path="res://visuals/sprites/white_circle-removebg-preview.png" id="6_fn36i"]
+[ext_resource type="Texture2D" uid="uid://tbektxvktsuf" path="res://visuals/sprites/charge_bar.png" id="5_0jgcy"]
+[ext_resource type="Texture2D" uid="uid://bl2ixclxrixmb" path="res://visuals/sprites/white_circle-removebg-preview.png" id="6_fn36i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lq231"]
 
@@ -17,10 +17,9 @@ shading_mode = 0
 albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
 albedo_texture = ExtResource("2_c16yx")
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_mgdw5"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_5gw35"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxa7q"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex"
 
 [sub_resource type="LabelSettings" id="LabelSettings_hnvdx"]
 font_size = 96
@@ -91,7 +90,7 @@ one_shot = true
 [node name="LineRenderer3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_qtgjc")
-mesh = SubResource("ImmediateMesh_mgdw5")
+mesh = SubResource("ImmediateMesh_5gw35")
 script = ExtResource("3_qof0h")
 points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
