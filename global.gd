@@ -8,3 +8,5 @@ var records = [
 ]
 
 var level_on = 0
+
+var sensitvity = 0.2

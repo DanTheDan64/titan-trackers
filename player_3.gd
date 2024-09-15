@@ -19,7 +19,7 @@ var sens: float = 0.2
 
 #objects
 @onready var movement_orienter: Object = $movement_orienter
-
+@onready var game_menu = $Game_menu
 @onready var crosshair: Object = $"gui/Sprite2D"
 @onready var state_text_display: Object = $gui/state_display
 @onready var spedometer: Object = $"gui/spedometer"
@@ -79,17 +79,24 @@ var time: float = 0.0
 func _ready():
 	grapple_line.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
+	sens = global.sensitvity
+	
 
 func _input(event):
 	#camera movement
 	if event is InputEventMouseMotion:
-		cam.rotation_degrees.y += -event.relative.x * sens
-		cam.rotation_degrees.x += -event.relative.y * sens
-		cam.rotation_degrees.x = clamp(cam.rotation_degrees.x, -90, 90)
+		if game_menu.visible == false:
+			cam.rotation_degrees.y += -event.relative.x * sens
+			cam.rotation_degrees.x += -event.relative.y * sens
+			cam.rotation_degrees.x = clamp(cam.rotation_degrees.x, -90, 90)
 	elif InputEvent:
 		if Input.is_action_pressed("escape"):
-			get_tree().quit()
+			if game_menu.visible == true:
+				game_menu.visible = false
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			else:
+				game_menu.visible = true
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 

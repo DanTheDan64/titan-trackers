@@ -51,3 +51,7 @@ func _on_audio_tab_button_pressed(_tab):
 	crosshair.visible = false
 	audio.visible = true
 	user_retical.visible = 0
+
+
+func _on_exit_button_button_down():
+	get_tree().change_scene_to_file("res://player_3.gd")

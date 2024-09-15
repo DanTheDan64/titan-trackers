@@ -39,12 +39,6 @@ func set_action_name():
 		"sneak":
 			label.text= "Crouch"
 			
-		"fire_hook":
-			label.text= "Hook"
-			
-		"shoot":
-			label.text= "Fire"
-			
 		"escape":
 			label.text= "Escape"
 			

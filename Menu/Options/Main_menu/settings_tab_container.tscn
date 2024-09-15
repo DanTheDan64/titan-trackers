@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://byq6v4758uvab"]
+[gd_scene load_steps=14 format=3 uid="uid://byq6v4758uvab"]
 
 [ext_resource type="Script" path="res://Menu/Options/Main_menu/settings_tab_container.gd" id="1_5nmmp"]
 [ext_resource type="PackedScene" uid="uid://csj2wee15vf2b" path="res://Menu/Options/Video/window_mode_button.tscn" id="2_btrjl"]
+[ext_resource type="PackedScene" uid="uid://tdang68v5lcu" path="res://Menu/Options/general/sensitivity.tscn" id="2_ew6ok"]
 [ext_resource type="PackedScene" uid="uid://nwctiw8atefk" path="res://Menu/Options/Video/resolution_mode_button.tscn" id="3_jky41"]
 [ext_resource type="PackedScene" uid="uid://bpfvrx5b54j4b" path="res://Menu/Options/Video/nsync_display_button.tscn" id="4_f84su"]
 [ext_resource type="PackedScene" uid="uid://cirih71yp56dn" path="res://Menu/Options/Keybind/hotkey_rebind_button.tscn" id="5_uui1b"]
@@ -68,12 +69,10 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
 all_tabs_in_front = true
 metadata/_edit_use_anchors_ = true
 
 [node name="General" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
 metadata/_tab_index = 0
@@ -90,59 +89,11 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/General/MarginContainer"]
+[node name="Sensitivity" parent="TabContainer/General/MarginContainer" instance=ExtResource("2_ew6ok")]
 layout_mode = 2
-theme_override_constants/separation = 64
-
-[node name="Label" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label2" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label3" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label4" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label5" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label6" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label7" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
-
-[node name="Label8" type="Label" parent="TabContainer/General/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "yes
-"
 
 [node name="Video" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
 metadata/_tab_index = 1
@@ -210,27 +161,27 @@ layout_mode = 2
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
+action_name = "right"
 
 [node name="Hotkey_Rebind_Button3" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
+action_name = "up"
 
 [node name="Hotkey_Rebind_Button4" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
+action_name = "down"
 
 [node name="Hotkey_Rebind_Button5" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
+action_name = "jump"
 
 [node name="Hotkey_Rebind_Button6" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
+action_name = "sneak"
 
 [node name="Hotkey_Rebind_Button7" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
 layout_mode = 2
-
-[node name="Hotkey_Rebind_Button8" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
-layout_mode = 2
-
-[node name="Hotkey_Rebind_Button9" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("5_uui1b")]
-layout_mode = 2
+action_name = "escape"
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Key Bind/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -408,6 +359,19 @@ offset_top = -10.5
 offset_right = -472.0
 offset_bottom = -10.5
 
+[node name="Exit_Button" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 16)
+layout_mode = 0
+offset_left = 1698.0
+offset_top = 922.0
+offset_right = 1818.0
+offset_bottom = 977.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 34
+text = "Exit
+"
+
 [connection signal="tab_button_pressed" from="TabContainer/General" to="." method="_on_general_tab_button_pressed"]
 [connection signal="tab_button_pressed" from="TabContainer/Video" to="." method="_on_video_tab_button_pressed"]
 [connection signal="tab_button_pressed" from="TabContainer/Key Bind" to="." method="_on_key_bind_tab_button_pressed"]
@@ -419,3 +383,4 @@ offset_bottom = -10.5
 [connection signal="value_changed" from="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer/Line length" to="TabContainer/Crosshair" method="_on_line_length_value_changed"]
 [connection signal="value_changed" from="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer/Line width" to="TabContainer/Crosshair" method="_on_line_width_value_changed"]
 [connection signal="tab_button_pressed" from="TabContainer/Audio" to="." method="_on_audio_tab_button_pressed"]
+[connection signal="button_down" from="Exit_Button" to="." method="_on_exit_button_button_down"]
