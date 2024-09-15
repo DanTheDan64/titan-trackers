@@ -1,0 +1,433 @@
+[gd_scene load_steps=9 format=3 uid="uid://danx1erveb837"]
+
+[ext_resource type="Script" path="res://Menu/Level_Select/level_mover.gd" id="1_1gmy6"]
+[ext_resource type="Script" path="res://Menu/Level_Select/menu_level_select.gd" id="1_utpgt"]
+[ext_resource type="PackedScene" uid="uid://g7jpv1wfx1bd" path="res://visuals/levels/level_select.glb" id="3_qc61e"]
+
+[sub_resource type="Animation" id="Animation_cb1cg"]
+resource_name = "move_between_0_1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.404916, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker3D/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(20, 6, 10), Vector3(50, 27, -10)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_vtivw"]
+resource_name = "move_between_1_2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.785398, 0), Vector3(0, -0.523599, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker3D/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.03526, 1),
+"update": 0,
+"values": [Vector3(50, 27, -10), Vector3(0, 61, -45)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f3ip0"]
+_data = {
+"move_between_0_1": SubResource("Animation_cb1cg"),
+"move_between_1_2": SubResource("Animation_vtivw")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgt88"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3wp8"]
+font_size = 36
+
+[node name="Menu_Level_Select" type="Node3D"]
+script = ExtResource("1_utpgt")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 0, 0)
+script = ExtResource("1_1gmy6")
+
+[node name="Camera3D" type="Camera3D" parent="Marker3D"]
+transform = Transform3D(0.47948, -0.375413, 0.793198, 0.0426937, 0.912784, 0.406204, -0.876513, -0.160902, 0.45369, 0, 61, -45)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f3ip0")
+}
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.85323, 19.3349, 16.5416)
+light_energy = 5.0
+omni_range = 50.0
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
+
+[node name="windows" type="Control" parent="gui"]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
+
+[node name="0" type="Node2D" parent="gui/windows"]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="gui/windows/0"]
+offset_left = 1504.0
+offset_top = 488.0
+offset_right = 1792.0
+offset_bottom = 984.0
+color = Color(0.431373, 0.0941176, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="gui/windows/0"]
+offset_left = 1528.0
+offset_top = 512.0
+offset_right = 1768.0
+offset_bottom = 960.0
+color = Color(0.713726, 0.490196, 0.345098, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="gui/windows/0"]
+offset_left = 1544.0
+offset_top = 528.0
+offset_right = 1752.0
+offset_bottom = 952.0
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="gui/windows/0/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/0/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "tutorial"
+label_settings = SubResource("LabelSettings_tgt88")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="gui/windows/0/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/0/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "time: 
+23:21"
+label_settings = SubResource("LabelSettings_l3wp8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="gui/windows/0/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 36
+text = "start:"
+
+[node name="1" type="Node2D" parent="gui/windows"]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="gui/windows/1"]
+offset_left = 1504.0
+offset_top = 488.0
+offset_right = 1792.0
+offset_bottom = 984.0
+color = Color(0.431373, 0.0941176, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="gui/windows/1"]
+offset_left = 1528.0
+offset_top = 512.0
+offset_right = 1768.0
+offset_bottom = 960.0
+color = Color(0.713726, 0.490196, 0.345098, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="gui/windows/1"]
+offset_left = 1544.0
+offset_top = 528.0
+offset_right = 1752.0
+offset_bottom = 952.0
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="gui/windows/1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/1/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "level 1
+"
+label_settings = SubResource("LabelSettings_tgt88")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="gui/windows/1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/1/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "time: 
+23:21"
+label_settings = SubResource("LabelSettings_l3wp8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_1" type="Button" parent="gui/windows/1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 36
+text = "start:"
+
+[node name="2" type="Node2D" parent="gui/windows"]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="gui/windows/2"]
+offset_left = 1504.0
+offset_top = 488.0
+offset_right = 1792.0
+offset_bottom = 984.0
+color = Color(0.431373, 0.0941176, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="gui/windows/2"]
+offset_left = 1528.0
+offset_top = 512.0
+offset_right = 1768.0
+offset_bottom = 960.0
+color = Color(0.713726, 0.490196, 0.345098, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="gui/windows/2"]
+offset_left = 1544.0
+offset_top = 528.0
+offset_right = 1752.0
+offset_bottom = 952.0
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="gui/windows/2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/2/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "level 2"
+label_settings = SubResource("LabelSettings_tgt88")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="gui/windows/2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/2/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "time: 
+23:21"
+label_settings = SubResource("LabelSettings_l3wp8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button-2" type="Button" parent="gui/windows/2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 36
+text = "start:"
+
+[node name="3" type="Node2D" parent="gui/windows"]
+
+[node name="ColorRect2" type="ColorRect" parent="gui/windows/3"]
+offset_left = 1504.0
+offset_top = 488.0
+offset_right = 1792.0
+offset_bottom = 984.0
+color = Color(0.431373, 0.0941176, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="gui/windows/3"]
+offset_left = 1528.0
+offset_top = 512.0
+offset_right = 1768.0
+offset_bottom = 960.0
+color = Color(0.713726, 0.490196, 0.345098, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="gui/windows/3"]
+offset_left = 1544.0
+offset_top = 528.0
+offset_right = 1752.0
+offset_bottom = 952.0
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="gui/windows/3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/3/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "level 3
+"
+label_settings = SubResource("LabelSettings_tgt88")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="gui/windows/3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/3/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "time: 
+23:21"
+label_settings = SubResource("LabelSettings_l3wp8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_3" type="Button" parent="gui/windows/3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 36
+text = "start:"
+
+[node name="4" type="Node2D" parent="gui/windows"]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="gui/windows/4"]
+offset_left = 1504.0
+offset_top = 488.0
+offset_right = 1792.0
+offset_bottom = 984.0
+color = Color(0.431373, 0.0941176, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="gui/windows/4"]
+offset_left = 1528.0
+offset_top = 512.0
+offset_right = 1768.0
+offset_bottom = 960.0
+color = Color(0.713726, 0.490196, 0.345098, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="gui/windows/4"]
+offset_left = 1544.0
+offset_top = 528.0
+offset_right = 1752.0
+offset_bottom = 952.0
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="gui/windows/4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/4/VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "level 2"
+label_settings = SubResource("LabelSettings_tgt88")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="gui/windows/4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="gui/windows/4/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 128.0
+text = "time: 
+23:21"
+label_settings = SubResource("LabelSettings_l3wp8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button-4" type="Button" parent="gui/windows/4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 36
+text = "start:"
+
+[node name="back" type="Button" parent="gui"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 992.0
+offset_right = 128.0
+offset_bottom = 1048.0
+text = "back"
+
+[node name="level_select" parent="." instance=ExtResource("3_qc61e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.57281, 0, -7.85395)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="Marker3D" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="gui/windows/0/VBoxContainer/Button" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="gui/windows/1/VBoxContainer/Button_1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="gui/windows/2/VBoxContainer/Button-2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="gui/windows/3/VBoxContainer/Button_3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="gui/windows/4/VBoxContainer/Button-4" to="." method="_on_button_4_pressed"]
+[connection signal="button_down" from="gui/back" to="." method="_on_back_button_down"]

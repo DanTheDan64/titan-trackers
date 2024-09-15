@@ -4,10 +4,10 @@ extends TabBar
 @export var DOT_RADIUS :float = 1.0
 @export var DOT_COLOR : Color = Color.WHITE
 @onready var crosshair = $"." as TabBar
-@onready var top = $UserRetical/Top as Line2D
-@onready var right = $UserRetical/Right as Line2D
-@onready var bottom = $UserRetical/Bottom as Line2D
-@onready var left = $UserRetical/Left as Line2D
+#@onready var top = $UserRetical/Top as Line2D
+#@onready var right = $UserRetical/Right as Line2D
+#@onready var bottom = $UserRetical/Bottom as Line2D
+#@onready var left = $UserRetical/Left as Line2D
 @onready var user_retical = $UserRetical
 @onready var retical = $UserRetical/retical
 @onready var lines_name : String
@@ -30,17 +30,17 @@ func _draw():
 	
 
 func _on_line_length_value_changed(value):
-	top.points[0].y = - value
-	right.points[0].x = value
-	bottom.points[0].y = value
-	left.points[0].x = - value
+	Retical.top.points[0].y = - value
+	Retical.right.points[0].x = value
+	Retical.bottom.points[0].y = value
+	Retical.left.points[0].x = - value
 
 
 func _on_line_width_value_changed(value):
-	top.width = value
-	right.width = value
-	bottom.width = value
-	left.width = value
+	Retical.top.width = value
+	Retical.right.width = value
+	Retical.bottom.width = value
+	Retical.left.width = value
 
 
 func _on_on_or_off_dot_toggled(toggled_on):
@@ -52,19 +52,19 @@ func _on_on_or_off_dot_toggled(toggled_on):
 
 func _on_on_or_off_line_toggled(toggled_on):
 	if toggled_on:
-		top.visible = false
-		right.visible = false
-		bottom.visible = false
-		left.visible = false
+		Retical.top.visible = false
+		Retical.right.visible = false
+		Retical.bottom.visible = false
+		Retical.left.visible = false
 	else:
-		top.visible = true
-		right.visible = true
-		bottom.visible = true
-		left.visible = true
+		Retical.top.visible = true
+		Retical.right.visible = true
+		Retical.bottom.visible = true
+		Retical.left.visible = true
 
 
 func _on_color_picker_button_color_changed(color):
-	top.default_color = color
-	right.default_color = color
-	bottom.default_color = color
-	left.default_color = color
+	Retical.top.default_color = color
+	Retical.right.default_color = color
+	Retical.bottom.default_color = color
+	Retical.left.default_color = color

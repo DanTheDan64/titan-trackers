@@ -136,11 +136,11 @@ func _physics_process(delta):
 	#show what the grapple ray hit
 	if grapple_data:
 		if grapple_data.collider.is_in_group("enemy"):
-			crosshair.modulate = Color.GREEN
+			Retical.DOT_COLOR = Color.GREEN
 		else:
-			crosshair.modulate = Color.RED
+			Retical.DOT_COLOR = Color.RED
 	else:
-		crosshair.modulate = Color.WHITE
+		Retical.DOT_COLOR = Color.WHITE
 	
 	
 	#track speed of player

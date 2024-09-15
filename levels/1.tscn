@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr816ape3xwln"]
+
+[ext_resource type="PackedScene" uid="uid://cdhvmv2ol3v11" path="res://visuals/levels/canyon.glb" id="1_17cty"]
+[ext_resource type="PackedScene" uid="uid://b3xketobjo0ab" path="res://enemy.tscn" id="2_jo316"]
+[ext_resource type="PackedScene" uid="uid://cx7won6w4lpiy" path="res://player.tscn" id="3_c1h1k"]
+
+[node name="1" type="Node3D"]
+
+[node name="canyon" parent="." instance=ExtResource("1_17cty")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -6.46852, 1.19209e-07, -0.498162)
+
+[node name="enemy" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54.5256, 101.488, -90.828)
+
+[node name="enemy2" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 20.8974, 75.8648, -31.2661)
+
+[node name="enemy3" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, -1.32988, 7.88869, 0, -7.88869, -1.32988, 38.3998, 75.4289, -188.763)
+
+[node name="enemy4" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, -1.32988, 7.88869, 0, -7.88869, -1.32988, 82.5994, 49.9881, -320.901)
+
+[node name="enemy5" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, -1.32988, 7.88869, 0, -7.88869, -1.32988, 50.2653, 101.957, -418.274)
+
+[node name="enemy6" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(7.81368, 1.69264, 0.285346, 0, -1.32988, 7.88869, 1.71652, -7.70496, -1.29891, 92.1595, 86.2556, -484.088)
+
+[node name="enemy7" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, -1.32988, 7.88869, 0, -7.88869, -1.32988, 67.1527, 111.318, -586.004)
+
+[node name="enemy9" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, -1.32988, 7.88869, 0, -7.88869, -1.32988, 27.2514, 189.514, -614.369)
+
+[node name="enemy8" parent="." instance=ExtResource("2_jo316")]
+transform = Transform3D(8, 0, 0, 0, -1.32988, 7.88869, 0, -7.88869, -1.32988, 66.3429, 121.769, -582.661)
+
+[node name="player" parent="." instance=ExtResource("3_c1h1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.063, 158.733, 31.8274)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4485, 240.822, -165.621)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4485, 240.822, -385.587)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4485, 240.822, -614.58)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4485, 399.025, -783.537)

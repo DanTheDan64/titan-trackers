@@ -45,6 +45,7 @@ func set_action_name():
 
 func set_key_text():
 	var action_events = InputMap.action_get_events(action_name)
+	print(action_events)	
 	var action_event = action_events[0]
 	var action_keycode = OS.get_keycode_string(action_event.physical_keycode)
 	

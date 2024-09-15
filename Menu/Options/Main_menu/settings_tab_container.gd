@@ -54,4 +54,8 @@ func _on_audio_tab_button_pressed(_tab):
 
 
 func _on_exit_button_button_down():
-	get_tree().change_scene_to_file("res://player_3.gd")
+	pass
+	#if _on_exit_button_button_down() == true:
+		#GameMenu.game_menu.visible = true
+	#else:
+		#GameMenu.game_menu.visible = false

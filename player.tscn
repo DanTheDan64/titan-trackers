@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://addons/LineRenderer/line_renderer.gd" id="3_qof0h"]
 [ext_resource type="Texture2D" uid="uid://oce5xjtw33cp" path="res://visuals/sprites/283-2837245_overlay-showing-custom-shape-overlay-showing-custom-white-removebg-preview.png" id="4_s4oow"]
 [ext_resource type="Texture2D" uid="uid://tbektxvktsuf" path="res://visuals/sprites/charge_bar.png" id="5_0jgcy"]
+[ext_resource type="PackedScene" uid="uid://ddv1nl4fnv71v" path="res://Retical/user_retical.tscn" id="5_tue55"]
 [ext_resource type="Texture2D" uid="uid://bl2ixclxrixmb" path="res://visuals/sprites/white_circle-removebg-preview.png" id="6_fn36i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lq231"]
@@ -18,35 +19,7 @@ shading_mode = 0
 albedo_color = Color(0.34902, 0.34902, 0.34902, 1)
 albedo_texture = ExtResource("2_c16yx")
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_go6o5"]
-
-[sub_resource type="GDScript" id="GDScript_bkjhr"]
-script/source = "extends CenterContainer
-
-@export var DOT_RADIUS :float = 1.0
-@export var DOT_COLOR : Color = Color.WHITE
-@onready var top = $\"../Top\"
-@onready var right = $\"../Right\"
-@onready var bottom = $\"../Bottom\"
-@onready var left = $\"../Left\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	queue_redraw()# This code tells to draw any commends that you have put into the script 
-
-func _draw():
-	draw_circle(Vector2 (0,0),DOT_RADIUS,DOT_COLOR) #This basickly means that godot draws a circal at 0,0 and can be controled by DOT_RADIUS and DOT_COLOR
-
-
-func _on_dot_size_value_changed(value):
-	DOT_RADIUS = value
-"
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_yaukl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hnvdx"]
 font_size = 96
@@ -129,7 +102,7 @@ one_shot = true
 [node name="LineRenderer3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 material_override = SubResource("StandardMaterial3D_qtgjc")
-mesh = SubResource("ImmediateMesh_go6o5")
+mesh = SubResource("ImmediateMesh_yaukl")
 script = ExtResource("3_qof0h")
 points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
@@ -137,49 +110,16 @@ points = Array[Vector3]([Vector3(0, 0, 0), Vector3(0, 10, 0)])
 
 [node name="Camera2D" type="Camera2D" parent="gui"]
 
-[node name="UserRetical" type="Control" parent="gui"]
-layout_mode = 3
-anchor_left = 0.742
-anchor_top = 0.479
-anchor_right = 0.742
-anchor_bottom = 0.479
-offset_left = -56.2401
-offset_top = -63.621
-offset_right = 271.76
-offset_bottom = 248.379
-
-[node name="retical" type="CenterContainer" parent="gui/UserRetical"]
-light_mask = 1048575
-visibility_layer = 1048575
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 56.0
-offset_top = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-script = SubResource("GDScript_bkjhr")
-
-[node name="Top" type="Line2D" parent="gui/UserRetical"]
-position = Vector2(56, 64)
-points = PackedVector2Array(0, -5, 0, -15)
-width = 2.0
-
-[node name="Right" type="Line2D" parent="gui/UserRetical"]
-position = Vector2(56, 64)
-points = PackedVector2Array(5, 0, 15, 0)
-width = 2.0
-
-[node name="Bottom" type="Line2D" parent="gui/UserRetical"]
-position = Vector2(56, 64)
-points = PackedVector2Array(0, 5, 0, 15)
-width = 2.0
-
-[node name="Left" type="Line2D" parent="gui/UserRetical"]
-position = Vector2(56, 64)
-points = PackedVector2Array(-5, 0, -15, 0)
-width = 2.0
+[node name="UserRetical" parent="gui" instance=ExtResource("5_tue55")]
+anchors_preset = -1
+anchor_left = -0.501
+anchor_top = -0.488
+anchor_right = 0.499
+anchor_bottom = 0.499
+offset_left = 961.92
+offset_top = 527.04
+offset_right = 961.92
+offset_bottom = 541.08
 
 [node name="state_display" type="Label" parent="gui"]
 offset_left = -992.0
