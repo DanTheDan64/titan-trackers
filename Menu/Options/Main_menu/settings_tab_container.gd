@@ -12,7 +12,7 @@ extends Control
 func _ready():
 	pass
 
-func _on_general_tab_button_pressed(tab):
+func _on_general_tab_button_pressed(_tab):
 	general.visible = true
 	video.visible = false
 	key_bind.visible = false
@@ -20,7 +20,7 @@ func _on_general_tab_button_pressed(tab):
 	audio.visible = false
 	user_retical.visible = 0
 
-func _on_video_tab_button_pressed(tab):
+func _on_video_tab_button_pressed(_tab):
 	general.visible = false
 	video.visible = true
 	key_bind.visible = false
@@ -28,7 +28,7 @@ func _on_video_tab_button_pressed(tab):
 	audio.visible = false
 	user_retical.visible = 0
 
-func _on_key_bind_tab_button_pressed(tab):
+func _on_key_bind_tab_button_pressed(_tab):
 	general.visible = false
 	video.visible = false
 	key_bind.visible = true
@@ -36,7 +36,7 @@ func _on_key_bind_tab_button_pressed(tab):
 	audio.visible = false
 	user_retical.visible = 0
 
-func _on_crosshair_tab_button_pressed(tab):
+func _on_crosshair_tab_button_pressed(_tab):
 	general.visible = false
 	video.visible = false
 	key_bind.visible = false
@@ -44,7 +44,7 @@ func _on_crosshair_tab_button_pressed(tab):
 	audio.visible = false
 	user_retical.visible = 1
 
-func _on_audio_tab_button_pressed(tab):
+func _on_audio_tab_button_pressed(_tab):
 	general.visible = false
 	video.visible = false
 	key_bind.visible = false
