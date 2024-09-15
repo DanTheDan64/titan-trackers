@@ -4,6 +4,8 @@ extends Control
 
 func _on_check_button_toggled(toggled_on):
 	if toggled_on:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		#DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		DisplayServer.VSYNC_ENABLED
 	else:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		#DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		DisplayServer.VSYNC_DISABLED
