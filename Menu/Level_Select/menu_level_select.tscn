@@ -100,9 +100,11 @@ libraries = {
 }
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.85323, 19.3349, 16.5416)
-light_energy = 5.0
-omni_range = 50.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.79, 94.7402, -53.1308)
+light_color = Color(0.835294, 0.847059, 1, 1)
+light_energy = 16.0
+omni_range = 126.711
+omni_attenuation = 0.366021
 
 [node name="gui" type="Control" parent="."]
 layout_mode = 3
@@ -118,7 +120,6 @@ offset_bottom = 1080.0
 metadata/_edit_lock_ = true
 
 [node name="0" type="Node2D" parent="gui/windows"]
-visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="gui/windows/0"]
 offset_left = 1504.0
@@ -296,6 +297,7 @@ theme_override_font_sizes/font_size = 36
 text = "start:"
 
 [node name="3" type="Node2D" parent="gui/windows"]
+visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="gui/windows/3"]
 offset_left = 1504.0
@@ -423,6 +425,13 @@ text = "back"
 
 [node name="level_select" parent="." instance=ExtResource("3_qc61e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.57281, 0, -7.85395)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 60.8614, -55)
+light_energy = 16.0
+omni_range = 93.734
+omni_attenuation = 2.54912
+omni_shadow_mode = 0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Marker3D" method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="gui/windows/0/VBoxContainer/Button" to="." method="_on_button_0_pressed"]

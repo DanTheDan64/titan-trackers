@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6efww7vieo0"
-path="res://.godot/imported/Mega_sky1.glb-2e2114434e8e35ec4789cf362369d179.scn"
+uid="uid://gbj4uyq3t2s4"
+path="res://.godot/imported/ImageToStl.com_mega_sky1.glb-f5339cace41ea7f47024c471c08a903c.scn"
 
 [deps]
 
-source_file="res://visuals/levels/Mega_sky1.glb"
-dest_files=["res://.godot/imported/Mega_sky1.glb-2e2114434e8e35ec4789cf362369d179.scn"]
+source_file="res://visuals/levels/ImageToStl.com_mega_sky1.glb"
+dest_files=["res://.godot/imported/ImageToStl.com_mega_sky1.glb-f5339cace41ea7f47024c471c08a903c.scn"]
 
 [params]
 
@@ -29,12 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Cube": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

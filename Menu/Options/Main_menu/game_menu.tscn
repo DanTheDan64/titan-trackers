@@ -37,12 +37,6 @@ text = "Resume"
 [node name="Specter2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Option" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 120)
-layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "Option"
-
 [node name="Specter3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
@@ -53,5 +47,4 @@ theme_override_font_sizes/font_size = 64
 text = "Exit"
 
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_button_down"]
-[connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Option" to="." method="_on_option_button_down"]
 [connection signal="button_down" from="MarginContainer/HBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_button_down"]

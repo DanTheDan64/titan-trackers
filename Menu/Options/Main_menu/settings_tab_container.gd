@@ -8,6 +8,7 @@ extends Control
 @onready var audio = $TabContainer/Audio
 @onready var user_retical = $TabContainer/Crosshair/UserRetical
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -54,8 +55,8 @@ func _on_audio_tab_button_pressed(_tab):
 
 
 func _on_exit_button_button_down():
-	pass
 	#if _on_exit_button_button_down() == true:
 		#GameMenu.game_menu.visible = true
 	#else:
 		#GameMenu.game_menu.visible = false
+	pass

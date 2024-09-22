@@ -10,8 +10,8 @@ extends TabBar
 #@onready var left = $UserRetical/Left as Line2D
 @onready var user_retical = $UserRetical
 @onready var retical = $UserRetical/retical
-@onready var lines_name : String
-@onready var lines_index : int
+#@onready var lines_name : String
+#@onready var lines_index : int
 
 # Called when the node enters the scene tree for the first time
 func _ready():

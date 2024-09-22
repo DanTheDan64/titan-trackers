@@ -20,7 +20,7 @@ var sens: float = 0.2
 #objects
 @onready var movement_orienter: Object = $movement_orienter
 @onready var game_menu = $Game_menu
-@onready var crosshair: Object = $"gui/Sprite2D"
+@onready var user_retical = $gui/UserRetical
 @onready var state_text_display: Object = $gui/state_display
 @onready var spedometer: Object = $"gui/spedometer"
 @onready var speed_text_display: Object = $"gui/spedometer/speed_display"
@@ -254,7 +254,7 @@ func grappling(delta):
 	
 	if Input.is_action_just_released("fire_hook"):
 		grapple_line.hide()
-		crosshair.modulate = Color.WHITE
+		Retical.DOT_COLOR = Color.BLUE
 		if is_on_floor():
 			update_state(STATES.MOVING)
 		else:

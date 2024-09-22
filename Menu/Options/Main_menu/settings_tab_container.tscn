@@ -313,19 +313,6 @@ offset_top = -10.5
 offset_right = -472.0
 offset_bottom = -10.5
 
-[node name="Exit_Button" type="Button" parent="."]
-custom_minimum_size = Vector2(120, 16)
-layout_mode = 0
-offset_left = 1660.0
-offset_top = 921.0
-offset_right = 1890.0
-offset_bottom = 976.0
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 34
-text = "Exiting player
-"
-
 [connection signal="tab_button_pressed" from="TabContainer/General" to="." method="_on_general_tab_button_pressed"]
 [connection signal="tab_button_pressed" from="TabContainer/Video" to="." method="_on_video_tab_button_pressed"]
 [connection signal="tab_button_pressed" from="TabContainer/Key Bind" to="." method="_on_key_bind_tab_button_pressed"]
@@ -336,4 +323,3 @@ text = "Exiting player
 [connection signal="value_changed" from="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer/Line length" to="TabContainer/Crosshair" method="_on_line_length_value_changed"]
 [connection signal="value_changed" from="TabContainer/Crosshair/MarginContainer/ScrollContainer/VBoxContainer/Line width" to="TabContainer/Crosshair" method="_on_line_width_value_changed"]
 [connection signal="tab_button_pressed" from="TabContainer/Audio" to="." method="_on_audio_tab_button_pressed"]
-[connection signal="button_down" from="Exit_Button" to="." method="_on_exit_button_button_down"]

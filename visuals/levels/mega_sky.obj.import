@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://daks20qslh5ep"
+path="res://.godot/imported/mega_sky.obj-2663c2ad7e54f2068b30e984c3dff27b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mega_sky.obj-2663c2ad7e54f2068b30e984c3dff27b.mesh"]
+
+source_file="res://visuals/levels/mega_sky.obj"
+dest_files=["res://.godot/imported/mega_sky.obj-2663c2ad7e54f2068b30e984c3dff27b.mesh", "res://.godot/imported/mega_sky.obj-2663c2ad7e54f2068b30e984c3dff27b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

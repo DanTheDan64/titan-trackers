@@ -14,4 +14,4 @@ func _process(delta):
 
 
 func _on_h_slider_drag_ended(value_changed):
-	global.sensitivity = value_changed
+	global.sensitvity = value_changed

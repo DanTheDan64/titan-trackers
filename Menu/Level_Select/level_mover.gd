@@ -14,7 +14,7 @@ func _input(event):
 	if event is InputEvent:
 		if Input.get_axis("left", "right"):
 			selected += Input.get_axis("left", "right")
-		selected = clamp(selected, 0, 2)
+		selected = clamp(selected, 0, 3)
 		windows.get_node(str(on)).hide()
 		if not animation_player.is_playing():
 			run_animation()
@@ -25,10 +25,11 @@ func _ready():
 	windows.get_node(str(selected)).show()
 	print(global.records[0])
 	for child in $"../gui/windows".get_children():
+		print(child.name)
 		
-		if global.records[child.name.to_int()]:
+		if global.records[0]:
 			get_node("../gui/windows/" + str(child.name) + "/VBoxContainer/Panel2/Label").text = \
-			"record:" + "\n" + str(global.records[child.name.to_int()])
+			"record:" + "\n" + str(0)
 		else:
 			get_node("../gui/windows/" + str(child.name) + "/VBoxContainer/Panel2/Label").text = \
 			"record:" + "\n" + "unavailable"

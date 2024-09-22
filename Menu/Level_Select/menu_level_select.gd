@@ -3,7 +3,7 @@ extends Node3D
 const MAIN_MENU = "res://Menu/Main/Main_Menu.tscn"
 const TEST_SCENE = "res://levels/test_scene.tscn"
 const _1 = "res://levels/1.tscn"
-const _2 = "res://levels/2.tscn"
+const _2 = "res://levels/2.tscn"	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,7 +15,7 @@ func _process(_delta):
 
 
 func _on_button_0_pressed():
-	get_tree().change_scene_to_file(TEST_SCENE)
+	pass
 
 
 func _on_button_1_pressed():

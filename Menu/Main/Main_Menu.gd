@@ -6,14 +6,14 @@ extends Control
 @onready var options_button = $MarginContainer/HBoxContainer/VBoxContainer/Options_button as Button
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
-@onready var start_level = preload("res://Menu/Level_Select/menu_level_select.tscn")
+@onready var start_level = "res://Menu/Level_Select/menu_level_select.tscn"
 
 
 func _ready():
 	pass
 
 func _on_start_button_button_down():
-	get_tree().change_scene_to_packed(start_level)
+	get_tree().change_scene_to_file(start_level)
 
 func _on_options_button_button_down():
 	margin_container.visible = false
@@ -26,3 +26,4 @@ func _on_exit_button_button_down():
 func _on_options_menu_exit_options_menu():
 	margin_container.visible = true
 	options_menu.visible = false
+	options_menu.set_process(false)
