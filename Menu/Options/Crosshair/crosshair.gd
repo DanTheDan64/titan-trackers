@@ -21,6 +21,7 @@ func _ready():
 
 func _process(delta):
 	queue_redraw()
+	user_retical.get_tree().get_first_node_in_group("retical")
 
 
 func _draw():
@@ -30,17 +31,18 @@ func _draw():
 	
 
 func _on_line_length_value_changed(value):
-	Retical.top.points[0].y = - value
-	Retical.right.points[0].x = value
-	Retical.bottom.points[0].y = value
-	Retical.left.points[0].x = - value
+	if is_node_ready():
+		user_retical.get_tree().get_first_node_in_group("retical").top.points[0].y = - value
+		user_retical.get_tree().get_first_node_in_group("retical").right.points[0].x = value
+		user_retical.get_tree().get_first_node_in_group("retical").bottom.points[0].y = value
+		user_retical.get_tree().get_first_node_in_group("retical").left.points[0].x = - value
 
 
 func _on_line_width_value_changed(value):
-	Retical.top.width = value
-	Retical.right.width = value
-	Retical.bottom.width = value
-	Retical.left.width = value
+	user_retical.get_tree().get_first_node_in_group("retical").top.width = value
+	user_retical.get_tree().get_first_node_in_group("retical").right.width = value
+	user_retical.get_tree().get_first_node_in_group("retical").bottom.width = value
+	user_retical.get_tree().get_first_node_in_group("retical").left.width = value
 
 
 func _on_on_or_off_dot_toggled(toggled_on):
@@ -52,19 +54,23 @@ func _on_on_or_off_dot_toggled(toggled_on):
 
 func _on_on_or_off_line_toggled(toggled_on):
 	if toggled_on:
-		Retical.top.visible = false
-		Retical.right.visible = false
-		Retical.bottom.visible = false
-		Retical.left.visible = false
+		user_retical.get_tree().get_first_node_in_group("retical").top.visible = false
+		user_retical.get_tree().get_first_node_in_group("retical").right.visible = false
+		user_retical.get_tree().get_first_node_in_group("retical").bottom.visible = false
+		user_retical.get_tree().get_first_node_in_group("retical").left.visible = false
 	else:
-		Retical.top.visible = true
-		Retical.right.visible = true
-		Retical.bottom.visible = true
-		Retical.left.visible = true
+		user_retical.get_tree().get_first_node_in_group("retical").top.visible = true
+		user_retical.get_tree().get_first_node_in_group("retical").right.visible = true
+		user_retical.get_tree().get_first_node_in_group("retical").bottom.visible = true
+		user_retical.get_tree().get_first_node_in_group("retical").left.visible = true
 
 
 func _on_color_picker_button_color_changed(color):
-	Retical.top.default_color = color
-	Retical.right.default_color = color
-	Retical.bottom.default_color = color
-	Retical.left.default_color = color
+	user_retical.get_tree().get_first_node_in_group("retical").top.default_color = color
+	user_retical.get_tree().get_first_node_in_group("retical").right.default_color = color
+	user_retical.get_tree().get_first_node_in_group("retical").bottom.default_color = color
+	user_retical.get_tree().get_first_node_in_group("retical").left.default_color = color
+
+
+func _on_dot_size_value_changed(value):
+	user_retical.get_tree().get_first_node_in_group("retical").DOT_RADIUS = value

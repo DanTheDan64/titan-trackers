@@ -11,10 +11,15 @@ extends CenterContainer
 func _ready():
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	queue_redraw()# This code tells to draw any commends that you have put into the script 
+	top
+	right
+	bottom
+	left
+	DOT_RADIUS
+	DOT_COLOR
 
 func _draw():
 	draw_circle(Vector2 (0,0),DOT_RADIUS,DOT_COLOR) #This basickly means that godot draws a circal at 0,0 and can be controled by DOT_RADIUS and DOT_COLOR

@@ -136,11 +136,11 @@ func _physics_process(delta):
 	#show what the grapple ray hit
 	if grapple_data:
 		if grapple_data.collider.is_in_group("enemy"):
-			Retical.DOT_COLOR = Color.GREEN
+			user_retical.get_tree().get_first_node_in_group("retical").DOT_COLOR = Color.GREEN
 		else:
-			Retical.DOT_COLOR = Color.RED
+			user_retical.get_tree().get_first_node_in_group("retical").DOT_COLOR = Color.RED
 	else:
-		Retical.DOT_COLOR = Color.WHITE
+		user_retical.get_tree().get_first_node_in_group("retical").DOT_COLOR = Color.WHITE
 	
 	
 	#track speed of player
@@ -254,7 +254,7 @@ func grappling(delta):
 	
 	if Input.is_action_just_released("fire_hook"):
 		grapple_line.hide()
-		Retical.DOT_COLOR = Color.BLUE
+		user_retical.get_tree().get_first_node_in_group("retical").DOT_COLOR = Color.BLUE
 		if is_on_floor():
 			update_state(STATES.MOVING)
 		else:

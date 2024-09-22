@@ -19,7 +19,6 @@ config/icon="res://visuals/sprites/icon.svg"
 [autoload]
 
 global="*res://global.gd"
-Retical="*res://Retical/retical.gd"
 
 [display]
 
